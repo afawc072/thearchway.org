@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Archway</title>
+<link rel="stylesheet" href="/style.1.css" type="text/css" />
+
+<link rel="search" href="/opensearch.xml" type="application/opensearchdescription+xml" title="Archway Search" />
+</head>
+<body>
+<div class="top">
+<h1><a>The Archway</a></h1>
+</div>
+
+<form name="input" action="search.php" method="post">
+<div><input type="text" name="find" value=""/></div> 
+<div><input type="submit" value="Submit"/></div>
+</form>
+
+<p class="generic">The Archway is a free and powerful platform that helps you share courses-related documents</p>
+<p class="generic" style="font-size: 13px;" id="stats">Our database contains 0 assignments, 0 course notes and 0 exams.</p>
+<p class="generic"><img src="/img/cutehamster.gif" title="Arrr" alt="" /></p>
+<div class="footer">
+<p class="generic" style="font-size: 12px;"><a href="search.html">Search</a> <a href="profile.html">Profile</a> <a href="about.php">Help</a> <br/><br/></a></p>
+&copy; 2014 The Archway</<a href="search.html">Search</a>div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#thesearchbox").focus();
+});
+</script>
+</body>
+</html>

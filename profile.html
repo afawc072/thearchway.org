@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<?php
+	session_start();
+	session_unset();
+	?>
+<head>
+<title>Profile</title>
+</head>
+<body>
+<div class="top">
+<h1>The Archway</h1>
+</div>
+
+
+<form action=login.php method="post" class="profile">
+<fieldset>
+<legend>User Login</legend>
+<label for="luser">Username</label>
+<input type="text" name="user" id="luser" class="i" />
+<label for="lpass">Password</label>
+<input type="password" name="pass" id="lpass" class="i" />
+<p><div class="s"><input type="submit" name="go" value="Login" /></div>
+</fieldset>
+<input type="hidden" name="backto" value="aHR0cDovL3RvcnJlbnR6LmV1Lw==" /></form>
+
+<form action="/profile" method="post" class="profile">
+<fieldset>
+<legend>User Registration</legend>
+<p> A valid email is required for password recovery only.</p>
+<label for="ruser">Username</label>
+<input type="text" name="user" id="ruser" class="i" />
+<label for="rpass">Password</label>
+<input type="password" name="pass" id="rpass" class="i" />
+<label for="rpass2">Password Again</label>
+<input type="password" name="pass2" id="rpass2" class="i" />
+<label for="remail">Email</label>
+<input type="text" name="email" id="remail" class="i" />
+<p> We respect your privacy and won't ever share your information. (See help)</p>
+<div class="s"><input type="submit" name="go" value="Register" /></div>
+</fieldset>
+</form>
+
+<form action="/profile" method="post" class="profile">
+<fieldset>
+<legend>Password Recovery</legend>
+<p>Please enter your email to recover your username/password.</p>
+<label for="recemail">Email</label>
+<input type="text" name="email" id="recemail" class="i" />
+<div class="s"><input type="submit" name="go" value="Recover" /></div>
+</fieldset>
+</form>
+
+<div class="footer">
+<p class="generic" style="font-size: 12px;"><a href="index.html">Search | </a> <a href="profile.html">Profile | </a> <a href="about.php">Help | </a><a href="upload/upload.php">Upload | </a><a href="logout.php">Logout</a> <br/><br/></a></p>
+&copy; 2014 The Archway</div>
+</body>
+</html>
