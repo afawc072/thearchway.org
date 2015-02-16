@@ -3,6 +3,7 @@
 
     <head>
 
+<?php session_start() ?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
     <link href="iconFont.css" rel="stylesheet">
@@ -20,14 +21,6 @@
     <script src="github.info.js"></script>
     <script src="start-screen.js"></script>
 
-<!-- INSERT A BACKGROUND HERE ... MAYBE LATER...
-    <style media="screen" type="text/css">
-body {
-    background: url("bg.png") no-repeat fixed center center / cover #363843 !important;
-}
-</style>
-
--->
     </head>
 
     <body class="metro">
@@ -38,27 +31,7 @@ body {
 
 <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
 
-<div class="example">
-                    <nav class="horizontal-menu">
-                        <ul>
-
-                            <li><a href="oforceportal.html">home</a></li>
-                            <li><a href="profile.html">profile</a></li>
-                            <li><a href="upload/upload.php">upload</a></li>
-                            <li><a href="about.php">help</a></li>
-
-                            <div class="element place-right">
-                            <button class="large" style= "background-color: #00A255;">Sign up</button>
-                            
-                            <span class="element-divider place-right"></span>
-                            
-                            <button class="large">Log in</button>
-                            </div>
-                        </ul>
-
-
-                    </nav>
-                </div>
+<?php include ("templates/header.php"); ?>
 
     <div id="isc_3" class="normal" onscroll="return isc_VLayout_0._handleCSSScroll()" style="position: relative;width: 50%; top: 10%; margin: 0 auto; width: 779px;">
         

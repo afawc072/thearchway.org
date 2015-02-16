@@ -1,8 +1,8 @@
 <?php
 if(isset($_SESSION['username'])){
-echo"<body link=gray><font face=Rockwell color= gray ><center><h2><a href=/archway/index.php> Search | </a> <a href=/archway/profile.html>Profile | </a> <a href=/archway/about.php>Help | </a><a href=/archway/upload/upload.php>Upload | </a> <a href=/archway/logout.php>Logout</a></center></font></body>";
+echo"<div class='example'><nav class='horizontal-menu'><ul><li><a href='oforceportal.php'>home</a></li><li><a href='profile.html'>profile</a></li><li><a href='upload/upload.php'>upload</a></li><li><a href='about.php'>help</a></li><div class='element place-right'><button class='large' style= 'background-color: #00A255;'>Sign up</button><span class='element-divider place-right'></span><button class='large'>Log in</button></div></ul></nav></div>";
 }
 else{
-echo"<body link=gray><font face=Rockwell color= gray ><center><h2><a href=/archway/index.php> Search | </a> <a href=/archway/profile.html>Profile | </a> <a href=/archway/about.php>Help </a><a href=/archway/upload/upload.php>| Upload</a></center></font></body>";
+echo"<div class='example'><nav class='horizontal-menu'><ul><li><a href='oforceportal.php'>home</a></li><li><a href='upload/upload.php'>upload</a></li><li><a href='about.php'>help</a></li><div class='element place-right'><button class='large' style= 'background-color: #00A255;'>Sign up</button><span class='element-divider place-right'></span><button class='large'>Log in</button></div></ul></nav></div>";
 }
 ?>
