@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<?php session_start() ?>
+<title>The Archway</title>
+<link rel="search" href="/opensearch.xml" type="application/opensearchdescription+xml" title="Archway Search" />
+<link rel="icon" type="image/ico" href="favicon.ico">
+
+ <link href="style/metro-bootstrap.css" rel="stylesheet">
+ <link href="style/metro-bootstrap-responsive.css" rel="stylesheet">
+ <link href="style/iconFont.css" rel="stylesheet">
+ <link href="style/docs.css" rel="stylesheet">
+ <link href="style/prettify.css" rel="stylesheet">
+     <!-- Load JavaScript Libraries -->
+    <script src="style/jquery.min.js"></script>
+    <script src="style/jquery/jquery.widget.min.js"></script>
+    <script src="style/jquery/jquery.mousewheel.js"></script>
+    <script src="style/prettify/prettify.js"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="style/load-metro.js"></script>
+
+    <!-- Local JavaScript -->
+    <script src="style/docs.js"></script>
+    <script src="style/github.info.js"></script>
+    <script src="style/ga.js"></script>
+<?php include ("templates/header.php"); ?>
+
+</head>
+<body>
+
+<div id="Content" style="clear:both;margin:0px auto; text-align:center; padding:15px; position:absolute;top: 20%;left: 50%;">
+<div id="inner" style=" position: relative;top: -50%;left: -50%;">
+<img src="images/archwaylogo.png" />
+</div>
+</div>
+
+ <div class="element input-element">
+<form name="input" action="search.php" method="post">
+<div><input class ="input-control text" type="text" placeholder="Search..." name="find" value=""/></div> 
+<div><input type="submit" value="Submit"/></div>
+</form>
+</div>
+
+<center><p class="generic">The Archway is a free and powerful platform that helps you share courses-related documents</p></center>
+<center><p class="generic" style="font-size: 13px;" id="stats">Our database contains 0 assignments, 0 course notes and 0 exams.</p></center>
+<center><?php
+
+$myFile = "stats/coursesStats.txt";
+$fh = fopen($myFile, 'r');
+while(!feof($fh))
+{
+    $data[] = fgets($fh);     
+ //Do whatever you want with the data in here
+    //This feeds the file into an array line by line
+}
+print_r($data[2]);
+fclose($fh);
+
+?></center>
+
+
+
+<center><div class="footer">
+<p class="generic" style="font-size: 12px;"><a href="index.html">Search | </a> <a href="profile.html">Profile | </a> <a href="about.php">Help | </a><a href="logout.php">Logout |</a> <a href="upload/upload.php"> Upload </a>
+ <br/><br/></a></p>
+&copy; 2014 The Archway</div></center>
+
+
+</body>
+</html>

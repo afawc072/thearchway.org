@@ -11,7 +11,7 @@
 </head>
 <body>
 <center>
-<img src="images/projectarchway.png" width="45%" height="45%"/>
+<img src="images/archwaylogo.png" width="45%" height="45%"/>
 </center> 
 
 
