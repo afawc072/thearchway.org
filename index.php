@@ -33,6 +33,13 @@ while(!feof($fh))
     //This feeds the file into an array line by line
 }
 print_r($data[2]);
+echo '<br/>';
+print_r($data[3]);
+echo '<br/>';
+print_r($data[4]);
+echo '<br/>';
+
+
 fclose($fh);
 
 ?></center>
