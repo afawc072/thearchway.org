@@ -55,10 +55,10 @@
                         <img src="images/help2.png"/>
                     </div>
                     <div class="span4">
-
+                        <img src="images/help3.png"/>
                     </div>
                     <div class="span4">
-
+                        <img src="images/help4.png"/>
                     </div>
                 </div>
             </div>
