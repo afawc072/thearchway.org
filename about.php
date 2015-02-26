@@ -49,6 +49,19 @@
 
 
    <div class="example" style="border: 0px;">
+                <div class="grid fluid">
+                <div class="row" style="text-align:center; position:relative;">
+                    <div class="span4">
+                        <img src="images/help2.jpg"/>
+                    </div>
+                    <div class="span4">
+
+                    </div>
+                    <div class="span4">
+
+                    </div>
+                </div>
+            </div>
             <div class="grid fluid">
                 <div class="row" style="text-align:center; position:relative;">
                     <div class="span4">
