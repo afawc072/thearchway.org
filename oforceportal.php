@@ -46,7 +46,7 @@
 <!--  logo  -->
 
 <center>
-<img src="images/archwaylogo.png"/>
+<img src="images/archwaylogo.jpg"/>
 </center> 
 
 <br>
