@@ -52,7 +52,7 @@
                 <div class="grid fluid">
                 <div class="row" style="text-align:center; position:relative;">
                     <div class="span4">
-                        <img src="images/help2.jpg"/>
+                        <img src="images/help2.png"/>
                     </div>
                     <div class="span4">
 
