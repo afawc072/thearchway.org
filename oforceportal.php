@@ -78,6 +78,24 @@
     
     <div id="isc_1Z" style="POSITION:relative;display:inline-block; padding-top: 10%;" >
         <p class="generic" style="color: #606B7C; font-family: Open Sans,helvetica,arial,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;">A free and powerful platform that helps uOttawa students to share courses-related documents.</p>
+
+	<center><?php
+		$myFile = "stats/coursesStats.txt";
+		$fh = fopen($myFile, 'r');
+			while(!feof($fh))
+			{
+			    $data[] = fgets($fh);     
+			}
+		print_r($data[2]);
+		echo '<br/>';
+		print_r($data[3]);
+		echo '<br/>';
+		print_r($data[4]);
+		echo '<br/>';
+
+
+		fclose($fh);
+        ?></center>
 </div>
 </div>
 </div>
