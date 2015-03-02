@@ -6,6 +6,8 @@
 <title>The Archway</title>
 <link rel="search" href="/opensearch.xml" type="application/opensearchdescription+xml" title="Archway Search" />
 <link rel="icon" type="image/ico" href="favicon.ico">
+
+
 <?php include ("templates/header.php"); ?>
 
 </head>
