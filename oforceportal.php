@@ -231,7 +231,7 @@ $(document).ready(function() {
 
 <!--  searchb  -->
 <center>
-      <div class="element input-element" style="align: center; width:700px;">
+      <div class="element input-element" style="align: center; width:780px;">
                             <form action="search.php" method="post"> 
                             <div class="input-control text">
                             <input type="text" placeholder="Search resources by course or keyword" style="width:80%;"/><button class="active" style="padding: 7px 12px;"><img src="images/search-3071e9e44daa3fd755860cfeb35f83e4.png" width="75%" height="75%"/> </button>
@@ -251,7 +251,7 @@ $(document).ready(function() {
 </div>
 
 
-    <div id="isc_1Z" style="POSITION:relative;display:inline-block;align: center; width:700px; padding-top: 20px;" >
+    <div id="isc_1Z" style="POSITION:relative;display:inline-block;align: center; width:780px; padding-top: 20px; margin: 0 auto;" >
         <center>
         <p class="generic" style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;">A free and powerful platform that helps uOttawa students to share courses-related documents.</p>
     </center>
