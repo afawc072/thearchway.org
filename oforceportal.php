@@ -257,8 +257,7 @@ $(document).ready(function() {
     </center>
         <div class="container2">
     <div id="content">
-                <a href="#login-box" class="login-window">Login / Sign In</a>
-        
+                  
         <div id="login-box" class="login-popup">
         <a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
           <form class="signin" method="post" action="#">
