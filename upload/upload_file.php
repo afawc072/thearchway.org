@@ -4,7 +4,7 @@ $temp = explode(".",$_FILES["file"]["name"]);
 $cname = $_POST["course"];
 $filename = $cname."_".$_FILES["file"]["name"];
 $extension = end($temp);
-$structure = "/opt/lampp/htdocs/archway/upload/uploadedFiles/";
+$structure = "/var/www/archway/upload/uploadedFiles/";
 if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
 || ($_FILES["file"]["type"] == "application/vnd.oasis.opendocument.text")
 || ($_FILES["file"]["type"] == "application/msword")
@@ -38,6 +38,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       // if(!file_exists(dirname("/opt/lampp/htdocs/php_website_test/uploadedFiles/" .$tname)))
     if (!is_dir($structure.$cname)) {
         mkdir($structure.$cname);         
+echo 'DIrectory not found';
        }
      
       //move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."_".$_FILES["file"]["name"]);

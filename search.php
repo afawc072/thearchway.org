@@ -32,16 +32,16 @@ $input = trim( $input );
 //the sql statement
 if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
 
-$sql = "SELECT C.cid,C.cname FROM Course as C  WHERE C.cid  LIKE '%$input%';";
+$sql = "SELECT C.cname FROM Course as C  WHERE C.cname  LIKE '%$input%';";
 
 //execute the statement
 $data = mysql_query($sql, $conn) or die(mysql_error());
 while ($result = mysql_fetch_array($data)) {
 //giving names to the fields
-$title = $result['cid'];
+//$title = $result['cid'];
 $info = $result['cname'];
 //put the results on the screen
-$path = "upload/uploadedFiles/".$title;
+$path = "upload/uploadedFiles/".$info;
 $pathtotal= $path."*";
 echo "<br><b>$title</b>";
 echo "<br>$info<br>";
