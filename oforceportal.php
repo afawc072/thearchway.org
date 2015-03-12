@@ -260,21 +260,22 @@ $(document).ready(function() {
                   
         <div id="login-box" class="login-popup">
         <a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-          <form class="signin" method="post" action="#">
+          <form class="signin" method="post" action="login.php">
                 <fieldset class="textbox" style="margin: 15px;">
                 <label class="username">
                 <span>Email</span>
                 <br>
-                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Email Address" style="width: 214px;">
+                <input id="user" name="user" value="" type="text" autocomplete="on" placeholder="Email Address" style="width: 214px;">
                 </label>
                 
                 <label class="password">
                 <span>Password</span>
                 <br>
-                <input id="password" name="password" value="" type="password" placeholder="Password" style="width: 214px;">
+                <input id="pass" name="pass" value="" type="password" placeholder="Password" style="width: 214px;">
                 </label>
                 
-                <button  class='medium' type="button" style="width: 214px; margin-top: 10px;">Sign in</button>
+                <input type="submit"  style="width: 214px; margin-top: 10px;"/>
+                <//<button  class='medium' type="button" style="width: 214px; margin-top: 10px;">Sign in</button>
                 
                 <p style="line-height: 18px; padding-top: 15px;">
                 <a class="forgot" href="#">Forgot your password?</a>
