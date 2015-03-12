@@ -135,6 +135,23 @@ form.signin .textbox input {
     width:200px;
 }
 
+form.signin .textbox input[type="submit"]{
+  padding: 4px 12px;
+  text-align: center;
+  vertical-align: middle !important;
+  background-color: #d9d9d9;
+  border: 1px transparent solid;
+  color: #222222;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin: auto;
+}
+
 form.signin input:-moz-placeholder { color:#bbb; text-shadow:0 0 2px #000; }
 form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #000;  }
 
@@ -274,7 +291,7 @@ $(document).ready(function() {
                 <input id="pass" name="pass" value="" type="password" placeholder="Password" style="width: 214px;">
                 </label>
                 
-                <input type="submit" placeholder="Sign In" style="width: 214px; margin-top: 10px;"/>
+                <input type="submit" value="Sign In" style="width: 214px; margin-top: 10px;"/>
                                 
                 <p style="line-height: 18px; padding-top: 15px;">
                 <a class="forgot" href="#">Forgot your password?</a>
