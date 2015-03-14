@@ -20,7 +20,9 @@
     <script src="docs.js"></script>
     <script src="github.info.js"></script>
     <script src="start-screen.js"></script>
+    <script src="scripts/loading.js"></script>
     <style type="text/css">
+
 
 a { 
     text-decoration:none; 
@@ -203,6 +205,17 @@ $(document).ready(function() {
         
         return false;
     });
+
+    $('#load').live('click', function() {
+    var $this = $(this);
+        $this.css({
+            'background-color' : 'rgba(219, 86, 86, 0)',
+            'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
+
+        })
+        $this.fadeOut(3000);
+    });
+
     
     // When clicking on the button close or the mask layer the popup closed
     $('a.close, #mask').live('click', function() { 
@@ -213,6 +226,7 @@ $(document).ready(function() {
     });
 });
 </script>
+
     </head>
 
     <body class="metro" style="height: 100%;">
@@ -251,7 +265,7 @@ $(document).ready(function() {
       <div class="element input-element" style="align: center; width:780px;">
                             <form action="search.php" method="post"> 
                             <div class="input-control text">
-                            <input type="text" name="find" placeholder="Search resources by course or keyword" style="width:80%;"/><button class="active" style="padding: 7px 12px;"><img src="images/search-3071e9e44daa3fd755860cfeb35f83e4.png" width="75%" height="75%"/> </button>
+                            <input type="text" placeholder="Search resources by course or keyword" style="width:80%;"/><button class="active" style="padding: 7px 12px;"><img src="images/search-3071e9e44daa3fd755860cfeb35f83e4.png" width="75%" height="75%"/> </button>
                         </div>
 
                     </form>
@@ -291,7 +305,7 @@ $(document).ready(function() {
                 <input id="pass" name="pass" value="" type="password" placeholder="Password" style="width: 214px;">
                 </label>
                 
-                <input type="submit" value="Sign In" style="width: 214px; margin-top: 10px;"/>
+                <input type="submit" id="load" value="Sign In" style="width: 214px; margin-top: 10px;"/>
                                 
                 <p style="line-height: 18px; padding-top: 15px;">
                 <a class="forgot" href="#">Forgot your password?</a>
@@ -304,7 +318,6 @@ $(document).ready(function() {
 </div>
     
    
-
 
 	<center>
         <p class="generic" style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
