@@ -28,7 +28,7 @@ $result = mysql_query($query);
 echo "<select name= 'course'>";// start a table tag in the HTML
 echo '<option value="">'.'--Select Course--'.'</option>';
 while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
-echo "<option value='". $row['cid'] . "'>".$row['cid'] .'</option>';
+echo "<option value='". $row['cname'] . "'>".$row['cname'] .'</option>';
 }
 
 echo '</select>';
@@ -37,6 +37,8 @@ echo '</select>';
 ?>
 <input type="submit" name="submit" value="Submit">
 </form>
+
+<a href="add_course.php"> Can't find a course? </a>
 
 <div class="footer">
 &copy; 2014 The Archway
