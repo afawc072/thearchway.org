@@ -38,6 +38,8 @@ echo '</select>';
 <input type="submit" name="submit" value="Submit">
 </form>
 
+<a href="add_course.php"> Can't find a course? </a>
+
 <div class="footer">
 &copy; 2014 The Archway
 </div>
