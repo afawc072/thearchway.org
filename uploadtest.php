@@ -60,7 +60,7 @@ header('Location:/archway/profile.html');
                     <legend>Upload your notes</legend>
                     <label>File</label>
                     <div class="input-control file" data-role="input-control">
-                        <input type="file" name="file">
+                        <input type="file">
                         <button class="btn-file"></button>
                     </div>
                     <label>Course</label>
