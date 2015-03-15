@@ -1,13 +1,44 @@
+<!DOCTYPE html>
+    <html style="">
 
-<?php
-session_start();
-if(!isset($_SESSION['username'])){
-header('Location:/archway/profile.html');
-}
-?>
- <html>
+    <head>
 
-<?php include ("/opt/lampp/htdocs/archway/templates/header.php"); ?>
+<?php session_start() ?>
+    <link href="../css/metro-bootstrap.css" rel="stylesheet">
+    <link href="../css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="../iconFont.css" rel="stylesheet">
+    <link href="../docs.css" rel="stylesheet">
+    <link href="../prettify.css" rel="stylesheet">
+
+    <script src="../jquery.min.js"></script>
+    <script src="../jquery.widget.min.js"></script>
+    <script src="../jquery.mousewheel.js"></script>
+    <script src="../prettify.js"></script>
+
+    <script src="../load-metro.js"></script>
+
+    <script src="../docs.js"></script>
+    <script src="../github.info.js"></script>
+    <script src="../start-screen.js"></script>
+    <script src="../scripts/loading.js"></script>
+
+
+    </head>
+
+<body class="metro" style="height: 100%;">
+
+<script></script>
+
+<noscript></noscript>
+
+<div class="container">
+
+<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
+
+<?php include ("../templates/header.php"); ?>
+
+
+
 
 <center><body>
 
