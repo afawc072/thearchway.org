@@ -3,11 +3,7 @@
 
     <head>
 
-<?php session_start() 
-if(!isset($_SESSION['username'])){
-header('Location:/archway/profile.html');
-}
-?>
+<?php session_start() ?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
     <link href="css/iconFont.css" rel="stylesheet">
@@ -60,7 +56,7 @@ header('Location:/archway/profile.html');
                     <legend>Upload your notes</legend>
                     <label>File</label>
                     <div class="input-control file" data-role="input-control">
-                        <input type="file">
+                        <input type="file" name="file" value="" onchange="javascript:document.getElementById('fakeupload').value = document.getElementById('path')value;">
                         <button class="btn-file"></button>
                     </div>
                     <label>Course</label>
