@@ -80,7 +80,7 @@ if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
 
     	echo "Starting Compression"
     	mysqldump --user=$dbuser --password=$dbPass --default-character-set=utf8 $dbname > "$backupPath"
-    	"Compression Complete"
+    	echo "Compression Complete"
     	exit
     fi
 
