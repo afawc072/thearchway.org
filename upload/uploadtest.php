@@ -50,25 +50,18 @@ enctype="multipart/form-data">
 </form>
 
         <div class="example">
-            <form>
+            <form action="upload_file.php" method="post">
                 <fieldset>
                     <legend>Post your notes</legend>
                     <label>Filename</label>
-                    <div class="input-control text" data-role="input-control">
-                        <input type="text" placeholder="type text" style=" width: 85%;"><input type="submit" name="submit" value="Upload" style="width: 15%">
-                        
-                    </div>
-                    <label>Semester</label>
-                    <div class="input-control text" data-role="input-control">
-                        <input type="text">
-                        <button class="btn-search"></button>
-                    </div>
-                    <div class="input-control text warning-state" data-role="input-control">
-                        <input type="text" value="warning state">
-                    </div>
                     <div class="input-control file" data-role="input-control">
                         <input type="file">
                         <button class="btn-file"></button>
+                    </div>
+                    <label>Course</label>
+                    <div class="input-control text" data-role="input-control">
+                        <input type="text">
+                        <button class="btn-search"></button>
                     </div>
 
                     <div class="input-control text error-state" data-role="input-control">
@@ -81,61 +74,6 @@ enctype="multipart/form-data">
                         <input type="text" value="info state">
                     </div>
 
-                    <div class="input-control checkbox" data-role="input-control">
-                        <label class="inline-block">
-                            <input type="checkbox" />
-                            <span class="check"></span>
-                            Check me out
-                        </label>
-                        <label class="inline-block">
-                            <input type="checkbox" checked />
-                            <span class="check"></span>
-                            Check me out
-                        </label>
-                        <label class="inline-block">
-                            Check me out
-                            <input type="checkbox" disabled/>
-                            <span class="check"></span>
-                        </label>
-                        <label class="inline-block">
-                            Check me out
-                            <input type="checkbox" disabled checked/>
-                            <span class="check"></span>
-                        </label>
-                        <label class="inline-block">
-                            Intermediate
-                            <input type="checkbox" data-show="intermediate"/>
-                            <span class="check"></span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <div class="clearfix">
-                        <div class="input-control radio inline-block" data-role="input-control">
-                            <label class="inline-block">
-                                <input type="radio" name="r1" checked />
-                                <span class="check"></span>
-                                R1
-                            </label>
-                            <label class="inline-block">
-                                <input type="radio" name="r1"  />
-                                <span class="check"></span>
-                                R1
-                            </label>
-                        </div>
-                        <div class="input-control radio default-style inline-block" data-role="input-control">
-                            <label class="inline-block">
-                                <input type="radio" name="r2" checked />
-                                <span class="check"></span>
-                                R1
-                            </label>
-                            <label class="inline-block">
-                                <input type="radio" name="r2" />
-                                <span class="check"></span>
-                                R2
-                            </label>
-                        </div>
-                        </div>
                         <div class="input-control switch" data-role="input-control">
                             <label class="inline-block" style="margin-right: 20px">
                                 Switch me
@@ -143,7 +81,7 @@ enctype="multipart/form-data">
                                 <span class="check"></span>
                             </label>
                         </div>
-                    </div>
+                    
 
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
