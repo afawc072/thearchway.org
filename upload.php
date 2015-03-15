@@ -53,7 +53,7 @@ enctype="multipart/form-data">
 $conn = mysql_connect("localhost","admin","vincentdb") or die(mysql_error());
 //select database
 mysql_select_db("archway1", $conn);
-$query = "SELECT * FROM Course"; //You don't need a ; like you do in SQL
+$query = "SELECT * FROM Course ORDER BY cname"; //You don't need a ; like you do in SQL
 $result = mysql_query($query);
 
 echo "<select name= 'course'>";// start a table tag in the HTML
