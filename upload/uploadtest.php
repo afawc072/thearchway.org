@@ -71,18 +71,18 @@ enctype="multipart/form-data">
                         <input type="text" value="info state">
                     </div>
                     <div class="input-control text success-state" data-role="input-control">
-                        <input type="text" value="info state">
+                        <textarea data-transform="input-control" placeholder="leave a comment"></textarea>
                     </div>
 
                         <div class="input-control switch" data-role="input-control">
                             <label class="inline-block" style="margin-right: 20px">
-                                Switch me
+                                Add description
                                 <input type="checkbox" checked/>
                                 <span class="check"></span>
                             </label>
                         </div>
                     
-
+                    <br>
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
 
