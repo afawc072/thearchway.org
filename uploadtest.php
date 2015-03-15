@@ -56,7 +56,7 @@
                     <legend>Upload your notes</legend>
                     <label>File</label>
                     <div class="input-control file" data-role="input-control">
-                        <input type="file">
+                        <input type="file" name="file">
                         <button class="btn-file"></button>
                     </div>
                     <label>Course</label>
@@ -78,7 +78,7 @@
                                 }
 
                                 echo '</select>';
-                                //mysql_close(); //Make sure to close out the database connection
+                                mysql_close(); //Make sure to close out the database connection
 
                             ?>
                             </select>
