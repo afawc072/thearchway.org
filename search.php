@@ -53,7 +53,14 @@ $thelist="";
     while (false !== ($file = readdir($handle))) {
       if ($file != "." && $file != "..") {
       	$tempp= $path."/".$file;
-        $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
+        if (file_exists($tempp.".description")){
+            $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
+            $thelist .= 'echo readfile('$tempp.'".description")';
+        }
+        else{        
+          $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
+            }
+        
       }
     }
     closedir($handle);

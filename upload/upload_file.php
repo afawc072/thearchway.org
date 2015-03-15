@@ -2,6 +2,7 @@
 $allowedExts = array("ppt","docx","doc","pdf","odt");
 $temp = explode(".",$_FILES["file"]["name"]);
 $cname = $_POST["course"];
+$description = $_POST["details"];
 $filename = $cname."_".$_FILES["file"]["name"];
 $extension = end($temp);
 $structure = "/var/www/archway/upload/uploadedFiles/";
@@ -43,6 +44,11 @@ echo 'DIrectory not found';
      
       //move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."_".$_FILES["file"]["name"]);
       move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."/".$filename);
+
+      $descfile = fopen($structure.$cname."/".$filename.".description","w");
+      echo fwrite($file,$description);
+      fclose($descfile);
+
       echo "Stored in: " . "uploadedFiles/" . $cname."/".$filename;
       }
     }
