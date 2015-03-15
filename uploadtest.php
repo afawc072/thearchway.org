@@ -61,11 +61,26 @@
                     </div>
                     <label>Course</label>
                     <div class="input-control select">
-                        <select name='course'>
-                            <option>--Select--</option>
-                            <option>ELG123</option>
-                            <option>CSI123</option>
-                            <option>CVG123</option>
+                        <!--<select name='course'>-->
+                            <?php
+
+                                //open connection
+                                $conn = mysql_connect("localhost","admin","vincentdb") or die(mysql_error());
+                                //select database
+                                mysql_select_db("archway1", $conn);
+                                $query = "SELECT * FROM Course ORDER BY cname"; //You don't need a ; like you do in SQL
+                                $result = mysql_query($query);
+
+                                echo "<select name= 'course'>";// start a table tag in the HTML
+                                echo '<option value="">'.'--Select Course--'.'</option>';
+                                while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
+                                    echo "<option value='". $row['cname'] . "'>".$row['cname'] .'</option>';
+                                }
+
+                                echo '</select>';
+                                //mysql_close(); //Make sure to close out the database connection
+
+                            ?>
                             </select>
                     </div>
                     
