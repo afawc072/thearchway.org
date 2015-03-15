@@ -9,6 +9,8 @@ header('Location:/archway/profile.html');
 
 //declaring variable
 $input = $_POST['coursetoadd'];
+$input = strtoupper($input);
+
 
 //If they did not enter a search term we give them an error
 if ($input == "")
@@ -29,7 +31,7 @@ $input = mysql_real_escape_string( $input );
 $input = trim( $input );
 
 //the sql statement
-if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
+if(preg_match('/([A-Z]{3})([0-9]{4})/', $input)){
 
 $sql = "SELECT C.cname FROM Course as C  WHERE C.cname  LIKE '%$input%';";
 
@@ -45,35 +47,32 @@ $pathtotal= $path."*";
 
 }
 
-}
-
-//This counts the number or results – and if there wasn’t any it gives a little message explaining that
+//If the course can't be found in the db, it is added to it
 $anymatches=mysql_num_rows($data);
 if ($anymatches == 0)
 {
-
-echo "IT WORKS"
-$sql = "INSERT INTO Course (cname) VALUES ($input)";
-mysql_query($sql, $conn) or die(mysql_error());
+echo "IT WORKS";
+$sql2 = "INSERT INTO Course (cname) VALUES ('$input')";
+$result=mysql_query($sql2, $conn) or die(mysql_error());
+mysql_close($conn);
 }
 
-
-
-//input not null and not a cid...
+//If the course is found
 else{
 
-echo "<p>Sorry, your search: &quot;" . $input . "&quot; is already ENTER THE RIGHT SHIT</p>";
+echo "<p>Sorry, the Course &quot;" . $input . "&quot already exists on our Website</p>";
 
 }
 
-$anymatches = mysql_num_rows($data);
-
-if ($anymatches == 0){
-
-$sql = "INSERT INTO Course (cname) VALUES ($input)";
 
 }
+//In case the input doesn't contain the right number of strings
 
+else{
+
+echo "Not enough strings";
+
+}
 
 ?>
 </body>
