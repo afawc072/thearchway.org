@@ -66,7 +66,7 @@ if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
 	echo "Enter the directory for the DB to be compressed to (full path): "
 	read backupPath
 
-    filename=$dbname"_backup_"$date
+    filename=$dbname"_backup_"$date".sql"
     pathFile="$backupPath/$filename"
 
     while [ "$userInput" != "Y" ] && [ "$userInput" != "n" ]; do
@@ -80,7 +80,7 @@ if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
 
     	echo "Starting Compression"
 
-    	mysqldump --user=$dbUser --password=$dbPass --databases $dbname > $filename".sql"
+    	mysqldump --user=$dbUser --password=$dbPass --databases $dbname > $filename
     	tar -czvf $pathFile".tar.gz" $filename
     	echo "Compression Complete"
     	exit
