@@ -22,6 +22,21 @@
     <script src="../start-screen.js"></script>
     <script src="../scripts/loading.js"></script>
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+         $("#detailsgiven").change(function() {
+            if($(this).is(":checked")) {                
+              $("#details").removeAttr("disabled");
+             }
+            else {
+              $("#details").attr("disabled", "disabled");
+             }
+        });
+    
+    });
+    </script>
 
     </head>
 
@@ -50,49 +65,40 @@ enctype="multipart/form-data">
 </form>
 
         <div class="example">
-            <form action="upload_file.php" method="post">
+            <form action="upload_file.php" method="post" enctype="multipart/form-data">
                 <fieldset>
-                    <legend>Post your notes</legend>
+                    <legend>Upload your notes</legend>
                     <label>Filename</label>
                     <div class="input-control file" data-role="input-control">
-                        <input type="file">
+                        <input type="file" name="file" id="file">
                         <button class="btn-file"></button>
                     </div>
                     <label>Course</label>
-                    <div class="input-control text" data-role="input-control">
-                        <input type="text">
-                        <button class="btn-search"></button>
+                    <div class="input-control select">
+                        <select name='course'>
+                            <option>--Select--</option>
+                            <option>ELG123</option>
+                            <option>CSI123</option>
+                            <option>CVG123</option>
+                            </select>
                     </div>
+                    
 
-                    <div class="input-control text error-state" data-role="input-control">
-                        <input type="text" value="error state">
-                    </div>
-                    <div class="input-control text info-state" data-role="input-control">
-                        <input type="text" value="info state">
-                    </div>
-
-                <div class="tab-control padding20" data-role="tab-control">
-                    <ul class="tabs">
-                        <li class="active"><a href="#write">Description</a></li>
-                    </ul>
-
-                    <div class="frames">
-                        <div id="write" class="frame">
-                            <textarea data-transform="input-control" placeholder="Tell us more about your notes..."></textarea>
-                        </div>
-                    </div>
-                </div>
+                    <label>Description</label>
+                    <div class="input-control textarea">
+                        <textarea name="details" id="details" data-transform="input-control" placeholder="This is optional..."></textarea>
+                     </div>
 
                         <div class="input-control switch" data-role="input-control">
                             <label class="inline-block" style="margin-right: 20px">
                                 Add description
-                                <input type="checkbox" checked/>
+                                <input type="checkbox" name="detailsgiven" id="detailsgiven" checked/>
                                 <span class="check"></span>
                             </label>
                         </div>
                     
                     <br>
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Upload">
                     <input type="reset" value="Reset">
 
                     <div style="margin-top: 20px">
