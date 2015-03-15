@@ -46,7 +46,8 @@ echo 'DIrectory not found';
       move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."/".$filename);
 
       $descfile = fopen($structure.$cname."/".$filename.".description","w");
-      echo fwrite($file,$description);
+      fwrite($descfile,$description);
+      echo $description;
       fclose($descfile);
 
       echo "Stored in: " . "uploadedFiles/" . $cname."/".$filename;
