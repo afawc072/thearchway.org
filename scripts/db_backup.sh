@@ -78,8 +78,8 @@ if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
     fi
     if [ "$userInput" == "Y" ]; then
 
-    	"Starting Compression"
-    	mysqldump --user = '$dbuser' --password = '$dbPass' --default-character-set=utf8 '$dbname' | gzip > "$backupPath"
+    	echo "Starting Compression"
+    	mysqldump --user='$dbuser' --password='$dbPass' --default-character-set=utf8 '$dbname' | gzip > "$backupPath"
     	"Compression Complete"
     	exit
     fi
