@@ -57,14 +57,11 @@ fi
 if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
 	
 	echo "You will need to provide the appropriate information when prompted to be able to compress a mysql database"
-	echo "Enter your Mysql username: "
-	read dbUser
+	echo "Enter your Mysql username: "read dbUser
 	echo "Enter your Mysql password: "
 	read -s dbPass
-	echo "Enter the name of the DB to be compressed and backed up: "
-	read dbname
-	echo "Enter the directory for the DB to be compressed to (full path): "
-	read backupPath
+	echo "Enter the name of the DB to be compressed and backed up: "read dbname
+	echo "Enter the directory for the DB to be compressed to (full path): "read backupPath
 
     filename=$dbname"_backup_"$date".sql"
     pathFile="$backupPath/$filename"
@@ -78,15 +75,39 @@ if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
     fi
     if [ "$userInput" == "Y" ]; then
 
-    	echo "Starting Compression"
-
+    	echo "Starting Dumping"
     	mysqldump --user=$dbUser --password=$dbPass --databases $dbname > $filename
+    	echo "Starting Compression"
     	tar -czvf $pathFile".tar.gz" $filename
+    	rm $filename
     	echo "Compression Complete"
     	exit
     fi
 if [ "$1" == "-x" ] || [ "$1" == "--extract" ] ; then
 #in mysql, source asdasd.sql to extract.
+	echo "You will need to provide the appropriate information when prompted to be able to compress a mysql database"
+	echo "Enter your Mysql username: "read dbUser
+	echo "Enter your Mysql password: "
+	read -s dbPass
+	echo "Enter the name of the DB compressed file to be extracted and imported into mysql (i.e archway1): "read dbname
+	echo "Enter the directory containing the compressed mysql DB (full path i.e. /media/blabla.tar): "read backupPath
+
+	while [ "$userInput" != "Y" ] && [ "$userInput" != "n" ]; do
+    	echo "The database $dbname will be imported into your current mysql, do you want to continue(Y/n)?"
+    	read userInput
+    done
+    if [ "$userInput" == "n" ]; then
+    	exit
+    fi
+    if [ "$userInput" == "Y" ]; then
+
+    	echo "Extracting Compressed File"
+    	dbSQl=$dbname".sql"
+    	tar -xzvf $backupPath $dbSQl
+    	echo "Importing Database into mysql"
+    	mysql -u=$dbUser -p=$dbPass 'source $dbSQl'
+   	fi
+fi
 else
 err_reason="This option doesn't exit"
 help
