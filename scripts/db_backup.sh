@@ -89,12 +89,15 @@ if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
 fi
 if [ "$1" == "-x" ] || [ "$1" == "--extract" ] ; then
 #in mysql, source asdasd.sql to extract.
-	echo "You will need to provide the appropriate information when prompted to be able to compress a mysql database"
+	echo "You will need to provide the appropriate information when prompted to be able to rebuil the mysql DB"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "YOU NEED A DATABASE NAMED archway1 IN MYSQL TO BE ABLE TO IMPORT"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 	echo "Enter your Mysql username: "
 	read dbUser
 	echo "Enter your Mysql password: "
 	read -s dbPass
-	echo "Enter the name of the DB compressed file to be extracted and imported into mysql (i.e archway1_backup): "
+	echo "Enter the name of the DB compressed file to be extracted and imported into mysql (i.e archway1_backup.sql): "
 	read dbname
 	echo "Enter the directory containing the compressed mysql DB (full path i.e. /media): "
 	read backupPath
