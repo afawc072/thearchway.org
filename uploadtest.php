@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-    <html style="">
+    <html>
 
     <head>
 
 <?php session_start() ?>
-    <link href="../css/metro-bootstrap.css" rel="stylesheet">
-    <link href="../css/metro-bootstrap-responsive.css" rel="stylesheet">
-    <link href="../css/iconFont.css" rel="stylesheet">
-    <link href="../style/docs.css" rel="stylesheet">
-    <link href="../style/prettify.css" rel="stylesheet">
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="js/prettify/prettify.css" rel="stylesheet">
 
-    <script src="../style/jquery.min.js"></script>
-    <script src="../style/jquery.widget.min.js"></script>
-    <script src="../style/jquery.mousewheel.js"></script>
-    <script src="../style/prettify.js"></script>
-    <script src="../css/holder/holder.js"></script>
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/prettify/prettify.js"></script>
+    <script src="js/holder/holder.js"></script>
 
-    <script src="../style/load-metro.js"></script>
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="js/load-metro.js"></script>
 
-    <script src="../style/docs.js"></script>
-    <script src="../style/github.info.js"></script>
-    <script src="../scripts/loading.js"></script>
-    <script src="../style/ga.js"></script>
+    <!-- Local JavaScript -->
+    <script src="js/docs.js"></script>
+    <script src="js/github.info.js"></script>
+    <script src="js/ga.js"></script>
+
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script type="text/javascript">
@@ -46,7 +49,7 @@
 <script></script>
 
 <noscript></noscript>
-<?php include ("../templates/header.php"); ?>
+<?php include ("templates/header.php"); ?>
 <div class="container">
 
         <div class="example" style="padding-top : 20px;">
@@ -55,8 +58,8 @@
                     <legend>Upload your notes</legend>
                     <label>File</label>
                     <div class="input-control file" data-role="input-control">
-                        <input tabindex="-1" style="z-index: 0;" type="file"><input id="__input_file_wrapper__" readonly="" style="z-index: 1; cursor: default;" type="text">
-                        <button type="button" class="btn-file"></button>
+                        <input type="file">
+                        <button class="btn-file"></button>
                     </div>
                     <label>Course</label>
                     <div class="input-control select">
