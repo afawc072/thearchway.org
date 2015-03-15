@@ -56,7 +56,7 @@ header('Location:/archway/profile.html');
 <div class="container">
 
         <div class="example" style="padding-top : 20px;">
-            <form action="upload/upload_file.php" method="post"
+            <form action="upload/upload_file.php" method="post" id="uploadform"
              enctype="multipart/form-data">
                 <fieldset>
                     <legend>Upload your notes</legend>
@@ -93,7 +93,7 @@ header('Location:/archway/profile.html');
 
                     <label>Description</label>
                     <div class="input-control textarea">
-                        <textarea> <input type="text" name="details" id="details" data-transform="input-control" placeholder="This is optional..."></textarea>
+                        <textarea name="details" id="details" form="uploadform" data-transform="input-control" placeholder="This is optional..."></textarea>
                      </div>
 
                         <div class="input-control switch" data-role="input-control">
