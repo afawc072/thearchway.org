@@ -70,8 +70,10 @@ enctype="multipart/form-data">
                     <div class="input-control text info-state" data-role="input-control">
                         <input type="text" value="info state">
                     </div>
-                    <div class="input-control text success-state" data-role="input-control">
-                        <textarea data-transform="input-control" placeholder="leave a comment"></textarea>
+                    <div class="frames">
+                        <div id="write" class="frame">
+                            <textarea data-transform="input-control" placeholder="Additional information..."></textarea>
+                        </div>
                     </div>
 
                         <div class="input-control switch" data-role="input-control">
