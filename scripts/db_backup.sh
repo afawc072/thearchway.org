@@ -114,11 +114,10 @@ if [ "$1" == "-x" ] || [ "$1" == "--extract" ] ; then
     	echo "Importing Database into mysql"
     	mysql -u=$dbUser -p=$dbPass 'source $dbSQl'
    	fi
-fi
+
 else
 err_reason="This option doesn't exit"
 help
 exit
 
 fi
-
