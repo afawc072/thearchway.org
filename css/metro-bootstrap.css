@@ -2963,7 +2963,7 @@ a {
 .metro .input-control.tel input,
 .metro .input-control.number input {
   border: 1px #d9d9d9 solid;
-  width: 70%;
+  width: 100%;
   height: 100%;
   padding: 5px;
   z-index: 1;

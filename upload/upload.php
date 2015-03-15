@@ -38,9 +38,18 @@
 <?php include ("../templates/header.php"); ?>
 
 
+    <div id="isc_3" class="normal" onscroll="return isc_VLayout_0._handleCSSScroll()" style="position: relative;width: 50%; top: 10%; margin: 0 auto; width: 779px;">
+        
+                 
+               
 
 
-<center><body>
+	<div id="isc_9" class="loginFormUser" style="position: absolute; left: 0px; top: 90px; width: 780px; heig…; box-sizing: border-box; cursor: default;" >
+
+
+
+
+<body>
 
 <form action="upload_file.php" method="post"
 enctype="multipart/form-data">
@@ -71,8 +80,11 @@ echo '</select>';
 
 <a href="add_course.php"> Can't find a course? </a>
 
+</div>
+</div>
+
 <div class="footer">
 &copy; 2014 The Archway
 </div>
-</body></center>
+</body>
 </html> 
