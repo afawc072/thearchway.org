@@ -59,9 +59,9 @@ header('Location:/archway/profile.html');
                 <fieldset>
                     <legend>Upload your notes</legend>
                     <label>File</label>
-                    inputNode.value = fileInput.value.replace("C:\\fakepath\\", "");
+
                     <div class="input-control file" data-role="input-control">
-                        <input type="file" name="file">
+                        <input type="file" name="file" value="" onchange="javascript:document.getElementById('fakeupload').value = document.getElementById('path')value;">
                         <button class="btn-file"></button>
                     </div>
                     <label>Course</label>
