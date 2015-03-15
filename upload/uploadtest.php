@@ -70,11 +70,23 @@ enctype="multipart/form-data">
                     <div class="input-control text info-state" data-role="input-control">
                         <input type="text" value="info state">
                     </div>
+                             <div class="balloon right">
+                <div class="tab-control padding20" data-role="tab-control">
+                    <p class="place-right tertiary-text">Comments are parsed with <a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown</a></p>
+                    <ul class="tabs">
+                        <li class="active"><a href="#write">Write</a></li>
+                        <li><a href="#preview">Preview</a></li>
+                    </ul>
+
                     <div class="frames">
                         <div id="write" class="frame">
-                            <textarea data-transform="input-control" placeholder="Additional information..."></textarea>
+                            <textarea data-transform="input-control" placeholder="leave a comment"></textarea>
+                        </div>
+                        <div id="preview" class="frame">
+                            This is preview :)
                         </div>
                     </div>
+                </div>
 
                         <div class="input-control switch" data-role="input-control">
                             <label class="inline-block" style="margin-right: 20px">
