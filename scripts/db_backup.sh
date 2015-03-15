@@ -57,11 +57,14 @@ fi
 if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
 	
 	echo "You will need to provide the appropriate information when prompted to be able to compress a mysql database"
-	echo "Enter your Mysql username: "read dbUser
+	echo "Enter your Mysql username: "
+	read dbUser
 	echo "Enter your Mysql password: "
 	read -s dbPass
-	echo "Enter the name of the DB to be compressed and backed up: "read dbname
-	echo "Enter the directory for the DB to be compressed to (full path): "read backupPath
+	echo "Enter the name of the DB to be compressed and backed up: "
+	read dbname
+	echo "Enter the directory for the DB to be compressed to (full path): "
+	read backupPath
 
     filename=$dbname"_backup_"$date".sql"
     pathFile="$backupPath/$filename"
@@ -86,11 +89,14 @@ if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
 if [ "$1" == "-x" ] || [ "$1" == "--extract" ] ; then
 #in mysql, source asdasd.sql to extract.
 	echo "You will need to provide the appropriate information when prompted to be able to compress a mysql database"
-	echo "Enter your Mysql username: "read dbUser
+	echo "Enter your Mysql username: "
+	read dbUser
 	echo "Enter your Mysql password: "
 	read -s dbPass
-	echo "Enter the name of the DB compressed file to be extracted and imported into mysql (i.e archway1): "read dbname
-	echo "Enter the directory containing the compressed mysql DB (full path i.e. /media/blabla.tar): "read backupPath
+	echo "Enter the name of the DB compressed file to be extracted and imported into mysql (i.e archway1): "
+	read dbname
+	echo "Enter the directory containing the compressed mysql DB (full path i.e. /media/blabla.tar): "
+	read backupPath
 
 	while [ "$userInput" != "Y" ] && [ "$userInput" != "n" ]; do
     	echo "The database $dbname will be imported into your current mysql, do you want to continue(Y/n)?"
