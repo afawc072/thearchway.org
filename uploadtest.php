@@ -3,7 +3,11 @@
 
     <head>
 
-<?php session_start() ?>
+<?php session_start() 
+if(!isset($_SESSION['username'])){
+header('Location:/archway/profile.html');
+}
+?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
     <link href="css/iconFont.css" rel="stylesheet">
@@ -55,6 +59,7 @@
                 <fieldset>
                     <legend>Upload your notes</legend>
                     <label>File</label>
+                    inputNode.value = fileInput.value.replace("C:\\fakepath\\", "");
                     <div class="input-control file" data-role="input-control">
                         <input type="file" name="file">
                         <button class="btn-file"></button>
