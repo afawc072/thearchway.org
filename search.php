@@ -55,7 +55,7 @@ $thelist="";
       	$tempp= $path."/".$file;
         if (file_exists($tempp.".description")){
             $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
-            $thelist .= readfile('$tempp.'".description");
+            $thelist .= readfile($tempp.".description");
         }
         else{        
           $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
