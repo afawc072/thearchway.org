@@ -85,7 +85,8 @@ if [ "$1" == "-c" ] || [ "$1" == "--compress" ] ; then
     	echo "Compression Complete"
     	exit
     fi
-
+if [ "$1" == "-x" ] || [ "$1" == "--extract" ] ; then
+#in mysql, source asdasd.sql to extract.
 else
 err_reason="This option doesn't exit"
 help
