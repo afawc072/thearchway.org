@@ -93,7 +93,7 @@ header('Location:/archway/profile.html');
 
                     <label>Description</label>
                     <div class="input-control textarea">
-                        <textarea name="details" id="details" data-transform="input-control" placeholder="This is optional..."></textarea>
+                        <textarea> <input type="text" name="details" id="details" data-transform="input-control" placeholder="This is optional..."></textarea>
                      </div>
 
                         <div class="input-control switch" data-role="input-control">
