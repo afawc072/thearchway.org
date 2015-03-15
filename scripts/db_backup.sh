@@ -94,9 +94,9 @@ if [ "$1" == "-x" ] || [ "$1" == "--extract" ] ; then
 	read dbUser
 	echo "Enter your Mysql password: "
 	read -s dbPass
-	echo "Enter the name of the DB compressed file to be extracted and imported into mysql (i.e archway1): "
+	echo "Enter the name of the DB compressed file to be extracted and imported into mysql (i.e archway1_backup): "
 	read dbname
-	echo "Enter the directory containing the compressed mysql DB (full path i.e. /media/blabla.tar): "
+	echo "Enter the directory containing the compressed mysql DB (full path i.e. /media): "
 	read backupPath
 
 	while [ "$userInput" != "Y" ] && [ "$userInput" != "n" ]; do
@@ -109,10 +109,10 @@ if [ "$1" == "-x" ] || [ "$1" == "--extract" ] ; then
     if [ "$userInput" == "Y" ]; then
 
     	echo "Extracting Compressed File"
-    	dbSQl=$dbname".sql"
-    	tar -xzvf $backupPath $dbSQl
+    	
+    	tar -xzvf $backupPath"/"$dbname".tar.gz"
     	echo "Importing Database into mysql"
-    	mysql -u=$dbUser -p=$dbPass 'source $dbSQl'
+    	mysql --user=$dbUser --password=$dbPass archway1 < $dbname
    	fi
 
 else
