@@ -61,11 +61,11 @@ $thelist="";
         if (file_exists($tempp.".description")){
             $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
             $thelist .= file_get_contents($tempp.".description");
-            $thelist .= '\n';
+            $thelist .= '<br> </br>';
            }
         else{        
           $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
-          $thelist .= '\n';
+          $thelist .= '<br> </br>';
             }
         
       }
