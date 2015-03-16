@@ -55,12 +55,13 @@ $thelist="";
         || $file['extension'] == "docx" 
         || $file['extension'] == "pdf" 
         || $file['extension'] == "odt" 
-        || $file['extension'] == "ppt") {
+        || $file['extension'] == "ppt") 
+       {
       	$tempp= $path."/".$file;
         if (file_exists($tempp.".description")){
             $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
             $thelist .= file_get_contents($tempp.".description");
-        }
+           }
         else{        
           $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
             }
