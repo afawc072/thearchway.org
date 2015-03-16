@@ -47,11 +47,15 @@ echo "<br><b>$title</b>";
 echo "<br>$info<br>";
 }
 
+$except = array("doc", "docx", "odt", "ppt", "pdf");
+$imp = implode('|', $except);
+
 if($path != "." && $path != ".." ){
 $thelist="";
   if ($handle = opendir($path)) {
     while (false !== ($file = readdir($handle))) {
-      if ($file != "." && $file != ".." && (preg_match('/^.*\.('."doc" | "docx" | "odt" | "ppt" | "pdf".')$/i', $file))) 
+      
+      if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file))) 
        {
       	$tempp= $path."/".$file;
         if (file_exists($tempp.".description")){
