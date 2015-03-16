@@ -51,7 +51,7 @@ if($path != "." && $path != ".." ){
 $thelist="";
   if ($handle = opendir($path)) {
     while (false !== ($file = readdir($handle))) {
-      if ($file != "." && $file != ".." && file_parts['extension'] != "description") {
+      if ($file != "." && $file != ".." && file_parts[$file] != "description") {
       	$tempp= $path."/".$file;
         if (file_exists($tempp.".description")){
             $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
