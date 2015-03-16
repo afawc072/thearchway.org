@@ -51,11 +51,7 @@ if($path != "." && $path != ".." ){
 $thelist="";
   if ($handle = opendir($path)) {
     while (false !== ($file = readdir($handle))) {
-      if ($file != "." && $file != ".." && (($file['extension'] == "doc") 
-        || ($file['extension'] == "docx")
-        || ($file['extension'] == "pdf")
-        || ($file['extension'] == "odt") 
-        || ($file['extension'] == "ppt"))) 
+      if ($file != "." && $file != ".." && (preg_match('/^.*\.('."doc" | "docx" | "odt" | "ppt" | "pdf".')$/i', $file))) 
        {
       	$tempp= $path."/".$file;
         if (file_exists($tempp.".description")){
