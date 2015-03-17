@@ -113,10 +113,8 @@ header('Location:/archway/profile.html');
 
                 </fieldset>
             </form>
+            <a href="upload/add_course.php"> Can't find a course? </a>
         </div>
 
-
-
 </body></center>
-<a href="upload/add_course.php"> Can't find a course? </a>
 </html> 
