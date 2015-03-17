@@ -116,7 +116,7 @@ header('Location:/archway/profile.html');
         </div>
 
 
-<a href="upload/add_course.php"> Can't find a course? </a>
 
 </body></center>
+<a href="upload/add_course.php"> Can't find a course? </a>
 </html> 
