@@ -55,7 +55,7 @@ header('Location:/archway/profile.html');
 <?php include ("templates/header.php"); ?>
 <div class="container">
 
-        <div class="example" >
+        <div class="example" style="top: 50px;">
             <form action="upload/upload_file.php" method="post" id="uploadform"
              enctype="multipart/form-data">
                 <fieldset>
