@@ -9,6 +9,7 @@ if(!isset($_SESSION['username'])){
 header('Location:/archway/profile.html');
 }
 ?>
+
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
     <link href="css/iconFont.css" rel="stylesheet">
@@ -55,7 +56,7 @@ header('Location:/archway/profile.html');
 <?php include ("templates/header.php"); ?>
 <div class="container">
 
-        <div class="example" style="padding-top : 20px;">
+        <div class="example" style="position: absolute; top: 20%;">
             <form action="upload/upload_file.php" method="post" id="uploadform"
              enctype="multipart/form-data">
                 <fieldset>
