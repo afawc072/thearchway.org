@@ -33,8 +33,7 @@ header('Location:/archway/profile.html');
     <script type="text/javascript">
 
     $(document).ready(function() {
-        $("#test").addClass("load");
-        $('#uploadform').fadeIn(1000);
+        $("#uploadform").addClass("load");
          $("#detailsgiven").change(function() {
             if($(this).is(":checked")) {                
               $("#details").removeAttr("disabled");
