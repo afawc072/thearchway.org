@@ -33,7 +33,7 @@ header('Location:/archway/profile.html');
     <script type="text/javascript">
 
     $(document).ready(function() {
-        $("#uploadform").addClass("load");
+        $("#uploadform form").addClass("load");
          $("#detailsgiven").change(function() {
             if($(this).is(":checked")) {                
               $("#details").removeAttr("disabled");
@@ -47,7 +47,7 @@ header('Location:/archway/profile.html');
     </script>
 
 <style type="text/css">
-    #uploadform {
+    #uploadform form{
     opacity: 0;
     -webkit-transition: opacity 2s ease-in;
     -moz-transition: opacity 2s ease-in;
@@ -55,7 +55,7 @@ header('Location:/archway/profile.html');
     -ms-transition: opacity 2s ease-in;
     transition: opacity 2s ease-in;
     }
-    #uploadform .load {
+    #uploadform form.load {
     opacity: 1;
     }
 
