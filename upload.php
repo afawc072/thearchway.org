@@ -33,6 +33,8 @@ header('Location:/archway/profile.html');
     <script type="text/javascript">
 
     $(document).ready(function() {
+
+        $('#uploadform').fadeIn(1000);
          $("#detailsgiven").change(function() {
             if($(this).is(":checked")) {                
               $("#details").removeAttr("disabled");
@@ -55,7 +57,7 @@ header('Location:/archway/profile.html');
 <?php include ("templates/header.php"); ?>
 <div class="container">
 
-        <div class="example" style="top: 50px;">
+        <div id="uploadform" name="uploadform" class="example" style="top: 50px;">
             <form action="upload/upload_file.php" method="post" id="uploadform"
              enctype="multipart/form-data">
                 <fieldset>
