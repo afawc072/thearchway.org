@@ -72,8 +72,10 @@ header('Location:/archway/profile.html');
 <script></script>
 
 <noscript></noscript>
-<?php include ("templates/header.php"); ?>
+
 <div class="container" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -100px;">
+
+    <?php include ("templates/header.php"); ?>
 
         <div id="uploadform" name="uploadform" class="example" style="top: 50px;">
             <form action="upload/upload_file.php" method="post" id="uploadform"
