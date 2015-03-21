@@ -334,13 +334,6 @@ $(document).ready(function() {
                                 			    $data[] = fgets($fh);     
                                 			}
                                 		print_r($data[2]);
-                                		echo '<br/>';
-                                		print_r($data[3]);
-                                		echo '<br/>';
-                                		print_r($data[4]);
-                                		echo '<br/>';
-
-
                                 		fclose($fh);
                                         ?>
                                     </p>
