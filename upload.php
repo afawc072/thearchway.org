@@ -59,6 +59,10 @@ header('Location:/archway/profile.html');
     opacity: 1;
     }
 
+    .footer, .push {
+    height: 100px; /* .push must be the same height as .footer */
+}
+
 </style>
 
     </head>
@@ -69,7 +73,7 @@ header('Location:/archway/profile.html');
 
 <noscript></noscript>
 <?php include ("templates/header.php"); ?>
-<div class="container">
+<div class="container" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -100px;">
 
         <div id="uploadform" name="uploadform" class="example" style="top: 50px;">
             <form action="upload/upload_file.php" method="post" id="uploadform"
@@ -131,6 +135,9 @@ header('Location:/archway/profile.html');
                 </fieldset>
             </form>
         </div>
+
+    </div>
+    <?php include ("templates/footer.php"); ?>
 
 </body></center>
 </html> 
