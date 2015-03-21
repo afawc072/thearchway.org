@@ -75,6 +75,8 @@ header('Location:/archway/profile.html');
 
 <div class="container" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -100px;">
 
+    <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
+
     <?php include ("templates/header.php"); ?>
 
         <div id="uploadform" name="uploadform" class="example" style="top: 50px;">
@@ -138,6 +140,7 @@ header('Location:/archway/profile.html');
             </form>
         </div>
 
+    </div>
     </div>
     <?php include ("templates/footer.php"); ?>
 
