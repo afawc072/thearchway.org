@@ -136,8 +136,8 @@ header('Location:/archway/profile.html');
             </form>
         </div>
 
-    <?php include ("templates/footer.php"); ?>
     </div>
+    <?php include ("templates/footer.php"); ?>
 
 </body></center>
 </html> 
