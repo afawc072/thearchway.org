@@ -176,6 +176,10 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     width:214px;
 }
 
+.footer, .push {
+    height: 100px; /* .push must be the same height as .footer */
+}
+
 .button:hover { background:#ddd; }
 
 </style>
@@ -236,7 +240,7 @@ $(document).ready(function() {
 
 <noscript></noscript>
 
-<div class="container">
+<div class="container" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -100px;">
 
 <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
 
@@ -346,8 +350,11 @@ $(document).ready(function() {
     </div>
 </div>
 </div>
+
 </div>
 
+
+<?php include ("templates/footer.php"); ?>
 
 </div>
 </div>

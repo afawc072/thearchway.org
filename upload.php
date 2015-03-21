@@ -49,11 +49,11 @@ header('Location:/archway/profile.html');
 <style type="text/css">
     #uploadform form{
     opacity: 0;
-    -webkit-transition: opacity 1s ease-in;
-    -moz-transition: opacity 1s ease-in;
-    -o-transition: opacity 1s ease-in;
-    -ms-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
     }
     #uploadform form.load {
     opacity: 1;
