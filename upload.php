@@ -79,6 +79,8 @@ header('Location:/archway/profile.html');
 
     <?php include ("templates/header.php"); ?>
 
+    <div class="container">
+
         <div id="uploadform" name="uploadform" class="example" style="top: 50px;">
             <form action="upload/upload_file.php" method="post" id="uploadform"
              enctype="multipart/form-data">
@@ -138,6 +140,7 @@ header('Location:/archway/profile.html');
 
                 </fieldset>
             </form>
+        </div>
         </div>
 
     </div>
