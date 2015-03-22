@@ -19,7 +19,8 @@
 
     <script src="js/autocomplete/jquery-ui.js"></script>
     <script src="js/autocomplete/jquery-ui.min.js"></script>
-    jquery-ui.min.js
+    <link rel="stylesheet" href="js/autocomplete/jquery-ui.css">
+    <link rel="stylesheet" href="js/autocomplete/jquery-ui.min.css">
 
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
