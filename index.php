@@ -16,7 +16,11 @@
     <script src="js/prettify.js"></script>
 
     <script src="js/load-metro.js"></script>
+
     <script src="js/autocomplete/jquery-ui.js"></script>
+    <script src="js/autocomplete/jquery-ui.min.js"></script>
+    jquery-ui.min.js
+
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
     <script src="js/start-screen.js"></script>
