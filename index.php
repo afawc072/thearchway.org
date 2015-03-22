@@ -240,7 +240,6 @@ $(document).ready(function() {
 //jQuery(document).ready(function($){
 //    $('#searchCourse').autocomplete({source:'suggest_course.php', minLength:2});
 //});
- $(function() {
 $( "#searchCourse" ).autocomplete({
 source: 'suggest_course.php', minLength:2});
 });
