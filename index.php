@@ -360,5 +360,4 @@ $(document).ready(function() {
         </body>
     </html>
 
-$( "#searchCourse" ).autocomplete({source: "suggest_course.php", minLength:2});
 
