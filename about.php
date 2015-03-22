@@ -66,13 +66,13 @@
                         </div>
                     </div>
                     <div class="span4">
-                        <div class="notice2">
-                            <div class="fg-grai"><b>UPLOAD A FILE</b> <br> Once logged in, click on "upload" from the menu and provide a short file description to help other students in their search.</div>
+                        <div class="notice1">
+                            <div class="fg-grai-fo"><b>UPLOAD A FILE</b> <br> Once logged in, click on "upload" from the menu and provide a short file description to help other students in their search.</div>
                         </div>
                     </div>
                     <div class="span4">
-                        <div class="notice3">
-                            <div class="fg-white"><b>ACCESS NOTES, ASSIGNEMENTS AND EXAMS</b> <br>Browse our database and get your hands on academic ressources to help you improve your grades.</div>
+                        <div class="notice1">
+                            <div class="fg-grai-fo"><b>ACCESS NOTES, ASSIGNEMENTS AND EXAMS</b> <br>Browse our database and get your hands on academic ressources to help you improve your grades.</div>
                         </div>
                     </div>
                 </div>
