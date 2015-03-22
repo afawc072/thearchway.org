@@ -6,21 +6,25 @@
 <?php session_start() ?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
-    <link href="fonts/iconFont.css" rel="stylesheet">
-    <link href="docs.css" rel="stylesheet">
-    <link href="prettify.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="js/prettify.css" rel="stylesheet">
 
-    <script src="jquery.min.js"></script>
-    <script src="jquery.widget.min.js"></script>
-    <script src="jquery.mousewheel.js"></script>
-    <script src="prettify.js"></script>
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/prettify.js"></script>
 
-    <script src="load-metro.js"></script>
+    <script src="js/load-metro.js"></script>
 
-    <script src="docs.js"></script>
-    <script src="github.info.js"></script>
-    <script src="start-screen.js"></script>
-    <script src="scripts/loading.js"></script>
+    <script src="js/autocomplete/jquery-ui.js"></script>
+    <script src="js/autocomplete/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="js/autocomplete/jquery-ui.css">
+    <link rel="stylesheet" href="js/autocomplete/jquery-ui.min.css">
+
+    <script src="js/docs.js"></script>
+    <script src="js/github.info.js"></script>
+    <script src="js/start-screen.js"></script>
     <style type="text/css">
 
 
@@ -232,6 +236,15 @@ $(document).ready(function() {
 });
 </script>
 
+<script>
+//jQuery(document).ready(function($){
+//    $('#searchCourse').autocomplete({source:'suggest_course.php', minLength:2});
+//});
+$( "#searchCourse" ).autocomplete({
+source: 'suggest_course.php', minLength:2});
+</script>
+
+
     </head>
 
     <body class="metro" style="height: 100%;">
@@ -270,7 +283,7 @@ $(document).ready(function() {
                                   <div class="element input-element" style="align: center; width:780px;">
                                                         <form action="search.php" method="post"> 
                                                         <div class="input-control text">
-                                                        <input type="text" name="find" placeholder="Search resources by course or keyword" style="width:80%;"/><button class="active" style="padding: 7px 12px;"><img src="images/search-3071e9e44daa3fd755860cfeb35f83e4.png" width="75%" height="75%"/> </button>
+                                                        <input type="text" id="searchCourse" name="find" placeholder="Search resources by course or keyword" style="width:80%;"/><button class="active" style="padding: 7px 12px;"><img src="images/search-3071e9e44daa3fd755860cfeb35f83e4.png" width="75%" height="75%"/> </button>
                                                     </div>
 
                                                 </form>
