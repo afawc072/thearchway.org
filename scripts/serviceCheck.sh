@@ -21,9 +21,9 @@ echo "Verifying the status of Lighttpd"
 sleep 1
 if (( $(ps -ef | grep -v grep | grep $lighttpd | wc -l) > 0 ))
 then
-	echo "$lighttpd $COL_GREEN[OK]$COL_RESET!!!"
+	echo -e "$lighttpd $COL_GREEN[OK]$COL_RESET!!!"
 else
-	echo "Lighttpd $COL_GREEN[DOWN]$COL_RESET"
+	echo -e "Lighttpd $COL_GREEN[DOWN]$COL_RESET"
 	sleep 1
 	/etc/init.d/$lighttpd start
 fi
@@ -31,9 +31,9 @@ echo "Verifying the status of Mysql"
 sleep 1
 if (( $(ps -ef | grep -v grep | grep $mysql | wc -l) > 0 ))
 then
-	echo "$Mysql $COL_GREEN[OK]$COL_RESET!!!"
+	echo -e "$Mysql $COL_GREEN[OK]$COL_RESET!!!"
 else
-	echo "Mysql $COL_RED[OK]$COL_RESET"
+	echo -e "Mysql $COL_RED[OK]$COL_RESET"
 	sleep 1
 	/etc/init.d/$mysql start
 fi
