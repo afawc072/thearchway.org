@@ -6,13 +6,13 @@
 answer="a"
 
 echo "     *******************************************************"
-echo "     *				                         *"
-echo "     *				 	                 *"
-echo "     *						         *"
-echo "     *	          - T H E   A R C H W A Y -              *"
-echo "     *		             - SETUP -                   *"
-echo "     *				            	         *"
-echo "     *		 	           		         *"
+echo "     *		      		                           *"
+echo "     *				 	                   *"
+echo "     *						           *"
+echo "     *	          - T H E   A R C H W A Y -                *"
+echo "     *		             - SETUP -                     *"
+echo "     *				            	           *"
+echo "     *		 	           		           *"
 echo "     *******************************************************"
 
 sleep 5
