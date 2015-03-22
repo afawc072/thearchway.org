@@ -2,9 +2,9 @@
 lighttpd="lighttpd"
 mysql="mysql"
 
-COL_RESET=$ESC_SEQ"39;49;00m"
-COL_RED=$ESC_SEQ"31;01m"
-COL_GREEN=$ESC_SEQ"32;01m"
+red='\033[0;31m'
+green='\0330[;32'
+NC='\033[0m' # No Color
 
 echo "     *******************************************************"
 echo "     *		      		                           *"
@@ -21,9 +21,9 @@ echo "Verifying the status of Lighttpd"
 sleep 1
 if (( $(ps -ef | grep -v grep | grep $lighttpd | wc -l) > 0 ))
 then
-	echo -e "$lighttpd $COL_GREEN[OK]$COL_RESET!!!"
+	echo -e "$lighttpd ${green}OK]${NC}!!!"
 else
-	echo -e "Lighttpd $COL_GREEN[DOWN]$COL_RESET"
+	echo -e "Lighttpd ${green}[DOWN]${NC}"
 	sleep 1
 	/etc/init.d/$lighttpd start
 fi
@@ -31,9 +31,9 @@ echo "Verifying the status of Mysql"
 sleep 1
 if (( $(ps -ef | grep -v grep | grep $mysql | wc -l) > 0 ))
 then
-	echo -e "$Mysql $COL_GREEN[OK]$COL_RESET!!!"
+	echo -e "$Mysql ${green}[OK]${NC}!!!"
 else
-	echo -e "Mysql $COL_RED[OK]$COL_RESET"
+	echo -e "Mysql ${red}[OK]${NC}"
 	sleep 1
 	/etc/init.d/$mysql start
 fi
