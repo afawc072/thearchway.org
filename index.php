@@ -242,7 +242,6 @@ $(document).ready(function() {
 //});
 $( "#searchCourse" ).autocomplete({
 source: 'suggest_course.php', minLength:2});
-});
 </script>
 
 
