@@ -24,4 +24,3 @@ if ( $rs && mysql_num_rows($rs) )
 
 echo json_encode($data);
 flush();
-?>
