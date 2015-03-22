@@ -21,9 +21,9 @@ echo "Verifying the status of Lighttpd"
 sleep 1
 if (( $(ps -ef | grep -v grep | grep $lighttpd | wc -l) > 0 ))
 then
-	echo -e "$lighttpd ${green}OK]${NC}!!!"
+	echo -e "$lighttpd ${green} [OK] ${NC}!!!"
 else
-	echo -e "Lighttpd ${green}[DOWN]${NC}"
+	echo -e "Lighttpd ${green} [DOWN] ${NC}"
 	sleep 1
 	/etc/init.d/$lighttpd start
 fi
