@@ -14,11 +14,13 @@ header('Location:/archway/profile.html');
     <link href="css/iconFont.css" rel="stylesheet">
     <link href="css/docs.css" rel="stylesheet">
     <link href="js/prettify/prettify.css" rel="stylesheet">
+    <link href="css/smoothnessui.css" rel="stylesheet">
 
     <!-- Load JavaScript Libraries -->
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/jquery/jquery.widget.min.js"></script>
     <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/jquery/jqueryui.js"></script>
     <script src="js/prettify/prettify.js"></script>
     <script src="js/holder/holder.js"></script>
 
@@ -29,6 +31,30 @@ header('Location:/archway/profile.html');
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
     <script src="js/ga.js"></script>
+
+     <script>
+        $(function() {
+            var availableTags = [];
+            <?php
+                $phparray = array();
+                 //open connection
+                $conn = mysql_connect("localhost","admin","vincentdb") or die(mysql_error());
+                //select database
+                mysql_select_db("archway1", $conn);
+                $query = "SELECT * FROM Course ORDER BY cname"; //You don't need a ; like you do in SQL
+                $result = mysql_query($query);
+                while(($row = mysql_fetch_assoc($result))){   //Creates a loop to loop through results
+                    $phparray[] = $row['cname'];
+                }
+                $js_array = json_encode($phparray);
+                echo "var availableTags = ". $js_array . ";\n";
+                mysql_close(); //Make sure to close out the database connection
+                ?>
+                $( "#coursesInput" ).autocomplete({
+                source: availableTags
+                });
+            });
+    </script>
 
     <script type="text/javascript">
 
@@ -92,28 +118,10 @@ header('Location:/archway/profile.html');
                         <button class="btn-file"></button>
                     </div>
                     <label for="course">Course</label>
-                    <div class="input-control select">
-                        <!--<select name='course'>-->
-                            <?php
 
-                                //open connection
-                                $conn = mysql_connect("localhost","admin","vincentdb") or die(mysql_error());
-                                //select database
-                                mysql_select_db("archway1", $conn);
-                                $query = "SELECT * FROM Course ORDER BY cname"; //You don't need a ; like you do in SQL
-                                $result = mysql_query($query);
 
-                                echo "<select name= 'course'>";// start a table tag in the HTML
-                                echo '<option value="">'.'--Select Course--'.'</option>';
-                                while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
-                                    echo "<option value='". $row['cname'] . "'>".$row['cname'] .'</option>';
-                                }
-
-                                echo '</select>';
-                                mysql_close(); //Make sure to close out the database connection
-
-                            ?>
-                            </select>
+                    <div class="input-control text" data-role="input-control">
+                        <input id="coursesInput" type="text">
                     </div>
                     
 
