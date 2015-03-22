@@ -233,7 +233,7 @@ $(document).ready(function() {
 
 <script>
 jQuery(document).ready(function($){
-    $('#searchCourse').autocomplete({source:'suggest_zip.php', minLength:2});
+    $('#searchCourse').autocomplete({source:'suggest_course.php', minLength:2});
 });
 </script>
 
