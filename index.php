@@ -236,14 +236,6 @@ $(document).ready(function() {
 });
 </script>
 
-<script>
-//jQuery(document).ready(function($){
-//    $('#searchCourse').autocomplete({source:'suggest_course.php', minLength:2});
-//});
-$( "#searchCourse" ).autocomplete({
-source: 'suggest_course.php', minLength:2});
-</script>
-
 
     </head>
 
@@ -367,4 +359,5 @@ source: 'suggest_course.php', minLength:2});
 
         </body>
     </html>
+
 
