@@ -3,7 +3,7 @@ lighttpd="lighttpd"
 mysql="mysql"
 
 red='\033[0;31m'
-green='\0330[;32m'
+green='\033[0;32m'
 NC='\033[0m' # No Color
 
 echo "     *******************************************************"
