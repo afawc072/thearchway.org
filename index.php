@@ -16,7 +16,7 @@
     <script src="js/prettify.js"></script>
 
     <script src="js/load-metro.js"></script>
-
+    <script src="js/autocomplete/jquery-ui.js"></script>
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
     <script src="js/start-screen.js"></script>
@@ -233,7 +233,7 @@ $(document).ready(function() {
 
 <script>
 jQuery(document).ready(function($){
-    $('#searchCourse').autocomplete({source:'suggest_course.php', minLength:2});
+    $('#searchCourse').autocomplete({source:'suggest_zip.php', minLength:2});
 });
 </script>
 
