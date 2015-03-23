@@ -81,12 +81,12 @@ echo "<p>Sorry, &quot;" . $input . "&quot; doesn't exist in our database</p>";
 sleep(5);
 header('Location:/archway/index.php');
 }
-elseif($theList=="" && $anymatches == 1){
+if($theList=="" && $anymatches == 1){
 echo "No files have yet been uploaded to ".$input;
 sleep(5);
 header('Location:/archway/index.php');
 }
-else{
+if($theList!="" && $anymatches == 1){
 echo "List of files for ".$input.":";
 echo $thelist;
 }
