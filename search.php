@@ -91,7 +91,7 @@ echo "<p>Desole, votre recherche pour: &quot;" . $input . "&quot; a retourne auc
 }
 }
 
-//nuLL input
+//nuLL input *************NEEDS TO RETURN TO INDEX********************
 else if($input ==''){
 	
 echo "0 Result</br>";
