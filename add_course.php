@@ -40,7 +40,7 @@
  <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Upload /</b> Can't find a course ?</p>
 
 
-            <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">Our support team is available to assist you through email (24/7). We respond to all emails we receive, so please fill send us a request at<span style="color: #00A255;"> support@archway.ca </span>and we'll be happy to update our databases.</p>
+            <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">Our support team is available to assist you through email (24/7). We respond to all emails we receive, so please send us a request at<span style="color: #00A255;"> support@archway.ca </span>and we'll be happy to update our databases.</p>
                         
                         
 
