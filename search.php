@@ -1,11 +1,56 @@
-<html>
-<body>
+<!DOCTYPE html>
+    <html style="">
+
+    <head>
 
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
 header('Location:/archway/profile.html');
-}
+} 
+?>
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="iconFont.css" rel="stylesheet">
+    <link href="docs.css" rel="stylesheet">
+    <link href="prettify.css" rel="stylesheet">
+
+    <script src="jquery.min.js"></script>
+    <script src="jquery.widget.min.js"></script>
+    <script src="jquery.mousewheel.js"></script>
+    <script src="prettify.js"></script>
+
+    <script src="load-metro.js"></script>
+
+    <script src="docs.js"></script>
+    <script src="github.info.js"></script>
+    <script src="start-screen.js"></script>
+
+    </head>
+
+    <body class="metro">
+
+<script></script>
+
+<noscript></noscript>
+
+<div class="container" style="min-height: 100%; height: auto !important; height: 100%; ma
+rgin: 0 auto -100px;">
+
+    <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" sty
+le="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display:
+inline-block; outline-style: none;">
+
+    <?php include ("templates/header.php"); ?>
+
+    <div class="container" style="margin-top: 50px;">
+
+ <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sa
+ns,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55
+em;">
+
+
+<?php
 
 
 //declaring variable
@@ -74,17 +119,18 @@ $thelist="";
   }
 
   //This counts the number or results – and if there wasn’t any it gives a little message explaining that
+
 $anymatches=mysql_num_rows($data);
 if ($anymatches == 0)
 {
 echo "<p>Sorry, &quot;" . $input . "&quot; doesn't exist in our database</p>";
 
-header('Location:/archway/index.php');
+
 }
 if($thelist=="" && $anymatches == 1){
 echo "No files have yet been uploaded to ".$input;
 
-header('Location:/archway/index.php');
+
 }
 if($thelist!="" && $anymatches == 1){
 echo "List of files for ".$input.":";
@@ -100,37 +146,22 @@ echo $thelist;
 
 }
 
-//nuLL input *************NEEDS TO RETURN TO INDEX********************
-
-//input not null and not a cid...
-// else{
+</p>
 
 
 
-// $sql = "SELECT C.cid,C.cname FROM Course as C  WHERE C.cid  LIKE '%$input%';";
 
-// //execute the statement
-// $data = mysql_query($sql, $conn) or die(mysql_error());
-// while ($result = mysql_fetch_array($data)) {
-// //giving names to the fields
-// $title = $result['cid'];
-// $info = $result['cname'];
-// //put the results on the screen
-// $path = "upload/uploadedFiles/".$title;
-// $pathtotal= $path."*";
-// echo "<br>$title<br>";
-// echo "<br>$info<br>";
-// }
 
-// $anymatches = mysql_num_rows($data);
 
-// if ($anymatches == 0){
 
-// echo "0 Result</br>";
-// echo "0 Resultat";
-// }
 
-// }
+                </div>
+            </div>
+        </div>
+
+            <?php include ("templates/footer.php"); ?>
+
+
 ?>
 </body>
 </html>
