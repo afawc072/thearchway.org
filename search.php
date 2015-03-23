@@ -92,6 +92,7 @@ if ($anymatches == 0)
 {
 echo "<p>Sorry, your search: &quot;" . $input . "&quot; returned zero results</p>";
 echo "<p>Desole, votre recherche pour: &quot;" . $input . "&quot; a retourne aucun resultat</p>";
+echo $result;
 }
 }
 
