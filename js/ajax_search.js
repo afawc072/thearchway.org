@@ -14,7 +14,25 @@ $('#searchButton').click(function(e) {
 		$('#searchResponse').show();
 
 	}
+	else {
+		     $('#find').submit();
+		// var formData = $('form').serialize();
+		// submitForm(formData);
+	}
 
   });
 
 });
+
+// function submitForm(formData){
+
+// 	// $.ajax({
+
+//  // 			type: 'POST',
+//  // 			url: 'search.php',
+//  // 			data: formData,
+//  // 			cache: false,
+//  // 			timeout: 10000
+// 	// 	   });
+
+// };

@@ -274,7 +274,7 @@ $(document).ready(function() {
                             <center>
                                   <div id="searchResponse"></div>
                      <div class="element input-element" style="align: center; width:780px;">
-                                                        <form action="search.php" method="post">
+                                                        <form action="search.php" id="find" method="post">
                                                         <div class="input-control text">
                                                         <input type="text" id="searchCourse" name="find" placeholder="Search resources by course or keyword" style="width:80%;"/><button class="active" id="searchButton" style="padding: 7px 12px;"><img src="images/search-3071e9e44daa3fd755860cfeb35f83e4.png" width="75%" height="75%"/> </button>
                                                     </div>
