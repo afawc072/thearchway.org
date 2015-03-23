@@ -182,7 +182,7 @@ header('Location:/archway/profile.html');
                     <input type="reset" value="Reset">
 
                     <div style="margin-top: 20px">
-                                    <a href="upload/add_course.php"> Can't find a course? </a>
+                                    <a href="add_course.php"> Can't find a course? </a>
                     </div>
 
                 </fieldset>
