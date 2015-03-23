@@ -81,7 +81,7 @@ echo "<p>Sorry, &quot;" . $input . "&quot; doesn't exist in our database</p>";
 
 echo $result;
 }
-if($theList=="" $$ $anymatches == 1){
+if($theList=="" && $anymatches == 1){
 echo "No files have yet been uploaded to ".$input;
 }
 else{
