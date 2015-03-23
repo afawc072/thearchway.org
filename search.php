@@ -78,11 +78,13 @@ $anymatches=mysql_num_rows($data);
 if ($anymatches == 0)
 {
 echo "<p>Sorry, &quot;" . $input . "&quot; doesn't exist in our database</p>";
-
-echo $result;
+sleep(5);
+header('Location:/archway/index.php');
 }
 if($theList=="" && $anymatches == 1){
 echo "No files have yet been uploaded to ".$input;
+sleep(5);
+header('Location:/archway/index.php');
 }
 else{
 echo "List of files for ".$input.":";
