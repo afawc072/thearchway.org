@@ -11,8 +11,8 @@ $('#searchButton').click(function(e) {
 		valid="<p><b>You forgot to enter a search term</b></p>";
 		//$('#searchResponse').append("<p>HEY</p>" + valid);
                 $('#searchResponse').html(valid);
-		//$('#searchResponse').show();
-		    setTimeout( $('#searchResponse').show();,5000 );
+		$('#searchResponse').show();
+		    setTimeout( "$('#searchResponse').hide();",4000 );
 
 	}
 	else {
