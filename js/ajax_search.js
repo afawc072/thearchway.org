@@ -12,7 +12,7 @@ $('#searchButton').click(function(e) {
 		//$('#searchResponse').append("<p>HEY</p>" + valid);
                 $('#searchResponse').html(valid);
 		//$('#searchResponse').show();
-		    setTimeout( "$('#searchResponse').show();",5000 );
+		    setTimeout( $('#searchResponse').show();,5000 );
 
 	}
 	else {
