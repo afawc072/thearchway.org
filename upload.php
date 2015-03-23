@@ -74,7 +74,7 @@ header('Location:/archway/profile.html');
 
         function validateFile(){
             //if it's NOT valid
-            if(coursesInput.val().length == availableTags[0].length){
+            if(availableTags.indexOf(coursesInput.val()) != -1){
                 coursesInputDiv.addClass("success-state");
 
                 return false;
