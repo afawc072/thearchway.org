@@ -43,8 +43,8 @@ $info = $result['cname'];
 //put the results on the screen
 $path = "upload/uploadedFiles/".$info;
 $pathtotal= $path."*";
-echo "<br><b>$title</b>";
-echo "<br>$info<br>";
+// echo "<br><b>$title</b>";
+// echo "<br>$info<br>";
 }
 
 $except = array("doc", "docx", "odt", "ppt", "pdf");
@@ -72,37 +72,32 @@ $thelist="";
     }
     closedir($handle);
   }
-if($theList==""){
+
+  //This counts the number or results – and if there wasn’t any it gives a little message explaining that
+$anymatches=mysql_num_rows($data);
+if ($anymatches == 0)
+{
+echo "<p>Sorry, &quot;" . $input . "&quot; doesn't exist in our database</p>";
+
+echo $result;
+}
+if($theList=="" $$ $anymatches == 1){
 echo "No files have yet been uploaded to ".$input;
 }
 else{
-echo "List of files:";
+echo "List of files for ".$input.":";
 echo $thelist;
 }
 }
 //Fonction scandir (check if folder exists)
-function is_dir_empty($dir) {
-  if (!is_readable($dir)) return NULL; 
-  return (count(scandir($dir)) == 2);
-}
+// function is_dir_empty($dir) {
+//   if (!is_readable($dir)) return NULL; 
+//   return (count(scandir($dir)) == 2);
+// }
 
-//This counts the number or results – and if there wasn’t any it gives a little message explaining that
-$anymatches=mysql_num_rows($data);
-if ($anymatches == 0)
-{
-echo "<p>Sorry, your search: &quot;" . $input . "&quot; returned zero results</p>";
-echo "<p>Desole, votre recherche pour: &quot;" . $input . "&quot; a retourne aucun resultat</p>";
-echo $result;
-}
 }
 
 //nuLL input *************NEEDS TO RETURN TO INDEX********************
-else if($input ==''){
-	
-echo "0 Result</br>";
-echo "0 Resultat";
-
-}
 
 //input not null and not a cid...
 // else{
