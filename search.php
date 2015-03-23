@@ -105,34 +105,34 @@ echo "0 Resultat";
 }
 
 //input not null and not a cid...
-else{
+// else{
 
 
 
-$sql = "SELECT C.cid,C.cname FROM Course as C  WHERE C.cid  LIKE '%$input%';";
+// $sql = "SELECT C.cid,C.cname FROM Course as C  WHERE C.cid  LIKE '%$input%';";
 
-//execute the statement
-$data = mysql_query($sql, $conn) or die(mysql_error());
-while ($result = mysql_fetch_array($data)) {
-//giving names to the fields
-$title = $result['cid'];
-$info = $result['cname'];
-//put the results on the screen
-$path = "upload/uploadedFiles/".$title;
-$pathtotal= $path."*";
-echo "<br>$title<br>";
-echo "<br>$info<br>";
-}
+// //execute the statement
+// $data = mysql_query($sql, $conn) or die(mysql_error());
+// while ($result = mysql_fetch_array($data)) {
+// //giving names to the fields
+// $title = $result['cid'];
+// $info = $result['cname'];
+// //put the results on the screen
+// $path = "upload/uploadedFiles/".$title;
+// $pathtotal= $path."*";
+// echo "<br>$title<br>";
+// echo "<br>$info<br>";
+// }
 
-$anymatches = mysql_num_rows($data);
+// $anymatches = mysql_num_rows($data);
 
-if ($anymatches == 0){
+// if ($anymatches == 0){
 
-echo "0 Result</br>";
-echo "0 Resultat";
-}
+// echo "0 Result</br>";
+// echo "0 Resultat";
+// }
 
-}
+// }
 ?>
 </body>
 </html>
