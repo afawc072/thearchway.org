@@ -145,7 +145,7 @@ echo $thelist;
 // }
 
 }
-
+?>
 </p>
 
 
@@ -162,7 +162,6 @@ echo $thelist;
             <?php include ("templates/footer.php"); ?>
 
 
-?>
 </body>
 </html>
 
