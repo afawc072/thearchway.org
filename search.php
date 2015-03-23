@@ -72,9 +72,13 @@ $thelist="";
     }
     closedir($handle);
   }
-
+if($theList==""){
+echo "No files have yet been uploaded to ".$input;
+}
+else{
 echo "List of files:";
 echo $thelist;
+}
 }
 //Fonction scandir (check if folder exists)
 function is_dir_empty($dir) {
