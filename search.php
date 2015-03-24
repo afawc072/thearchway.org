@@ -54,7 +54,7 @@ em;">
 
 
 //declaring variable
-$input = $_POST['find'];
+$input = $_POST['searchCourse'];
 
 //If they did not enter a search term we give them an error
 if ($input == "")
