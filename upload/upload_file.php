@@ -12,7 +12,7 @@ $description = $_POST["details"];
 $filename = $cname."_".$_FILES["file"]["name"];
 $extension = end($temp);
 $structure = "/var/www/archway/upload/uploadedFiles/";
-$user=$_SESSION['username']
+$user=$_SESSION['username'];
 if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
 || ($_FILES["file"]["type"] == "application/vnd.oasis.opendocument.text")
 || ($_FILES["file"]["type"] == "application/msword")
