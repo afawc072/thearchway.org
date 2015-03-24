@@ -1,4 +1,10 @@
 <?php
+
+session_start();
+if(!isset($_SESSION['username'])){
+header('Location:/archway/profile.html');
+
+
 $allowedExts = array("ppt","docx","doc","pdf","odt");
 $temp = explode(".",$_FILES["file"]["name"]);
 $cname = $_POST["course"];
@@ -6,6 +12,7 @@ $description = $_POST["details"];
 $filename = $cname."_".$_FILES["file"]["name"];
 $extension = end($temp);
 $structure = "/var/www/archway/upload/uploadedFiles/";
+$user=$_SESSION['username']
 if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
 || ($_FILES["file"]["type"] == "application/vnd.oasis.opendocument.text")
 || ($_FILES["file"]["type"] == "application/msword")
@@ -39,16 +46,28 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       // if(!file_exists(dirname("/opt/lampp/htdocs/php_website_test/uploadedFiles/" .$tname)))
     if (!is_dir($structure.$cname)) {
         mkdir($structure.$cname);         
-echo 'DIrectory not found';
+echo 'Directory not found';
        }
      
-      //move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."_".$_FILES["file"]["name"]);
-      move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."/".$filename);
+      $path=$structure.$cname."/".$filename
+      move_uploaded_file($_FILES["file"]["tmp_name"], $path);
 
       $descfile = fopen($structure.$cname."/".$filename.".description","w");
       fwrite($descfile,$description);
       echo $description;
       fclose($descfile);
+
+      //Add course to MYSQL DB
+
+      //open connection
+      $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
+      //select database
+      mysql_select_db("archway1", $conn);
+
+      $sql2 = "INSERT INTO Files (courseFile,description,path,user) VALUES ('$filename','$description','$path','$user')";
+      $result=mysql_query($sql2, $conn) or die(mysql_error());
+      mysql_close($conn);
+
 
       echo "Stored in: " . "uploadedFiles/" . $cname."/".$filename;
       }
@@ -56,6 +75,6 @@ echo 'DIrectory not found';
   }
 else
   {
-  echo "Invalid file. You can only use documents of 'pdf', 'doc', 'docx' and 'odt' smaller than 20 Mb";
+  echo "Invalid file. You can only upload documents with the 'pdf', 'doc', 'docx', 'ppt' and 'odt' extension and smaller than 20 Mb";
   }
 ?> 
