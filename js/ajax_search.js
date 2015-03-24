@@ -16,7 +16,7 @@ $('#searchButton').click(function(e) {
 
 	}
 	else {
-		     $('#find').submit();
+		     $('#searchCourse').submit();
 		// var formData = $('form').serialize();
 		// submitForm(formData);
 	}
