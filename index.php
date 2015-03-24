@@ -9,9 +9,11 @@
     <link href="css/iconFont.css" rel="stylesheet">
     <link href="css/docs.css" rel="stylesheet">
     <link href="js/prettify.css" rel="stylesheet">
+    <link href="css/smoothnessui.css" rel="stylesheet">
 
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jqueryui.js"></script>
     <script src="js/jquery/jquery.mousewheel.js"></script>
     <script src="js/prettify.js"></script>
 
@@ -26,7 +28,31 @@
     <script src="js/github.info.js"></script>
     <script src="js/start-screen.js"></script>
 <script type="text/javascript">
+    
+     $(function() {
+            var availableTags = [];
+            <?php
+                $phparray = array();
+                 //open connection
+                $conn = mysql_connect("localhost","admin","vincentdb") or die(mysql_error());
+                //select database
+                mysql_select_db("archway1", $conn);
+                $query = "SELECT * FROM Course ORDER BY cname"; //You don't need a ; like you do in SQL
+                $result = mysql_query($query);
+                while(($row = mysql_fetch_assoc($result))){   //Creates a loop to loop through results
+                    $phparray[] = $row['cname'];
+                }
+                $js_array = json_encode($phparray);
+                echo "var availableTags = ". $js_array . ";\n";
+                mysql_close(); //Make sure to close out the database connection
+                ?>
+                $( "#searchCourse" ).autocomplete({
+                source: availableTags,
+                minLength: 3
+                });
+            });
 $(document).ready(function() {
+
 
     $('a.login-window').click(function() {
         
@@ -70,6 +96,8 @@ $(document).ready(function() {
     }); 
     return false;
     });
+
+
 });
 </script>
 
@@ -113,7 +141,7 @@ $(document).ready(function() {
                      <div class="element input-element" style="align: center; width:780px;">
                                                         <form action="search.php" id="find" method="post">
                                                         <div class="input-control text">
-                                                        <input type="text" id="searchCourse" name="find" placeholder="Search resources by course or keyword" style="width:80%;"/><button class="active" id="searchButton" style="padding: 7px 12px;"><img src="images/search-3071e9e44daa3fd755860cfeb35f83e4.png" width="75%" height="75%"/> </button>
+                                                        <input type="text" id="searchCourse" name="searchCourse" placeholder="Search resources by course or keyword" style="width:80%;"/><button class="active" id="searchButton" style="padding: 7px 12px;"><img src="images/search-3071e9e44daa3fd755860cfeb35f83e4.png" width="75%" height="75%"/> </button>
                                                     </div>
 
                                                 </form>
