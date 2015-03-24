@@ -99,37 +99,6 @@ header('Location:/archway/profile.html');
     });
     </script>
 
-<style type="text/css">
-    #uploadform form{
-    opacity: 0;
-    -webkit-transition: opacity 0.5s ease-in;
-    -moz-transition: opacity 0.5s ease-in;
-    -o-transition: opacity 0.5s ease-in;
-    -ms-transition: opacity 0.5s ease-in;
-    transition: opacity 0.5s ease-in;
-    }
-    #uploadform form.load {
-    opacity: 1;
-    }
-
-    .footer, .push {
-    height: 100px; /* .push must be the same height as .footer */
-    }
-.ui-autocomplete {
-    max-height: 200px;
-    overflow-y: auto;
-    /* prevent horizontal scrollbar */
-    overflow-x: hidden;
-    /* add padding to account for vertical scrollbar */
-    padding-right: 20px;
-}
-
-* html .ui-autocomplete {
-    height: 200px;
-}
-
-</style>
-
     </head>
 
 <body class="metro" style="height: 100%;">

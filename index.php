@@ -25,8 +25,6 @@
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
     <script src="js/start-screen.js"></script>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 
@@ -54,7 +52,7 @@ $(document).ready(function() {
         return false;
     });
 
-    $('#load').live('click', function() {
+    $('#load').click(function() {
     var $this = $(this);
         $this.css({
             'background-color' : 'rgba(219, 86, 86, 0)',
@@ -66,7 +64,7 @@ $(document).ready(function() {
 
     
     // When clicking on the button close or the mask layer the popup closed
-    $('a.close, #mask').live('click', function() { 
+    $('a.close, #mask').click( function() { 
       $('#mask , .login-popup').fadeOut(300 , function() {
         $('#mask').remove();  
     }); 
