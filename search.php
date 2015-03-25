@@ -138,22 +138,31 @@ echo $thelist;
 }
 
 }
-//Fonction scandir (check if folder exists)
-// function is_dir_empty($dir) {
-//   if (!is_readable($dir)) return NULL; 
-//   return (count(scandir($dir)) == 2);
-// }
+
+}
+//Condition if the search is made and doesn't contain the exact string content of a Course
+else{
+
+$thelist;
+
+$sql = "SELECT courseFile,path FROM Files WHERE courseFile  LIKE '%$input%';";
+
+//execute the statement
+$data = mysql_query($sql, $conn) or die(mysql_error());
+while ($result = mysql_fetch_array($data)) {
+    //giving names to the fields
+    //$title = $result['cid'];
+    $file = $result['courseFile'];
+    //put the results on the screen
+    $path = $result['path'];
+    $thelist .= '<li><a href="'.$path.'">'.$file.'</a></li>';
+    $thelist .= '<br> </br>';
+}
+  echo $thelist;
 
 }
 ?>
 </p>
-
-
-
-
-
-
-
 
                 </div>
             </div>
