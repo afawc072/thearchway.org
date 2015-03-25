@@ -145,7 +145,7 @@ mysql_close($conn);
 //Condition if the search is made and doesn't contain the exact string content of a Course
 else{
 
-$thelist2 ="";
+$thelist="";
 
 $sql = "SELECT courseFile,path FROM Files WHERE courseFile  LIKE '%$input%';";
 
