@@ -19,7 +19,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
 || ($_FILES["file"]["type"] == "application/pdf")
 || ($_FILES["file"]["type"] == "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
 || ($_FILES["file"]["type"] == "text/pdf"))
-&& ($_FILES["file"]["size"] < 200000000)
+&& ($_FILES["file"]["size"] < 20000000)
 && in_array($extension, $allowedExts))
   {
   if ($_FILES["file"]["error"] > 0)
