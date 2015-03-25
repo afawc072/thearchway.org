@@ -163,7 +163,7 @@ while ($result = mysql_fetch_array($data)) {
 }
 
   if($thelist=""){
-    echo "Sorry you search returned no results"
+    echo "Sorry you search returned no results";
   }
   else{
   echo $thelist;
