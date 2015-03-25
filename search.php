@@ -134,7 +134,7 @@ echo "No files have yet been uploaded to ".$input;
 }
 if($thelist!="" && $anymatches == 1){
 echo "List of files for ".$input.":";
-echo $thelist;
+echo $thelist="";
 }
 
 }
