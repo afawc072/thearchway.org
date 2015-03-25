@@ -3,7 +3,7 @@
 session_start();
 if(!isset($_SESSION['username'])){
 header('Location:/archway/profile.html');
-
+}
 
 $allowedExts = array("ppt","docx","doc","pdf","odt");
 $temp = explode(".",$_FILES["file"]["name"]);
