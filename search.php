@@ -134,7 +134,7 @@ echo "No files have yet been uploaded to ".$input;
 }
 if($thelist!="" && $anymatches == 1){
 echo "List of files for ".$input.":";
-echo $thelist="";
+echo $thelist;
 }
 
 }
@@ -143,7 +143,7 @@ mysql_close($conn);
 
 }
 //Condition if the search is made and doesn't contain the exact string content of a Course
-if(!preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
+else{
 
 $thelist2 ="";
 
@@ -157,10 +157,10 @@ while ($result = mysql_fetch_array($data)) {
     $file = $result['courseFile'];
     //put the results on the screen
     $path = $result['path'];
-    $thelist2 .= '<li><a href="'.$path.'">'.$file.'</a></li>';
-    $thelist2 .= '<br> </br>';
+    $thelist .= '<li><a href="'.$path.'">'.$file.'</a></li>';
+    $thelist .= '<br> </br>';
 }
-  echo $thelist2;
+  echo $thelist;
   mysql_close($conn);
 
 }
