@@ -143,7 +143,7 @@ echo $thelist="";
 //Condition if the search is made and doesn't contain the exact string content of a Course
 else{
 
-$thelist;
+$thelist2;
 
 $sql = "SELECT courseFile,path FROM Files WHERE courseFile  LIKE '%$input%';";
 
@@ -155,10 +155,10 @@ while ($result = mysql_fetch_array($data)) {
     $file = $result['courseFile'];
     //put the results on the screen
     $path = $result['path'];
-    $thelist .= '<li><a href="'.$path.'">'.$file.'</a></li>';
-    $thelist .= '<br> </br>';
+    $thelist2 .= '<li><a href="'.$path.'">'.$file.'</a></li>';
+    $thelist2 .= '<br> </br>';
 }
-  echo $thelist;
+  echo $thelist2;
 
 }
 ?>
