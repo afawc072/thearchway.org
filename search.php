@@ -158,11 +158,17 @@ while ($result = mysql_fetch_array($data)) {
     //put the results on the screen
     $path = $result['path'];
     $thelist .= '<li><a href="'.$path.'">'.$file.'</a></li>';
+    $thelist .= file_get_contents($path.".description");
     $thelist .= '<br> </br>';
 }
+
+  if($thelist=""){
+    echo "Sorry you search returned no results"
+  }
+  else{
   echo $thelist;
   mysql_close($conn);
-
+  }
 }
 ?>
 </p>
