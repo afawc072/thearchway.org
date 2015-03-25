@@ -7,7 +7,7 @@
 session_start();
 if(!isset($_SESSION['username'])){
 header('Location:/archway/profile.html');
-} 
+}
 ?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
@@ -99,20 +99,20 @@ if($path != "." && $path != ".." ){
 $thelist="";
   if ($handle = opendir($path)) {
     while (false !== ($file = readdir($handle))) {
-      
-      if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file))) 
+
+      if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)))
        {
-      	$tempp= $path."/".$file;
+        $tempp= $path."/".$file;
         if (file_exists($tempp.".description")){
             $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
             $thelist .= file_get_contents($tempp.".description");
             $thelist .= '<br> </br>';
            }
-        else{        
+        else{
           $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
           $thelist .= '<br> </br>';
             }
-        
+
       }
     }
     closedir($handle);
@@ -157,13 +157,14 @@ while ($result = mysql_fetch_array($data)) {
     $file = $result['courseFile'];
     //put the results on the screen
     $path = $result['path'];
-    if (file_exists($tempp.".description")){
-            $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
-            $thelist .= file_get_contents($tempp.".description");
+    echo $path;
+  if (file_exists($path.".description")){
+            $thelist .= '<li><a href="'.$path.'">'.$file.'</a></li>';
+            $thelist .= file_get_contents($path.".description");
             $thelist .= '<br> </br>';
            }
-        else{        
-          $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
+        else{
+          $thelist .= '<li><a href="'.$path.'">'.$file.'</a></li>';
           $thelist .= '<br> </br>';
             }
 }
@@ -189,4 +190,3 @@ while ($result = mysql_fetch_array($data)) {
 
 </body>
 </html>
-
