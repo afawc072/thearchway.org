@@ -77,7 +77,7 @@ $input = trim( $input );
 //the sql statement
 if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
 
-$sql = "SELECT C.cname FROM Course as C  WHERE C.cname  LIKE '%$input%';";
+$sql = "SELECT cname FROM Course WHERE cname  LIKE '%$input%';";
 
 //execute the statement
 $data = mysql_query($sql, $conn) or die(mysql_error());
@@ -138,6 +138,8 @@ echo $thelist="";
 }
 
 }
+;
+mysql_close($conn);
 
 }
 //Condition if the search is made and doesn't contain the exact string content of a Course
@@ -159,6 +161,7 @@ while ($result = mysql_fetch_array($data)) {
     $thelist2 .= '<br> </br>';
 }
   echo $thelist2;
+  mysql_close($conn);
 
 }
 ?>
