@@ -141,9 +141,9 @@ echo $thelist="";
 
 }
 //Condition if the search is made and doesn't contain the exact string content of a Course
-else{
+if(!preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
 
-$thelist2;
+$thelist2 ="";
 
 $sql = "SELECT courseFile,path FROM Files WHERE courseFile  LIKE '%$input%';";
 
