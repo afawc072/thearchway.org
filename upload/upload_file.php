@@ -49,7 +49,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
 echo 'Directory not found';
        }
      
-      $path=$structure.$cname."/".$filename
+      $path=$structure.$cname."/".$filename;
       move_uploaded_file($_FILES["file"]["tmp_name"], $path);
 
       $descfile = fopen($structure.$cname."/".$filename.".description","w");
