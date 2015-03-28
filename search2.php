@@ -98,7 +98,8 @@ else if (preg_match('^[A-Za-z0-9]+$', $input) &&  $anymatches!=0) {
 
 ?>
 
-    </div>
+            </div>
+        </div>
     </div>
     <?php include ("templates/footer.php"); ?>
 
