@@ -3,12 +3,6 @@
 
     <head>
 
-<?php
-session_start();
-if(!isset($_SESSION['username'])){
-header('Location:/archway/profile.html');
-}
-?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
     <link href="iconFont.css" rel="stylesheet">
@@ -89,6 +83,7 @@ else if (preg_match('^[A-Za-z0-9]+$', $input) &&  $anymatches!=0) {
                         }
                       }
                         closedir($handle);
+                        mysql_close($conn);
             }
           }
        }
