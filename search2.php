@@ -34,20 +34,13 @@ header('Location:/archway/profile.html');
 
 <noscript></noscript>
 
-<div class="container" style="min-height: 100%; height: auto !important; height: 100%; ma
-rgin: 0 auto -100px;">
+<div class="container" style="min-height: 950px; height: auto !important; margin: 0 auto -100px;">
 
-    <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" sty
-le="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display:
-inline-block; outline-style: none;">
+    <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
 
     <?php include ("templates/header.php"); ?>
 
-    <div class="container" style="margin-top: 50px;">
-
- <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sa
-ns,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55
-em;">
+    <div class="container">
 
 <?php
 
@@ -73,13 +66,12 @@ $result = mysql_fetch_array($data);
 $anymatches=mysql_num_rows($data);
 
 
-elseif (preg_match('^[A-Za-z0-9]+$', $input) &&  $anymatches!=0) {
+else if (preg_match('^[A-Za-z0-9]+$', $input) &&  $anymatches!=0) {
     $courseList="";
     while ($result = mysql_fetch_array($data)) {
-//giving names to the fields
-//$title = $result['cid'];
+
         $info = $result['cname'];
-//put the results on the screen
+
         $path = "upload/uploadedFiles/".$info;
         
         if(is_dir ($path){
