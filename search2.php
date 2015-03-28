@@ -41,7 +41,7 @@ header('Location:/archway/profile.html');
 
     <?php include ("templates/header.php"); ?>
 
-    <div class="container" style="height: auto !important; margin: 0 auto -100px;">
+    <div class="container" style="min-height: 850px;height: auto !important; margin: 0 auto -100px;">
             <div style="padding-bottom: 200px;">
             <div class="example">
             <table class="table striped bordered hovered">
