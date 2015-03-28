@@ -44,7 +44,7 @@ header('Location:/archway/profile.html');
     <div class="container">
 
 <?php
-
+ini_set('display_errors', 'On');
 //declaring variable
 $input = $_POST['searchCourse'];
 
@@ -96,6 +96,10 @@ else if (preg_match('^[A-Za-z0-9]+$', $input) &&  $anymatches!=0) {
         }
         echo "List of files for ".$input.":";
         echo $thelist;
+        }
+        else
+        {
+            
         }
         ?>
 
