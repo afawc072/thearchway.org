@@ -35,78 +35,74 @@ header('Location:/archway/profile.html');
 
 <noscript></noscript>
 
-<div class="container" style="min-height: 950px; height: auto !important; margin: 0 auto -100px;">
+<div class="container">
 
     <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
 
     <?php include ("templates/header.php"); ?>
 
-    <div class="container">
+    <div class="container" style="height: auto !important; margin: 0 auto -100px;">
+            <div style="padding-bottom: 200px;">
+            <div class="example">
+            <table class="table striped bordered hovered">
+                <thead>
+                <tr>
+                    <th class="text-left">Courses</th>
+                    <th class="text-left">Document(s) added</th>
+                </tr>
+                </thead>
+                    <tbody>
+                    <?php
+                    ini_set('display_errors', 'On');
+                    //declaring variable
+                    $input = $_POST['searchCourse'];
 
-<?php
-ini_set('display_errors', 'On');
-//declaring variable
-$input = $_POST['searchCourse'];
+                    $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
+                    //select database
+                    mysql_select_db("archway1", $conn);
 
-$conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
-//select database
-mysql_select_db("archway1", $conn);
+                    //filtering input for xss and sql injection
+                    $input = strip_tags( $input );
+                    $input = mysql_real_escape_string( $input );
+                    $input = trim( $input );
 
-//filtering input for xss and sql injection
-$input = strip_tags( $input );
-$input = mysql_real_escape_string( $input );
-$input = trim( $input );
+                    $sql1 = "SELECT cname FROM Course WHERE cname  LIKE '%$input%';";
+                    $data = mysql_query($sql1, $conn) or die(mysql_error());
+                    $result = mysql_fetch_array($data);
+                    $anymatches=mysql_num_rows($data);
 
-if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
+                    if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
 
-}
+                    } 
 
-$sql1 = "SELECT cname FROM Course WHERE cname  LIKE '%$input%';";
-$data = mysql_query($sql1, $conn) or die(mysql_error());
-$result = mysql_fetch_array($data);
-$anymatches=mysql_num_rows($data);
+                    else if (preg_match('/^[A-Za-z0-9]+$/', $input) &&  $anymatches!=0) {
+
+                         $courseList = "";
+
+                        while ($courseFetcher = mysql_fetch_array($data)) {
 
 
-else if (preg_match('^[A-Za-z0-9]+$', $input) &&  $anymatches!=0) {
-    $courseList="";
-    while ($result = mysql_fetch_array($data)) {
 
-        $info = $result['cname'];
+                                $courseList .= '<li><a href="">'.$courseFetcher['cname'].'</a></li><br>';
+                                echo '<tr class=""><td>'.$courseFetcher['cname'].'</td></tr>';
+                            
+                            
+                            }
+                            mysql_close($conn);
+                            }
+                            else
+                            {
 
-        $path = "upload/uploadedFiles/".$info;
-        
-        if(is_dir ($path){
-             if ($handle = opendir($path)) {
-                while (false !== ($file = readdir($handle))) {
-
-                    if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)))
-                        {
-                            $tempp= $path."/".$file;
-                             
-                                $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
-                                $thelist .= file_get_contents($tempp.".description");
-                                $thelist .= '<br> </br>';
-
-                        }
-                    }
-                        closedir($handle);
-                        mysql_close($conn);
-                }
-            }
-        }
-        echo "List of files for ".$input.":";
-        echo $thelist;
-        }
-        else
-        {
-            
-        }
-        ?>
-
+                            }
+                            ?>
+                     </tbody>
+                </table>
             </div>
         </div>
+            </div>
+            <?php include ("templates/footer.php"); ?>
+        </div>
     </div>
-    <?php include ("templates/footer.php"); ?>
 
 </body></center>
 </html> 
