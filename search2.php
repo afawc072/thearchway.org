@@ -3,6 +3,13 @@
 
     <head>
 
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+header('Location:/archway/profile.html');
+}
+?>
+
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
     <link href="iconFont.css" rel="stylesheet">
@@ -55,7 +62,7 @@ if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
 }
 
 $sql1 = "SELECT cname FROM Course WHERE cname  LIKE '%$input%';";
-$data = mysql_query($sql, $conn) or die(mysql_error());
+$data = mysql_query($sql1, $conn) or die(mysql_error());
 $result = mysql_fetch_array($data);
 $anymatches=mysql_num_rows($data);
 
@@ -81,17 +88,16 @@ else if (preg_match('^[A-Za-z0-9]+$', $input) &&  $anymatches!=0) {
                                 $thelist .= '<br> </br>';
 
                         }
-                      }
+                    }
                         closedir($handle);
                         mysql_close($conn);
+                }
             }
-          }
-       }
-
-
-        } 
-
-?>
+        }
+        echo "List of files for ".$input.":";
+        echo $thelist;
+        }
+        ?>
 
             </div>
         </div>
