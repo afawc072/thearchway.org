@@ -35,23 +35,9 @@ header('Location:/archway/profile.html');
 
 <noscript></noscript>
 
-<div class="container">
 
-    <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
 
-    <?php include ("templates/header.php"); ?>
 
-    <div class="container" style="min-height: 850px;height: auto !important; margin: 0 auto -100px;">
-            <div style="padding-bottom: 200px;">
-            <div class="example">
-            <table class="table striped bordered hovered">
-                <thead>
-                <tr>
-                    <th class="text-left">Courses</th>
-                    <th class="text-left">Document(s) added</th>
-                </tr>
-                </thead>
-                    <tbody>
                     <?php
                     ini_set('display_errors', 'On');
                     //declaring variable
@@ -77,6 +63,21 @@ header('Location:/archway/profile.html');
 
                     else if (preg_match('/^[A-Za-z0-9]+$/', $input) &&  $anymatches!=0) {
 
+                    echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+                    include ("templates/header.php");
+                    echo '<div class="container" style="min-height: 850px;height: auto !important; margin: 0 auto -100px;">';
+
+                    echo '<div style="padding-bottom: 200px;">';
+                    echo '<div class="example">';
+                    echo '<table class="table striped bordered hovered">';
+                    echo '<thead>';
+                    echo '<tr>';
+                    echo '<th class="text-left">Courses</th>';
+                    echo '<th class="text-left">Document(s) added</th>';
+                    echo '</tr>';
+                    echo '</thead>';
+                    echo '<tbody>';
+
                          $courseList = "";
 
                         while ($courseFetcher = mysql_fetch_array($data)) {
@@ -89,14 +90,29 @@ header('Location:/archway/profile.html');
                             
                             }
                             mysql_close($conn);
+
+                                echo'</tbody>';
+                                echo '</table>';
                             }
                             else
                             {
+                                echo '<div class="container" style="min-height: 950px; height: auto !important; margin: 0 auto -100px;">';
+
+                                echo '<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+
+                                include ("templates/header.php");
+
+                                echo '<div class="container" style="margin-top: 50px;">';
+
+                                echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search /</b> No results</p>";
+
+
+                                echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, <span style='color: #00A255;'>$input</span> did not return any document or course. For tips on how to find the ressources you are looking for, </p>";
+                        
+                   
 
                             }
                             ?>
-                     </tbody>
-                </table>
             </div>
         </div>
             </div>
