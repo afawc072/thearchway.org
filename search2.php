@@ -161,7 +161,7 @@ header('Location:/archway/profile.html');
                         while ($courseFetcher = mysql_fetch_array($data)) {
 
                         $fileCount = 0;
-                        $exactCourse = $result['cname'];
+                        $exactCourse = $courseFetcher['cname'];
                         //Setting the path to documents
                         $path = "upload/uploadedFiles/".$exactCourse;
                         $pathtotal= $path."*";
