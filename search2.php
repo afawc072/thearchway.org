@@ -70,7 +70,7 @@ header('Location:/archway/profile.html');
 
                         $exactCourse = $result['cname'];
                         //Setting the path to documents
-                        $path = "upload/uploadedFiles/".$input;
+                        $path = "upload/uploadedFiles/".$exactCourse;
                         $pathtotal= $path."*";
                         
                         //If a folder has been created already
