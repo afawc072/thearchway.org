@@ -66,21 +66,22 @@ header('Location:/archway/profile.html');
                     *         in its specific folder        *
                     *                                       *
                     *****************************************/
-                    if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input)){
+                    if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input) && $anymatches!=0){
 
-
-                    echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
-                    include ("templates/header.php");
-                    echo '<div class="container" style="min-height: 850px;height: auto !important; margin: 0 auto -100px;">';
-                    echo '<div style="padding-bottom: 200px;">';
-                    echo '<div class="example">';
-
-                        //put the results on the screen
+                        $exactCourse = $result['cname'];
+                        //Setting the path to documents
                         $path = "upload/uploadedFiles/".$input;
                         $pathtotal= $path."*";
-                        // echo "<br><b>$title</b>";
-                        // echo "<br>$info<br>";
                         
+                        //If a folder has been created already
+                        if(is_dir($path)){
+
+
+                        echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+                        include ("templates/header.php");
+                        echo '<div class="container" style="min-height: 800px;height: auto !important; margin: 0 auto -100px;">';
+                        echo '<div style="padding-bottom: 200px;">';
+
 
                         $except = array("doc", "docx", "odt", "ppt", "pdf");
                         $imp = implode('|', $except);
@@ -112,6 +113,23 @@ header('Location:/archway/profile.html');
                         }
                         echo "List of files for ".$input.":";
                         echo $thelist;
+                    }
+
+                    //If no folders have been created (no files were uploaded)
+                    else{
+
+                        echo '<div class="container" style="min-height: 950px; height: auto !important; margin: 0 auto -100px;">';
+                        echo '<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+
+                        include ("templates/header.php");
+
+                        echo '<div class="container" style="margin-top: 50px;">';
+                        echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>$exactCourse /</b> No documents uploaded yet ...</p>";
+                        echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, this course does not contain any document at the moment. If you have notes related to this class and you wish to contribute, we encourage you to post them from our <a href='upload.php' style='color: #00A255;'>upload page</a>.</p>";
+                        echo "<br>";
+                        echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>For tips on how to find the ressources you are looking for, please visit our <a href='help.php' style='color: #00A255;'>help page</a>.</p>"; 
+                        echo "</div>";
+                    }
                     }
 
                     /****************************************
@@ -167,7 +185,10 @@ header('Location:/archway/profile.html');
 
                                 echo '<div class="container" style="margin-top: 50px;">';
                                 echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search /</b> No results</p>";
-                                echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, <span style='color: #00A255;'>$input</span> did not return any document or course. For tips on how to find the ressources you are looking for, </p>";
+                                echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, <span style='color: #00A255;'>$input</span> did not return any document or course.</p>";
+                                echo "<br>";
+                                echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>For tips on how to find the ressources you are looking for, please visit our <a href='help.php' style='color: #00A255;'>help page</a>.</p>"; 
+            
                                 echo ' </div>';
                             }
                             ?>
