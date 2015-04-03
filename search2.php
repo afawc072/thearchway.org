@@ -144,8 +144,9 @@ header('Location:/archway/profile.html');
                     include ("templates/header.php");
                     echo '<div class="container" style="min-height: 850px;height: auto !important; margin: 0 auto -100px;">';
 
-                    echo '<div style="padding-bottom: 200px;">';
-                    echo '<div class="example">';
+                    echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
+                    echo '<div class="example" style="background-color: rgba(239, 246, 238, 0) !important;">';
+                    echo "<legend><b>Search / </b><span style='color: #00A255;'>$input</span></legend>";
                     echo '<table class="table striped bordered hovered">';
                     echo '<thead>';
                     echo '<tr>';
@@ -159,8 +160,34 @@ header('Location:/archway/profile.html');
 
                         while ($courseFetcher = mysql_fetch_array($data)) {
 
+                        $fileCount = 0;
+                        $exactCourse = $result['cname'];
+                        //Setting the path to documents
+                        $path = "upload/uploadedFiles/".$exactCourse;
+                        $pathtotal= $path."*";
+                        
+                        //If a folder has been created already
+                        if(is_dir($path)){
+                            $except = array("doc", "docx", "odt", "ppt", "pdf");
+                            $imp = implode('|', $except);
+
+                            if($path != "." && $path != ".." ){
+                                if ($handle = opendir($path)) {
+                                    while (false !== ($file = readdir($handle))) {
+
+                                         if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)))
+                                        {
+                                            $fileCount++;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+
                                 $courseList .= '<li><a href="">'.$courseFetcher['cname'].'</a></li><br>';
-                                echo '<tr class=""><td>'.$courseFetcher['cname'].'</td></tr>';
+                                echo '<tr class=""><td>'.$courseFetcher['cname'].'</td><td>'.$fileCount.'</td></tr>';
                                           
                             }
                             mysql_close($conn);
