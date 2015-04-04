@@ -41,14 +41,10 @@ header('Location:/archway/profile.html');
 
 <noscript></noscript>
 
-
-
-
                     <?php
                     ini_set('display_errors', 'On');
+                    
                     //declaring variable
-                    //$input = $_POST['searchCourse'];
-
                     foreach ($_POST as $name => $value) {
                         $input = $value; // the same as echo $_POST['email'], in this case
                         }
@@ -88,12 +84,18 @@ header('Location:/archway/profile.html');
                         if(is_dir($path)){
 
 
-                        echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
-                        include ("templates/header.php");
-                        echo '<div class="container" style="min-height: 800px;height: auto !important; margin: 0 auto -100px;">';
-                        echo '<div style="padding-bottom: 200px;">';
+                    echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+                    include ("templates/header.php");
+                    echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
+                    echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
 
+                     echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download documents /</b> $exactCourse  </p>";
+
+                    echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
+                    echo"<div class='list-group '>";
+                    echo"<a href='' class='group-title'>Available files</a>";
+                    echo"<div class='group-content'>";
                         $except = array("doc", "docx", "odt", "ppt", "pdf");
                         $imp = implode('|', $except);
 
@@ -106,7 +108,14 @@ header('Location:/archway/profile.html');
                                {
                                 $tempp= $path."/".$file;
                                 if (file_exists($tempp.".description")){
-                                    $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
+                                    echo"<a class='list marked' href='".$tempp."'>";
+                                    echo"<div class='list-content'>";
+                                    echo"<span class='list-title'>$file</span>";
+                                    echo"<span class='list-subtitle'>26/10/2013</span>";
+                                    echo"<span class='list-remark'>Description...</span>";
+                                    echo"</div>";
+                                    echo"</a>";
+
                                     $thelist .= file_get_contents($tempp.".description");
                                     $thelist .= '<br> </br>';
                                    }
@@ -122,8 +131,10 @@ header('Location:/archway/profile.html');
 
 
                         }
-                        echo "List of files for ".$input.":";
-                        echo $thelist;
+                        echo"</div>";
+                        echo"</div>";
+                        echo"</div>";
+
                     }
 
                     //If no folders have been created (no files were uploaded)
@@ -153,7 +164,7 @@ header('Location:/archway/profile.html');
 
                     echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
                     include ("templates/header.php");
-                    echo '<div class="container" style="min-height: 850px;height: auto !important; margin: 0 auto -100px;">';
+                    echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
                     echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
                     echo '<div class="example" style="background-color: rgba(239, 246, 238, 0) !important;">';
