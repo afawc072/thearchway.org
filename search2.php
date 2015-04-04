@@ -12,20 +12,26 @@ header('Location:/archway/profile.html');
 
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
-    <link href="iconFont.css" rel="stylesheet">
-    <link href="docs.css" rel="stylesheet">
-    <link href="prettify.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="js/prettify/prettify.css" rel="stylesheet">
+    <link href="css/smoothnessui.css" rel="stylesheet">
 
-    <script src="jquery.min.js"></script>
-    <script src="jquery.widget.min.js"></script>
-    <script src="jquery.mousewheel.js"></script>
-    <script src="prettify.js"></script>
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/jquery/jqueryui.js"></script>
+    <script src="js/prettify/prettify.js"></script>
+    <script src="js/holder/holder.js"></script>
 
-    <script src="load-metro.js"></script>
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="js/load-metro.js"></script>
 
-    <script src="docs.js"></script>
-    <script src="github.info.js"></script>
-    <script src="start-screen.js"></script>
+    <!-- Local JavaScript -->
+    <script src="js/docs.js"></script>
+    <script src="js/github.info.js"></script>
+    <script src="js/ga.js"></script>
 
     </head>
 
@@ -42,6 +48,7 @@ header('Location:/archway/profile.html');
                     ini_set('display_errors', 'On');
                     //declaring variable
                     $input = $_POST['searchCourse'];
+
 
                     $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
                     //select database
@@ -157,6 +164,7 @@ header('Location:/archway/profile.html');
                     echo '<tbody>';
 
                          $courseList = "";
+                         $courseCount = 1;
 
                         while ($courseFetcher = mysql_fetch_array($data)) {
 
@@ -187,7 +195,9 @@ header('Location:/archway/profile.html');
 
 
                                 $courseList .= '<li><a href="">'.$courseFetcher['cname'].'</a></li><br>';
-                                echo '<tr class=""><td>'.$courseFetcher['cname'].'</td><td>'.$fileCount.'</td></tr>';
+                                echo "<tr class=''><td><form style='margin:  0px 0px 0px;' name='courseForm".$courseCount."' action='search2.php' method='post'><a href='javascript:;' onclick='parentNode.submit();'>".$courseFetcher['cname']."</a><input type='hidden' name='".$courseCount."' value='".$courseFetcher['cname']."'/></form></td><td>".$fileCount."</td></tr>";
+
+                                $courseCount++;
                                           
                             }
                             mysql_close($conn);
