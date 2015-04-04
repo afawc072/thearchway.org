@@ -7139,10 +7139,10 @@ a {
 }
 .metro .listview-outlook .list .list-content .list-subtitle {
   font-weight: bold;
-  color: #0067cb;
+  color: #00A255;
 }
 .metro .listview-outlook .list.marked .list-content {
-  border-left: 3px #0067b0 solid !important;
+  border-left: 3px #00A255 solid !important;
 }
 .metro .listview-outlook .list:active,
 .metro .listview-outlook .list:focus,

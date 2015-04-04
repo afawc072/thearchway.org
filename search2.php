@@ -21,7 +21,6 @@ header('Location:/archway/profile.html');
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/jquery/jquery.widget.min.js"></script>
     <script src="js/jquery/jquery.mousewheel.js"></script>
-    <script src="js/jquery/jqueryui.js"></script>
     <script src="js/prettify/prettify.js"></script>
     <script src="js/holder/holder.js"></script>
 
@@ -108,20 +107,22 @@ header('Location:/archway/profile.html');
                                {
                                 $tempp= $path."/".$file;
                                 if (file_exists($tempp.".description")){
-                                    echo"<a class='list marked' href='".$tempp."'>";
+                                    echo"<a class='list' href='".$tempp."'>";
                                     echo"<div class='list-content'>";
                                     echo"<span class='list-title'>$file</span>";
                                     echo"<span class='list-subtitle'>26/10/2013</span>";
-                                    echo"<span class='list-remark'>Description...</span>";
+                                    echo"<span class='list-remark'>".file_get_contents($tempp.".description")."</span>";
                                     echo"</div>";
-                                    echo"</a>";
+                                    echo"</a>"; 
 
-                                    $thelist .= file_get_contents($tempp.".description");
-                                    $thelist .= '<br> </br>';
                                    }
                                 else{
-                                  $thelist .= '<li><a href="'.$tempp.'">'.$file.'</a></li>';
-                                  $thelist .= '<br> </br>';
+                                    echo"<a class='list' href='".$tempp."'>";
+                                    echo"<div class='list-content'>";
+                                    echo"<span class='list-title'>$file</span>";
+                                    echo"<span class='list-subtitle'>26/10/2013</span>";
+                                    echo"</div>";
+                                    echo"</a>";
                                     }
 
                               }
