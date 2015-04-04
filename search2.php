@@ -49,6 +49,11 @@ header('Location:/archway/profile.html');
                     //declaring variable
                     $input = $_POST['searchCourse'];
 
+                    foreach ($_POST as $name => $value) {
+                        echo $name; // email, for example
+                        echo $value; // the same as echo $_POST['email'], in this case
+                        }
+
 
                     $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
                     //select database
