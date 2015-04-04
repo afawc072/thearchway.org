@@ -47,11 +47,10 @@ header('Location:/archway/profile.html');
                     <?php
                     ini_set('display_errors', 'On');
                     //declaring variable
-                    $input = $_POST['searchCourse'];
+                    //$input = $_POST['searchCourse'];
 
                     foreach ($_POST as $name => $value) {
-                        echo $name; // email, for example
-                        echo $value; // the same as echo $_POST['email'], in this case
+                        $input = $value; // the same as echo $_POST['email'], in this case
                         }
 
 
