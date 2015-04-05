@@ -89,7 +89,7 @@ header('Location:/archway/profile.html');
 
                     echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
 
-                     echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download documents /</b> $exactCourse  </p>";
+                     echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download /</b> $exactCourse  </p>";
 
                     echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
                     echo"<div class='list-group '>";
@@ -107,7 +107,7 @@ header('Location:/archway/profile.html');
                                {
                                 $tempp= $path."/".$file;
                                 if (file_exists($tempp.".description")){
-                                    echo"<a class='list' href='".$tempp."'>";
+                                    echo"<a class='list marked' href='".$tempp."'>";
                                     echo"<div class='list-content'>";
                                     echo"<span class='list-title'>$file</span>";
                                     echo"<span class='list-subtitle'>26/10/2013</span>";

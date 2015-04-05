@@ -138,36 +138,8 @@ $(document).ready(function() {
                                 <center>
                                     <p class="generic" style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;">A free and powerful platform that helps uOttawa students to share courses-related documents.</p>
                                 </center>
-                                    <div class="container2">
-                                         <div id="content">
-                                              
-                                             <div id="login-box" class="login-popup">
-                                                 <a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-                                                    <form class="signin" method="post" action="login.php">
-                                                        <fieldset class="textbox" style="margin: 15px;">
-                                                        <label class="username">
-                                                        <span>Email</span>
-                                                        <br>
-                                                        <input id="user" name="user" value="" type="text" autocomplete="on" placeholder="Email Address" style="width: 214px;">
-                                                        </label>
-                                                        
-                                                        <label class="password">
-                                                        <span>Password</span>
-                                                        <br>
-                                                        <input id="pass" name="pass" value="" type="password" placeholder="Password" style="width: 214px;">
-                                                        </label>
-                                                        
-                                                        <input type="submit" id="load" value="Sign In" style="width: 214px; margin-top: 10px;"/>
-                                                                        
-                                                        <p style="line-height: 18px; padding-top: 15px;">
-                                                        <a class="forgot" href="#">Forgot your password?</a>
-                                                        </p>
-                                            
-                                                            </fieldset>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                     </div>
+                                
+                                <?php include ("templates/login_box.php");?>
     
    
 

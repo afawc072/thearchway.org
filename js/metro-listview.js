@@ -36,7 +36,7 @@
                 element.find('.list').removeClass('active');
                 $(this).toggleClass('active');
                 that.options.onListClick($(this));
-                e.preventDefault();
+                return true;
             });
         },
 
