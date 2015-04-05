@@ -86,7 +86,7 @@ header('Location:/archway/profile.html');
                         $anymatchesFiles =mysql_num_rows($dataFiles);
                         
                         //If a folder has been created already
-                        if(is_dir($path) && $resultFiles != false){
+                        if(is_dir($path) && $anymatchesFiles != 0){
 
 
                         echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
