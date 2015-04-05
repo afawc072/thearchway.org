@@ -63,6 +63,8 @@ echo 'Directory not found';
       $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
       //select database
       mysql_select_db("archway1", $conn);
+      echo $description;
+      echo $_POST['details'];
       if(!empty($_POST['details'])){
       $sql2 = "INSERT INTO Files (fromCourse, description, courseFile,path,user) VALUES ('$cname','$description','$filename','$path','$user')";
       } else {
