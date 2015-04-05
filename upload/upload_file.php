@@ -63,8 +63,11 @@ echo 'Directory not found';
       $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
       //select database
       mysql_select_db("archway1", $conn);
-
-      $sql2 = "INSERT INTO Files (courseFile,path,user) VALUES ('$filename','$path','$user')";
+      if(!empty($_POST['details'])){
+      $sql2 = "INSERT INTO Files (fromCourse, description, courseFile,path,user) VALUES ('$cname','$description','$filename','$path','$user')";
+      } else {
+      $sql2 = "INSERT INTO Files (fromCourse, courseFile,path,user) VALUES ('$cname','$filename','$path','$user')";  
+      }
       $result=mysql_query($sql2, $conn) or die(mysql_error());
       mysql_close($conn);
 

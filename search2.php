@@ -231,6 +231,12 @@ header('Location:/archway/profile.html');
                     *****************************************/
                             else
                             {
+
+                                //Querying for all courses that are LIKE input
+                                $sqlFiles = "SELECT courseFile, description, path, reg_date FROM Files WHERE courseFile  LIKE '%$input%';";
+                                $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
+                                $resultFiles = mysql_fetch_array($data);
+                                $anymatchesFiles =mysql_num_rows($data);
                                 echo '<div class="container" style="min-height: 950px; height: auto !important; margin: 0 auto -100px;">';
                                 echo '<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
 
