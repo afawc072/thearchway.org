@@ -99,6 +99,20 @@ header('Location:/archway/profile.html');
     });
     </script>
 
+    <style type="text/css">
+        #uploadform form{
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+    }
+    #uploadform form.load {
+    opacity: 1;
+    }
+    </style>
+
     </head>
 
 <body class="metro" style="height: 100%;">

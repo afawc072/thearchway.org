@@ -45,17 +45,6 @@ a:active,
   outline: 0;
 }
 //ADDED BY PL FROM FM
-    #uploadform form{
-    opacity: 0;
-    -webkit-transition: opacity 0.5s ease-in;
-    -moz-transition: opacity 0.5s ease-in;
-    -o-transition: opacity 0.5s ease-in;
-    -ms-transition: opacity 0.5s ease-in;
-    transition: opacity 0.5s ease-in;
-    }
-    #uploadform form.load {
-    opacity: 1;
-    }
 
     .footer, .push {
     height: 100px; /* .push must be the same height as .footer */
