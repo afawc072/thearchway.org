@@ -105,23 +105,23 @@ header('Location:/archway/profile.html');
                             $imp = implode('|', $except);
 
                             if($path != "." && $path != ".." ){
-                            $thelist="";
+
                               if ($handle = opendir($path)) {
                                 while (false !== ($file = readdir($handle))) {
+                                    $key = array_search($file, array_column($resultFiles, 'courseFile'));
 
-                                  if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)))
+                                  if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)) && isset($key))
                                    {
                                     $tempp= $path."/".$file;
-                                    $key = array_search($file, array_column($resultFiles, 'courseFile'));
 
                                     $descriptionTemp = $resultFiles[$key]['description'];
                                     echo $desccriptionTemp;
-                                    if (file_exists($tempp.".description")){
+                                    if (!is_null($resultFiles[$key]['description'])){
                                         echo"<a class='list marked' href='".$tempp."'>";
                                         echo"<div class='list-content'>";
                                         echo"<span class='list-title'>$file</span>";
                                         echo"<span class='list-subtitle'>26/10/2013</span>";
-                                        echo"<span class='list-remark'>".file_get_contents($tempp.".description")."</span>";
+                                        echo"<span class='list-remark'>".$descriptionTemp."</span>";
                                         echo"</div>";
                                         echo"</a>"; 
 
