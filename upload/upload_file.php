@@ -76,11 +76,10 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       }
       $result=mysql_query($sql2, $conn) or die(mysql_error());
       mysql_close($conn);
-      ob_start();
+    
       echo "Thank you for Contributing to the Archway";
-      ob_flush();
-      sleep(5);
-      header('Location:/archway');
+    
+      header("refresh:5; url=/archway");
       }
     }
   }
