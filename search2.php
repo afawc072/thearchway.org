@@ -120,7 +120,7 @@ header('Location:/archway/profile.html');
                                         echo"<a class='list marked' href='".$tempp."'>";
                                         echo"<div class='list-content'>";
                                         echo"<span class='list-title'>$file</span>";
-                                        echo"<span class='list-subtitle'>".$uploadDate"</span>";
+                                        echo"<span class='list-subtitle'>".$uploadDate."</span>";
                                         echo"<span class='list-remark'>".$description."</span>";
                                         echo"</div>";
                                         echo"</a>"; 
@@ -130,7 +130,7 @@ header('Location:/archway/profile.html');
                                         echo"<a class='list' href='".$tempp."'>";
                                         echo"<div class='list-content'>";
                                         echo"<span class='list-title'>$file</span>";
-                                        echo"<span class='list-subtitle'>".$uploadDate"</span>";
+                                        echo"<span class='list-subtitle'>".$uploadDate."</span>";
                                         echo"</div>";
                                         echo"</a>";
                                         }
@@ -143,7 +143,7 @@ header('Location:/archway/profile.html');
                               }
 
 
-                            }
+                            
                             echo"</div>";
                             echo"</div>";
                             echo"</div>";
