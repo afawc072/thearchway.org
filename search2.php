@@ -140,6 +140,7 @@ header('Location:/archway/profile.html');
                                   
                                 }
                             }
+                                mysql_close($conn);
                                 closedir($handle);
                               }
 
@@ -197,33 +198,20 @@ header('Location:/archway/profile.html');
 
                         while ($courseFetcher = mysql_fetch_array($data)) {
 
-                        $fileCount = 0;
-                        $exactCourse = $courseFetcher['cname'];
+                         $exactCourse = $courseFetcher['cname'];
+
+                        //Querying for all files from courses that are LIKE input
+                        $sqlNbrFiles = "SELECT fromCourse FROM Files WHERE fromCourse  LIKE '%$exactCourse%';";
+                        $dataNbrFiles = mysql_query($sqlNbrFiles, $conn) or die(mysql_error());
+                        $fileCount =mysql_num_rows($dataNbrFiles);
                         //Setting the path to documents
                         $path = "upload/uploadedFiles/".$exactCourse;
                         $pathtotal= $path."*";
                         
-                        //If a folder has been created already
-                        if(is_dir($path)){
-                            $except = array("doc", "docx", "odt", "ppt", "pdf");
-                            $imp = implode('|', $except);
-
-                            if($path != "." && $path != ".." ){
-                                if ($handle = opendir($path)) {
-                                    while (false !== ($file = readdir($handle))) {
-
-                                         if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)))
-                                        {
-                                            $fileCount++;
-                                        }
-                                    }
-                                }
-                            }
-                        }
 
 
 
-                                $courseList .= '<li><a href="">'.$courseFetcher['cname'].'</a></li><br>';
+                                
                                 echo "<tr class=''><td><form style='margin:  0px 0px 0px;' name='courseForm".$courseCount."' action='search2.php' method='post'><a href='javascript:;' onclick='parentNode.submit();'>".$courseFetcher['cname']."</a><input type='hidden' name='".$courseCount."' value='".$courseFetcher['cname']."'/></form></td><td>".$fileCount."</td></tr>";
 
                                 $courseCount++;
