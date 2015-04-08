@@ -78,65 +78,75 @@ header('Location:/archway/profile.html');
                         //Setting the path to documents
                         $path = "upload/uploadedFiles/".$exactCourse;
                         $pathtotal= $path."*";
+
+                        //Querying for all files from courses that are LIKE input
+                        $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE fromCourse LIKE '%$exactCourse%';";
+                        $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
+                        $resultFiles = mysql_fetch_array($dataFiles);
+                        $anymatchesFiles =mysql_num_rows($dataFiles);
                         
                         //If a folder has been created already
-                        if(is_dir($path)){
+                        if(is_dir($path) && $anymatchesFiles != 0){
 
 
-                    echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
-                    include ("templates/header.php");
-                    echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
+                        echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+                        include ("templates/header.php");
+                        echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
-                    echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
+                        echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
 
-                     echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download /</b> $exactCourse  </p>";
+                        echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download /</b> $exactCourse  </p>";
 
-                    echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
-                    echo"<div class='list-group '>";
-                    echo"<a href='' class='group-title'>Available files</a>";
-                    echo"<div class='group-content'>";
-                        $except = array("doc", "docx", "odt", "ppt", "pdf");
-                        $imp = implode('|', $except);
+                        echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
+                        echo"<div class='list-group '>";
+                        echo"<a href='' class='group-title'>Available files</a>";
+                        echo"<div class='group-content'>";
+                            $except = array("doc", "docx", "odt", "ppt", "pdf");
+                            $imp = implode('|', $except);
 
-                        if($path != "." && $path != ".." ){
-                        $thelist="";
-                          if ($handle = opendir($path)) {
-                            while (false !== ($file = readdir($handle))) {
+                            if($path != "." && $path != ".." ){
 
-                              if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)))
-                               {
-                                $tempp= $path."/".$file;
-                                if (file_exists($tempp.".description")){
-                                    echo"<a class='list marked' href='".$tempp."'>";
-                                    echo"<div class='list-content'>";
-                                    echo"<span class='list-title'>$file</span>";
-                                    echo"<span class='list-subtitle'>26/10/2013</span>";
-                                    echo"<span class='list-remark'>".file_get_contents($tempp.".description")."</span>";
-                                    echo"</div>";
-                                    echo"</a>"; 
+                              if ($handle = opendir($path)) {
+                                while (false !== ($file = readdir($handle))) {
+                                    $key = array_search($file, array_column($resultFiles, 'courseFile'));
 
-                                   }
-                                else{
-                                    echo"<a class='list' href='".$tempp."'>";
-                                    echo"<div class='list-content'>";
-                                    echo"<span class='list-title'>$file</span>";
-                                    echo"<span class='list-subtitle'>26/10/2013</span>";
-                                    echo"</div>";
-                                    echo"</a>";
-                                    }
+                                  if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)) && isset($key))
+                                   {
+                                    $tempp= $path."/".$file;
 
+                                    $descriptionTemp = $resultFiles[$key]['description'];
+                                    echo $desccriptionTemp;
+                                    if (!is_null($resultFiles[$key]['description'])){
+                                        echo"<a class='list marked' href='".$tempp."'>";
+                                        echo"<div class='list-content'>";
+                                        echo"<span class='list-title'>$file</span>";
+                                        echo"<span class='list-subtitle'>26/10/2013</span>";
+                                        echo"<span class='list-remark'>".$descriptionTemp."</span>";
+                                        echo"</div>";
+                                        echo"</a>"; 
+
+                                       }
+                                    else{
+                                        echo"<a class='list' href='".$tempp."'>";
+                                        echo"<div class='list-content'>";
+                                        echo"<span class='list-title'>$file</span>";
+                                        echo"<span class='list-subtitle'>26/10/2013</span>";
+                                        echo"</div>";
+                                        echo"</a>";
+                                        }
+
+                                  }
+                                }
+                                closedir($handle);
                               }
-                            }
-                            closedir($handle);
-                          }
 
+
+                            }
+                            echo"</div>";
+                            echo"</div>";
+                            echo"</div>";
 
                         }
-                        echo"</div>";
-                        echo"</div>";
-                        echo"</div>";
-
-                    }
 
                     //If no folders have been created (no files were uploaded)
                     else{
@@ -233,7 +243,7 @@ header('Location:/archway/profile.html');
                             {
 
                                 //Querying for all courses that are LIKE input
-                                $sqlFiles = "SELECT courseFile, description, path, reg_date FROM Files WHERE courseFile  LIKE '%$input%';";
+                                $sqlFiles = "SELECT fromCourse as fc, courseFile as cf, description as des, path as pth, reg_date as rd FROM Files WHERE (cf LIKE '%$input%') OR (des LIKE '%$input%');";
                                 $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
                                 $resultFiles = mysql_fetch_array($data);
                                 $anymatchesFiles =mysql_num_rows($data);
