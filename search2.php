@@ -109,7 +109,7 @@ header('Location:/archway/profile.html');
                                     $file = $fileFetcher['courseFile'];
                                     $description = $fileFetcher['description'];
                                     $filePath = $fileFetcher['path'];
-                                    $uploadDate = explode(" ", $fileFetcher['reg_date']);
+                                    $uploadDate = substr($fileFetcher['reg_date'], 0, strrpos($fileFetcher['reg_date'], ' '));
 
 
 
@@ -118,7 +118,7 @@ header('Location:/archway/profile.html');
                                     $tempp= $path."/".$file;
                                 
                                     if (!is_null($description)){
-                                        echo"<a class='list marked' href='".$filePath."'>";
+                                        echo"<a class='list marked' href='".$tempp."'>";
                                         echo"<div class='list-content'>";
                                         echo"<span class='list-title'>$file</span>";
                                         echo"<span class='list-subtitle'>".$uploadDate."</span>";
@@ -128,7 +128,7 @@ header('Location:/archway/profile.html');
 
                                        }
                                     else{
-                                        echo"<a class='list marked' href='".$filePath."'>";
+                                        echo"<a class='list marked' href='".$tempp."'>";
                                         echo"<div class='list-content'>";
                                         echo"<span class='list-title'>$file</span>";
                                         echo"<span class='list-subtitle'>".$uploadDate."</span>";
