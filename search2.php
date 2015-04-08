@@ -82,7 +82,6 @@ header('Location:/archway/profile.html');
                         //Querying for all files from courses that are LIKE input
                         $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE fromCourse LIKE '%$exactCourse%';";
                         $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
-                        $resultFiles = mysql_fetch_array($dataFiles);
                         $anymatchesFiles =mysql_num_rows($dataFiles);
                         
                         //If a folder has been created already
@@ -101,27 +100,28 @@ header('Location:/archway/profile.html');
                         echo"<div class='list-group '>";
                         echo"<a href='' class='group-title'>Available files</a>";
                         echo"<div class='group-content'>";
-                            $except = array("doc", "docx", "odt", "ppt", "pdf");
-                            $imp = implode('|', $except);
+
 
                             if($path != "." && $path != ".." ){
 
                               if ($handle = opendir($path)) {
-                                while (false !== ($file = readdir($handle))) {
-                                    $key = array_search($file, array_column($resultFiles, 'courseFile'));
+                                while($fileFetcher = mysql_fetch_array($dataFiles)){
+                                    $file = $fileFetcher['courseFile'];
+                                    $description = $fileFetcher['description'];
+                                    $filePath = $fileFetcher['path'];
+                                    $uploadDate = $fileFetcher['reg_date'];
 
-                                  if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)) && isset($key))
-                                   {
+
+                                    if(file_exists($filePath)){
+
                                     $tempp= $path."/".$file;
-                                    echo $key;
-                                    $descriptionTemp = $resultFiles[$key]['description'];
-                                    echo $desccriptionTemp;
-                                    if (!is_null($descriptionTemp)){
+                                
+                                    if (!is_null($description)){
                                         echo"<a class='list marked' href='".$tempp."'>";
                                         echo"<div class='list-content'>";
                                         echo"<span class='list-title'>$file</span>";
-                                        echo"<span class='list-subtitle'>26/10/2013</span>";
-                                        echo"<span class='list-remark'>".$descriptionTemp."</span>";
+                                        echo"<span class='list-subtitle'>".$uploadDate"</span>";
+                                        echo"<span class='list-remark'>".$description."</span>";
                                         echo"</div>";
                                         echo"</a>"; 
 
@@ -130,13 +130,15 @@ header('Location:/archway/profile.html');
                                         echo"<a class='list' href='".$tempp."'>";
                                         echo"<div class='list-content'>";
                                         echo"<span class='list-title'>$file</span>";
-                                        echo"<span class='list-subtitle'>26/10/2013</span>";
+                                        echo"<span class='list-subtitle'>".$uploadDate"</span>";
                                         echo"</div>";
                                         echo"</a>";
                                         }
+                                    }
 
-                                  }
+                                  
                                 }
+                            }
                                 closedir($handle);
                               }
 
