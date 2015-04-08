@@ -246,7 +246,7 @@ header('Location:/archway/profile.html');
                             {
 
                                 //Querying for all courses that are LIKE input
-                                $sqlFiles = "SELECT fromCourse as fc, courseFile as cf, description as des, path as pth, reg_date as rd FROM Files WHERE (cf LIKE '%$input%') OR (des LIKE '%$input%');";
+                                $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE (courseFile LIKE '%$input%') OR (description LIKE '%$input%');";
                                 $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
                                 $resultFiles = mysql_fetch_array($data);
                                 $anymatchesFiles =mysql_num_rows($data);
