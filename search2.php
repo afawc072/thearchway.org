@@ -113,10 +113,10 @@ header('Location:/archway/profile.html');
                                   if ($file != "." && $file != ".." && (preg_match('/^.*\.('.$imp.')$/i', $file)) && isset($key))
                                    {
                                     $tempp= $path."/".$file;
-
+                                    echo $key;
                                     $descriptionTemp = $resultFiles[$key]['description'];
                                     echo $desccriptionTemp;
-                                    if (!is_null($resultFiles[$key]['description'])){
+                                    if (!is_null($descriptionTemp)){
                                         echo"<a class='list marked' href='".$tempp."'>";
                                         echo"<div class='list-content'>";
                                         echo"<span class='list-title'>$file</span>";
