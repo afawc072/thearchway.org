@@ -236,7 +236,6 @@ header('Location:/archway/profile.html');
                                 //Querying for all courses that are LIKE input
                                 $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE ((courseFile LIKE '%$input%') OR (description LIKE '%$input%'));";
                                 $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
-                                $resultFiles = mysql_fetch_array($dataFiles);
                                 $anymatchesFiles =mysql_num_rows($dataFiles);
 
                          
@@ -269,9 +268,10 @@ header('Location:/archway/profile.html');
 
                                         //Setting the path to documents
                                         $path = "upload/uploadedFiles/".$exactCourse;
-
+                                        echo " BEFORE ENTERING THE FILE_EXISTS";
+                                        echo $filePath;
                                         if(file_exists($filePath)){
-                    
+                                        echo " AFTER ENTERING THE FILE_EXISTS";
                                         $tempp= $path."/".$file;
                                     
                                         if (!is_null($description)){
@@ -293,7 +293,7 @@ header('Location:/archway/profile.html');
                                             echo"</a>";
                                             }
                                         }
-                                        closedir($handle);
+                                       
 
                                       
                                     }
