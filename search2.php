@@ -234,7 +234,7 @@ header('Location:/archway/profile.html');
                             {
 
                                 //Querying for all courses that are LIKE input
-                                $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE (courseFile LIKE '%$input%') OR (description LIKE '%$input%');";
+                                $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE ((courseFile LIKE '%$input%') OR (description LIKE '%$input%'));";
                                 $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
                                 $resultFiles = mysql_fetch_array($data);
                                 $anymatchesFiles =mysql_num_rows($data);
@@ -242,91 +242,89 @@ header('Location:/archway/profile.html');
                          
 
                                  //If a folder has been created already
-                        if($anymatchesFiles != 0){
-
-                        //Setting the path to documents
-                        $path = "upload/uploadedFiles/".$exactCourse;
-                        $pathtotal= $path."*";
+                            if($anymatchesFiles != 0){
 
 
-                        echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
-                        include ("templates/header.php");
-                        echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
+                            echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+                            include ("templates/header.php");
+                            echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
-                        echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
+                            echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
 
-                        echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download /</b> $exactCourse  </p>";
+                            echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search by keyword /</b> $input </p>";
 
-                        echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
-                        echo"<div class='list-group '>";
-                        echo"<a href='' class='group-title'>Available files</a>";
-                        echo"<div class='group-content'>";
-
-
-                            if($path != "." && $path != ".." ){
-
-                              if ($handle = opendir($path)) {
-                                while($fileFetcher = mysql_fetch_array($dataFiles)){
-                                    $file = $fileFetcher['courseFile'];
-                                    $description = $fileFetcher['description'];
-                                    $filePath = $fileFetcher['path'];
-                                    $uploadDate = substr($fileFetcher['reg_date'], 0, strrpos($fileFetcher['reg_date'], ' '));
+                            echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
+                            echo"<div class='list-group '>";
+                            echo"<a href='' class='group-title'>Available files</a>";
+                            echo"<div class='group-content'>";
 
 
+                                 
+                                    while($fileFetcher = mysql_fetch_array($dataFiles)){
+                                        $file = $fileFetcher['courseFile'];
+                                        $description = $fileFetcher['description'];
+                                        $filePath = $fileFetcher['path'];
+                                        $exactCourse = $fileFetcher['fromCourse'];
+                                        $uploadDate = substr($fileFetcher['reg_date'], 0, strrpos($fileFetcher['reg_date'], ' '));
 
-                                    if(file_exists($filePath)){
+                                        //Setting the path to documents
+                                        $path = "upload/uploadedFiles/".$exactCourse;
+                                        $pathtotal= $path."*";
 
-                                    $tempp= $path."/".$file;
-                                
-                                    if (!is_null($description)){
-                                        echo"<a class='list marked' href='".$tempp."'>";
-                                        echo"<div class='list-content'>";
-                                        echo"<span class='list-title'>$file</span>";
-                                        echo"<span class='list-subtitle'>".$uploadDate."</span>";
-                                        echo"<span class='list-remark'>".$description."</span>";
-                                        echo"</div>";
-                                        echo"</a>"; 
+                                        if(file_exists($filePath) && $handle = opendir($path)){
+                    
+                                        $tempp= $path."/".$file;
+                                    
+                                        if (!is_null($description)){
+                                            echo"<a class='list marked' href='".$tempp."'>";
+                                            echo"<div class='list-content'>";
+                                            echo"<span class='list-title'>$file</span>";
+                                            echo"<span class='list-subtitle'>".$uploadDate."</span>";
+                                            echo"<span class='list-remark'>".$description."</span>";
+                                            echo"</div>";
+                                            echo"</a>"; 
 
-                                       }
-                                    else{
-                                        echo"<a class='list marked' href='".$tempp."'>";
-                                        echo"<div class='list-content'>";
-                                        echo"<span class='list-title'>$file</span>";
-                                        echo"<span class='list-subtitle'>".$uploadDate."</span>";
-                                        echo"</div>";
-                                        echo"</a>";
+                                           }
+                                        else{
+                                            echo"<a class='list marked' href='".$tempp."'>";
+                                            echo"<div class='list-content'>";
+                                            echo"<span class='list-title'>$file</span>";
+                                            echo"<span class='list-subtitle'>".$uploadDate."</span>";
+                                            echo"</div>";
+                                            echo"</a>";
+                                            }
                                         }
+
+                                      
                                     }
-
+                                
+                                    mysql_close($conn);
+                                    closedir($handle);
                                   
+
+
+                                
+                                echo"</div>";
+                                echo"</div>";
+                                echo"</div>";
+
+                            } else{
+
+
+
+                                    echo '<div class="container" style="min-height: 950px; height: auto !important; margin: 0 auto -100px;">';
+                                    echo '<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+
+                                    include ("templates/header.php");
+
+                                    echo '<div class="container" style="margin-top: 50px;">';
+                                    echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search /</b> No results</p>";
+                                    echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, <span style='color: #00A255;'>$input</span> did not return any document or course.</p>";
+                                    echo "<br>";
+                                    echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>For tips on how to find the ressources you are looking for, please visit our <a href='help.php' style='color: #00A255;'>help page</a>.</p>"; 
+                
+                                    echo ' </div>';
                                 }
-                            }
-                                mysql_close($conn);
-                                closedir($handle);
-                              }
-
-
-                            
-                            echo"</div>";
-                            echo"</div>";
-                            echo"</div>";
-
-                        }
-
-
-
-                                echo '<div class="container" style="min-height: 950px; height: auto !important; margin: 0 auto -100px;">';
-                                echo '<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
-
-                                include ("templates/header.php");
-
-                                echo '<div class="container" style="margin-top: 50px;">';
-                                echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search /</b> No results</p>";
-                                echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, <span style='color: #00A255;'>$input</span> did not return any document or course.</p>";
-                                echo "<br>";
-                                echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>For tips on how to find the ressources you are looking for, please visit our <a href='help.php' style='color: #00A255;'>help page</a>.</p>"; 
-            
-                                echo ' </div>';
                             }
 
                             ?>
