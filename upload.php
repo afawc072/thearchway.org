@@ -73,15 +73,17 @@ header('Location:/archway/profile.html');
         coursesInput.blur(validateFile);
 
         function validateFile(){
-            //if it's NOT valid
+            //if it's valid
             if(availableTags.indexOf(coursesInput.val()) != -1){
+                coursesInputDiv.removeClass("error-state");
                 coursesInputDiv.addClass("success-state");
 
                 return false;
             }
-            //if it's valid
+            //if it's NOT valid
             else{
                 coursesInputDiv.removeClass("success-state");
+                coursesInputDiv.addClass("error-state");
                 return true;
             }
         }
@@ -142,7 +144,7 @@ header('Location:/archway/profile.html');
                     <label for="course">Course</label>
 
 
-                    <div id="coursesInputDiv" name="coursesInputDiv" class="input-control text error-state" data-role="input-control">
+                    <div id="coursesInputDiv" name="coursesInputDiv" class="input-control text" data-role="input-control">
                         <input id="coursesInput" name="coursesInput" type="text">
                     </div>
                     
