@@ -66,7 +66,6 @@ header('Location:/archway/profile.html');
         var details = $("#details");
         var fileDiv = $("#fileDiv");
         var coursesInputDiv = $("#coursesInputDiv");
-        var canSubmit = false;
 
 
 
@@ -99,13 +98,11 @@ header('Location:/archway/profile.html');
              }
         });
 
-    document.getElementById('submit').addEventListener('submit', function(e){
-    if(canSubmit == false) {
-        e.preventDefault();
-    } else {
-        e.submit();
-    }
-    });
+         $("#reset").click(function() {
+            
+              $("#details").removeAttr("disabled");
+
+        });
 
     });
     </script>
@@ -172,11 +169,11 @@ header('Location:/archway/profile.html');
                         </div>
                     
                     <br>
-                    <input type="submit" name="submit" id="submit" value="Upload">
-                    <input type="reset" value="Reset">
+                    <input type="submit" name="submit" value="Upload">
+                    <input type="reset" value="Reset" name="reset" id="reset">
 
                     <div style="margin-top: 20px">
-                                    <a href="add_course.php"> Can't find a course? </a>
+                        <a href="add_course.php"> Can't find a course? </a>
                     </div>
 
                 </fieldset>
