@@ -269,9 +269,8 @@ header('Location:/archway/profile.html');
 
                                         //Setting the path to documents
                                         $path = "upload/uploadedFiles/".$exactCourse;
-                                        $pathtotal= $path."*";
 
-                                        if(file_exists($filePath) && $handle = opendir($path)){
+                                        if(file_exists($filePath)){
                     
                                         $tempp= $path."/".$file;
                                     
