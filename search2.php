@@ -240,7 +240,7 @@ header('Location:/archway/profile.html');
                                 $anymatchesFiles =mysql_num_rows($data);
 
                          
-
+                                echo "THE NUMBER OF MATCHES IS : $anymatchesFiles ";
                                  //If a folder has been created already
                             if($anymatchesFiles != 0){
 
