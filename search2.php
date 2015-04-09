@@ -80,7 +80,7 @@ header('Location:/archway/profile.html');
                         $pathtotal= $path."*";
 
                         //Querying for all files from courses that are LIKE input
-                        $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE fromCourse LIKE '%$exactCourse%';";
+                        $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE fromCourse LIKE '%$exactCourse%' ORDER BY reg_date DESC;";
                         $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
                         $anymatchesFiles =mysql_num_rows($dataFiles);
                         
@@ -248,7 +248,7 @@ header('Location:/archway/profile.html');
 
                             echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
 
-                            echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search by keyword /</b> $input </p>";
+                            echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Downloads matching keyword /</b> $input </p>";
 
                             echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
 
@@ -264,7 +264,7 @@ header('Location:/archway/profile.html');
 
                                         if(($flagCourse == "")){
                                             echo"<div class='list-group '>";
-                                            echo"<a href='' class='group-title'>$exactCourse files</a>";
+                                            echo"<a href='' class='group-title'>$exactCourse</a>";
                                             echo"<div class='group-content'>";
 
                                             $flagCourse = $exactCourse;
@@ -275,7 +275,7 @@ header('Location:/archway/profile.html');
                                             echo"</div>";
                                             echo"</div>";
                                             echo"<div class='list-group '>";
-                                            echo"<a href='' class='group-title'>$exactCourse files</a>";
+                                            echo"<a href='' class='group-title'>$exactCourse</a>";
                                             echo"<div class='group-content'>";
 
                                             $flagCourse = $exactCourse;
