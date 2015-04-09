@@ -294,12 +294,13 @@ header('Location:/archway/profile.html');
                                             echo"</a>";
                                             }
                                         }
+                                        closedir($handle);
 
                                       
                                     }
                                 
                                     mysql_close($conn);
-                                    closedir($handle);
+                                    
                                   
 
 
