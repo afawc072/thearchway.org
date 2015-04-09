@@ -99,7 +99,7 @@ header('Location:/archway/profile.html');
              }
         });
 
-    document.getElementById(form).addEventListener('submit', function(e){
+    document.getElementById('submit').addEventListener('submit', function(e){
     if(canSubmit == false) {
         e.preventDefault();
     } else {
