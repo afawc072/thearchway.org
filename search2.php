@@ -234,12 +234,10 @@ header('Location:/archway/profile.html');
                             {
 
                                 //Querying for all courses that are LIKE input
-                                $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE ((courseFile LIKE '%$input%') OR (description LIKE '%$input%'));";
+                                $sqlFiles = "SELECT fromCourse, courseFile, description, path, reg_date FROM Files WHERE ((courseFile LIKE '%$input%') OR (description LIKE '%$input%')) ORDER BY fromCourse, reg_date DESC;";
                                 $dataFiles = mysql_query($sqlFiles, $conn) or die(mysql_error());
                                 $anymatchesFiles =mysql_num_rows($dataFiles);
 
-                         
-                                echo "THE NUMBER OF MATCHES IS : $anymatchesFiles ";
                                  //If a folder has been created already
                             if($anymatchesFiles != 0){
 
@@ -253,12 +251,10 @@ header('Location:/archway/profile.html');
                             echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search by keyword /</b> $input </p>";
 
                             echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
-                            echo"<div class='list-group '>";
-                            echo"<a href='' class='group-title'>Available files</a>";
-                            echo"<div class='group-content'>";
 
 
-                                 
+
+                                 $flagCourse = "";
                                     while($fileFetcher = mysql_fetch_array($dataFiles)){
                                         $file = $fileFetcher['courseFile'];
                                         $description = $fileFetcher['description'];
@@ -266,12 +262,29 @@ header('Location:/archway/profile.html');
                                         $exactCourse = $fileFetcher['fromCourse'];
                                         $uploadDate = substr($fileFetcher['reg_date'], 0, strrpos($fileFetcher['reg_date'], ' '));
 
+                                        if(($flagCourse == "")){
+                                            echo"<div class='list-group '>";
+                                            echo"<a href='' class='group-title'>$exactCourse files</a>";
+                                            echo"<div class='group-content'>";
+
+                                            $flagCourse = $exactCourse;
+                                        } 
+
+                                        else if(($flagCourse != $exactCourse)){
+
+                                            echo"</div>";
+                                            echo"</div>";
+                                            echo"<div class='list-group '>";
+                                            echo"<a href='' class='group-title'>$exactCourse files</a>";
+                                            echo"<div class='group-content'>";
+
+                                            $flagCourse = $exactCourse;
+                                        }
                                         //Setting the path to documents
                                         $path = "upload/uploadedFiles/".$exactCourse;
-                                        echo " BEFORE ENTERING THE FILE_EXISTS";
-                                        echo $filePath;
+
                                         if(file_exists($filePath)){
-                                        echo " AFTER ENTERING THE FILE_EXISTS";
+
                                         $tempp= $path."/".$file;
                                     
                                         if (!is_null($description)){
