@@ -44,7 +44,16 @@ a:active,
 .tile:active {
   outline: 0;
 }
-//ADDED BY PL FROM FM
+
+    #hc-mask {
+      background-color: #000;
+      background-image : url(../images/archway_assets1600x400.jpg);
+      background-position: center center, center top;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      padding-top: 160px;
+    }
+
 
     .footer, .push {
     height: 100px; /* .push must be the same height as .footer */
@@ -8334,7 +8343,7 @@ a {
   min-width: 200px;
   height: auto;
   position: relative;
-  background-color:rgba(0, 162, 85, 0.12);
+  background-color:rgba(0, 162, 85, 0.46);
   padding: 20px;
 }
 .metro .notice2 {

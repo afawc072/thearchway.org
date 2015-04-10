@@ -86,17 +86,24 @@ $(document).ready(function() {
 
 <noscript></noscript>
 
-<div class="container" style="min-height: 950px; height: auto !important; margin: 0 auto -100px;">
+<div class="container" style="min-height: 1300px; height: auto !important; margin: 0 auto -100px;">
 
-    <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
+    <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; display: inline-block; outline-style: none;">
 
-    <?php include ("templates/header.php"); ?>
+    <?php include ("templates/header_0margin.php"); ?>
+
+    <div id="hc-mask" style="height: 400px;">
+        <h1 style="margin: 0px 0px; font-fize: 80px; color: #FFF; letter-spacing: 4px; vertical-align: baseline; font-weight: bold;">
+                HELP/...
+        </h1>
+    </div>
+
 
     <div class="container" style="margin-top: 50px;">
 
         
        
- <div id="isc_3" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px;width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
+ <div id="isc_3" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px;width: 100%; display: inline-block; outline-style: none;">
  
  <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em; margin-left: 57px;"><b>Help /</b> The Basics</p>
 
