@@ -144,6 +144,19 @@ $(document).ready(function() {
             </div>
         </div>
 
+        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em; margin-left: 57px; margin-top: 49px;"><b>Help /</b> Account Access</p>
+                   <div class="example" style="border: 0px; witdh: 100%; background-color: white !important;">
+                <div class="grid fluid">
+                <div class="row" style="position:relative;">
+
+            <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">If you've forgotten your password, please reset it from <span style="color: #00A255;"><a href="#"> this link</a></span>. You can enter your email address to <br>receive a password reset. If for some reason you don't receive an email from us after submitting a request,<br> please try checking your spam folder.</p>
+                        
+             
+
+            </div>
+        </div>
+    </div>
+
                         
                         
 
