@@ -132,7 +132,7 @@ header('Location:/archway/profile.html');
 
     <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
 
-    <?php include ("templates/header.php"); ?>
+    <?php include ("templates/header_sb.php"); ?>
 
     <div class="container" style="margin-top :116px;">
 
