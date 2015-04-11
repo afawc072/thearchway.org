@@ -29,7 +29,7 @@ header("Content-Length: " .(string)(filesize($fullpath)) );
 header('Content-Disposition: attachment; filename="'.basename($fullpath).'"');
 header("Content-Transfer-Encoding: binary\n");
 
-readfile($path); // outputs the content of the file
+readfile($fullpath); // outputs the content of the file
 
 exit();
 
