@@ -75,7 +75,6 @@ header('Location:/archway/profile.html');
         function validateFile(){
             //if it's valid
             if(availableTags.indexOf(coursesInput.val()) != -1){
-                coursesInputDiv.removeClass("error-state");
                 coursesInputDiv.addClass("success-state");
 
                 return false;
@@ -83,7 +82,6 @@ header('Location:/archway/profile.html');
             //if it's NOT valid
             else{
                 coursesInputDiv.removeClass("success-state");
-                coursesInputDiv.addClass("error-state");
                 return true;
             }
         }
@@ -119,6 +117,18 @@ header('Location:/archway/profile.html');
     #uploadform form.load {
     opacity: 1;
     }
+    input:invalid {
+  
+}
+input:focus:invalid {
+  
+}
+input:not(:focus):invalid {
+  
+}
+input:focus:invalid {
+  
+}
     </style>
 
     </head>
@@ -144,14 +154,14 @@ header('Location:/archway/profile.html');
                     <legend>Upload your notes</legend>
                     <label>File</label>
                     <div id="fileDiv" name="fileDiv"class="input-control file" data-role="input-control">
-                        <input type="file" id="file" name="file">
+                        <input type="file" id="file" name="file" required>
                         <button class="btn-file"></button>
                     </div>
                     <label for="course">Course</label>
 
 
                     <div id="coursesInputDiv" name="coursesInputDiv" class="input-control text" data-role="input-control">
-                        <input id="coursesInput" name="coursesInput" type="text">
+                        <input id="coursesInput" name="coursesInput" type="text" required pattern="[A-Za-z]{3}[0-9]{4}" placeholder="ZZZ0000">
                     </div>
                     
 
