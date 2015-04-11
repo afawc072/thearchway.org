@@ -10,6 +10,7 @@ $temp = explode(".",$_FILES["file"]["name"]);
 $cname = $_POST["coursesInput"];
 $description = $_POST["details"];
 $filename = $cname."_".$_FILES["file"]["name"];
+$filename = trim($filename, " \t\n\r\0\x0B" );
 $extension = end($temp);
 $structure = "/var/www/archway/upload/uploadedFiles/";
 $user = $_SESSION['username'];
