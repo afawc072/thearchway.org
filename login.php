@@ -24,7 +24,7 @@ $result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password =
 while($row = mysql_fetch_array($result))
 {
 session_start();
-$_SESSION['email']=$email;
+$_SESSION['username']=$email;
 
 header('Location:index.php');	
 
