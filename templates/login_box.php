@@ -10,13 +10,13 @@
                                                         echo"<label class='username'>";
                                                         echo"<span>Email</span>";
                                                         echo"<br>";
-                                                        echo"<input id='user' name='user' value='' type='text' autocomplete='on' placeholder='Email Address' style='width: 214px;'>";
+                                                        echo"<input id='user' name='user' value='' type='email' autocomplete='on' placeholder='Email Address' style='width: 214px; required'>";
                                                         echo"</label>";
                                                         
                                                         echo"<label class='password'>";
                                                         echo"<span>Password</span>";
                                                         echo"<br>";
-                                                        echo"<input id='pass' name='pass' value='' type='password' placeholder='Password' style='width: 214px;'>";
+                                                        echo"<input id='pass' name='pass' value='' type='password' placeholder='Password' style='width: 214px; required'>";
                                                         echo"</label>";
                                                         
                                                         echo"<input type='submit' id='load' value='Sign In' style='width: 214px; margin-top: 10px;'/>";
