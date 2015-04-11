@@ -30,10 +30,11 @@ if ($fd = fopen ($fullPath, "r")) {
     }
     header("Content-length: $fsize");
     header("Cache-control: private"); //use this to open files directly
-    while(!feof($fd)) {
-        $buffer = fread($fd, 2048);
-        echo $buffer;
-    }
+    //while(!feof($fd)) {
+    //    $buffer = fread($fd, 2048);
+    //    echo $buffer;
+    // }
+    readfile($fd);
 }
 fclose ($fd);
 exit;
