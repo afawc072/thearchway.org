@@ -40,7 +40,6 @@ if ($fd = fopen ($fullPath, "r")) {
     //    echo $buffer;
     // }
     ob_clean();
-    flush();
     readfile($fd);
 }
 fclose ($fd);
