@@ -15,16 +15,16 @@
 
 
 
-$username=$_POST['user'];
+$email=$_POST['user'];
 $password=$_POST['pass'];
 
 
 $key = FALSE;
-$result = mysql_query("SELECT * FROM Users WHERE username = '$username' AND password = '$password' ");
+$result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password' ");
 while($row = mysql_fetch_array($result))
 {
 session_start();
-$_SESSION['username']=$username;
+$_SESSION['email']=$email;
 
 header('Location:index.php');	
 
