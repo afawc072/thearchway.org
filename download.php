@@ -25,11 +25,11 @@ header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
 header("Cache-Control: public");
 header("Content-Description: File Transfer");
 header("Content-Type: " . $mm_type);
-header("Content-Length: " .(string)(filesize($fullpath)) );
-header('Content-Disposition: attachment; filename="'.basename($fullpath).'"');
+header("Content-Length: " .(string)(filesize($fullPath)) );
+header('Content-Disposition: attachment; filename="'.basename($fullPath).'"');
 header("Content-Transfer-Encoding: binary\n");
 
-readfile($fullpath); // outputs the content of the file
+readfile($fullPath); // outputs the content of the file
 
 exit();
 
