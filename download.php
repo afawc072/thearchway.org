@@ -9,6 +9,10 @@ $path = "/var/www/archway/upload/uploadedFiles/".$courseName; // change the path
 $dl_file = filter_var($dl_file, FILTER_SANITIZE_URL); // Remove (more) invalid characters
 $fullPath = $path.$dl_file;
 
+echo dl_file;
+echo path;
+echo fullPath;
+
 if ($fd = fopen ($fullPath, "r")) {
     $fsize = filesize($fullPath);
     $path_parts = pathinfo($fullPath);
