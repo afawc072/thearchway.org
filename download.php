@@ -19,6 +19,8 @@ if ($fd = fopen ($fullPath, "r")) {
     $ext = strtolower($path_parts["extension"]);
     switch ($ext) {
         case "pdf":
+        echo "pdf";
+        echo "\n";
         header("Content-type: application/pdf");
         header("Content-Disposition: attachment; filename=\"".$path_parts["basename"]."\""); // use 'attachment' to force a file download
         break;
