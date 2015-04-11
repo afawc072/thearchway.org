@@ -121,7 +121,7 @@ header('Cache-Control: max-age=900');
 
                                     if(file_exists($filePath)){
 
-                                    $tempp= $path."/".$file;
+                                    $tempp="download.php?download_file=".$file;
                                 
                                     if (!is_null($description)){
                                         echo"<a class='list marked' href='".$tempp."'>";
