@@ -24,26 +24,26 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
   {
   if ($_FILES["file"]["error"] > 0)
     {
-//    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
     }
   else
     {
-//    echo $cname ;
+    echo $cname ;
 
-//    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-//    echo "Type: " . $_FILES["file"]["type"] . "<br>";
-//    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-//    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
 
     //if (file_exists($structure.$cname."_".$_FILES["file"]["name"]))
       if (file_exists($structure.$cname."/".$filename))
       {
 //      echo $_FILES["file"]["name"] . " already exists. ";
-        sleep(5);
+//        sleep(5);
 
         echo "File Already Exists";
       
-        header('Location:/archway');
+//        header('Location:/archway');
       }
     else
       {
@@ -51,7 +51,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       // if(!file_exists(dirname("/opt/lampp/htdocs/php_website_test/uploadedFiles/" .$tname)))
     if (!is_dir($structure.$cname)) {
         mkdir($structure.$cname);
-//echo 'Directory not found';
+        echo 'Directory not found';
        }
 
       $path=$structure.$cname."/".$filename;
@@ -85,10 +85,10 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
   }
 else
   {
-      sleep(5);
+//      sleep(5);
 
       echo "Invalid file. You can only upload documents with the 'pdf', 'doc', 'docx', 'ppt' and 'odt' extension and smaller than 20 Mb";      
-      header('Location:/archway');
+//      header('Location:/archway');
  
   }
 ?>
