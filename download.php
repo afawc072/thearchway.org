@@ -16,33 +16,51 @@ echo "\n";
 echo $fullPath;
 echo "\n";
 
-if ($fd = fopen ($fullPath, "r")) {
-    $fsize = filesize($fullPath);
-    $path_parts = pathinfo($fullPath);
-    $ext = strtolower($path_parts["extension"]);
-    switch ($ext) {
-        case "pdf":
-        echo "pdf";
-        echo "\n";
-        header("Content-type: application/pdf");
-        header("Content-Disposition: attachment; filename=\"".$path_parts["basename"]."\""); // use 'attachment' to force a file download
-        header("Content-length: $fsize");
-    header("Cache-control: private"); //use this to open files directly
-    //while(!feof($fd)) {
-    //    $buffer = fread($fd, 2048);
-    //    echo $buffer;
-    // }
-    ob_clean();
-    readfile($fd);
-    fclose ($fd);
-        break;
-        // add more headers for other content types here
-        //default;
-        //header("Content-type: application/octet-stream");
-        //header("Content-Disposition: filename=\"".$path_parts["basename"]."\"");
-        //break;
-    }
+
+$mm_type="application/pdf"; // modify accordingly to the file type of $path, but in most cases no need to do so
+
+header("Pragma: public");
+header("Expires: 0");
+header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+header("Cache-Control: public");
+header("Content-Description: File Transfer");
+header("Content-Type: " . $mm_type);
+header("Content-Length: " .(string)(filesize($fullpath)) );
+header('Content-Disposition: attachment; filename="'.basename($fullpath).'"');
+header("Content-Transfer-Encoding: binary\n");
+
+readfile($path); // outputs the content of the file
+
+exit();
+
+
+// if ($fd = fopen ($fullPath, "r")) {
+//     $fsize = filesize($fullPath);
+//     $path_parts = pathinfo($fullPath);
+//     $ext = strtolower($path_parts["extension"]);
+//     switch ($ext) {
+//         case "pdf":
+//         echo "pdf";
+//         echo "\n";
+//         header("Content-type: application/pdf");
+//         header("Content-Disposition: attachment; filename=\"".$path_parts["basename"]."\""); // use 'attachment' to force a file download
+//         header("Content-length: $fsize");
+//     header("Cache-control: private"); //use this to open files directly
+//     //while(!feof($fd)) {
+//     //    $buffer = fread($fd, 2048);
+//     //    echo $buffer;
+//     // }
+//     ob_clean();
+//     readfile($fd);
+//     fclose ($fd);
+//         break;
+//         // add more headers for other content types here
+//         //default;
+//         //header("Content-type: application/octet-stream");
+//         //header("Content-Disposition: filename=\"".$path_parts["basename"]."\"");
+//         //break;
+//     }
     
-}
-//fclose ($fd);
-exit;
+// }
+// //fclose ($fd);
+// exit;
