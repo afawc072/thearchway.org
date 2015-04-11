@@ -35,6 +35,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
     echo "Type: " . $_FILES["file"]["type"] . "<br>";
     echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
     echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+    echo $filename;
 
     //if (file_exists($structure.$cname."_".$_FILES["file"]["name"]))
       if (file_exists($structure.$cname."/".$filename))
