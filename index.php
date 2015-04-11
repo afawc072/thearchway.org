@@ -3,6 +3,10 @@
 
     <head>
 <?php session_start() ?>
+
+<?php
+header('Cache-Control: max-age=900');
+?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
     <link href="css/iconFont.css" rel="stylesheet">

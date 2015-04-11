@@ -117,18 +117,7 @@ header('Location:/archway/profile.html');
     #uploadform form.load {
     opacity: 1;
     }
-    input:invalid {
-  
-}
-input:focus:invalid {
-  
-}
-input:not(:focus):invalid {
-  
-}
-input:focus:invalid {
-  
-}
+
     </style>
 
     </head>

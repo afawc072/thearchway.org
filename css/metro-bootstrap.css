@@ -229,6 +229,18 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 .button:hover { background:#ddd; }
 
 ///ADDED BY PL FROM FM
+    input:invalid {
+  
+}
+input:focus:invalid {
+  
+}
+input:not(:focus):invalid {
+  
+}
+input:focus:invalid {
+  
+}
 sub,
 sup {
   position: relative;
