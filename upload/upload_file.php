@@ -11,6 +11,8 @@ $cname = $_POST["coursesInput"];
 $description = $_POST["details"];
 $filename = $cname."_".$_FILES["file"]["name"];
 $filename = trim($filename, " \t\n\r\0\x0B" );
+$filename = str_replace(' ', '', $filename);
+$filename = preg_replace('/\s+/', '', $filename);
 $extension = end($temp);
 $structure = "/var/www/archway/upload/uploadedFiles/";
 $user = $_SESSION['username'];
@@ -35,7 +37,6 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
     echo "Type: " . $_FILES["file"]["type"] . "<br>";
     echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
     echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
-    echo $filename;
 
     //if (file_exists($structure.$cname."_".$_FILES["file"]["name"]))
       if (file_exists($structure.$cname."/".$filename))
