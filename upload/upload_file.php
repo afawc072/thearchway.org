@@ -38,12 +38,10 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
     //if (file_exists($structure.$cname."_".$_FILES["file"]["name"]))
       if (file_exists($structure.$cname."/".$filename))
       {
-//      echo $_FILES["file"]["name"] . " already exists. ";
-//        sleep(5);
 
-        echo "File Already Exists";
+        echo "A File With That Name Already Exists";
       
-//        header('Location:/archway');
+        header("refresh:5; url=/archway/upload.php");
       }
     else
       {
@@ -51,16 +49,11 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       // if(!file_exists(dirname("/opt/lampp/htdocs/php_website_test/uploadedFiles/" .$tname)))
     if (!is_dir($structure.$cname)) {
         mkdir($structure.$cname);
-        echo 'Directory not found';
+//        echo 'Directory not found';
        }
 
       $path=$structure.$cname."/".$filename;
       move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."/".$filename);
-
-      $descfile = fopen($structure.$cname."/".$filename.".description","w");
-      fwrite($descfile,$description);
-
-      fclose($descfile);
 
       //Add course to MYSQL DB
 
@@ -70,9 +63,9 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       mysql_select_db("archway1", $conn);
 
       if(!empty($_POST['details'])){
-      $sql2 = "INSERT INTO Files (fromCourse, description, courseFile,path,user) VALUES ('$cname','$description','$filename','$path','$user')";
+        $sql2 = "INSERT INTO Files (fromCourse, description, courseFile,path,user) VALUES ('$cname','$description','$filename','$path','$user')";
       } else {
-      $sql2 = "INSERT INTO Files (fromCourse, courseFile,path,user) VALUES ('$cname','$filename','$path','$user')";  
+          $sql2 = "INSERT INTO Files (fromCourse, courseFile,path,user) VALUES ('$cname','$filename','$path','$user')";  
       }
       $result=mysql_query($sql2, $conn) or die(mysql_error());
       mysql_close($conn);
@@ -85,10 +78,10 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
   }
 else
   {
-//      sleep(5);
+
 
       echo "Invalid file. You can only upload documents with the 'pdf', 'doc', 'docx', 'ppt' and 'odt' extension and smaller than 20 Mb";      
-//      header('Location:/archway');
+      header("refresh:5; url=/archway/upload.php");
  
   }
 ?>
