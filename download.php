@@ -17,7 +17,7 @@ echo $fullPath;
 echo "\n";
 
 
-$mm_type="application/pdf"; // modify accordingly to the file type of $path, but in most cases no need to do so
+$mm_type="application/octet-stream"; // modify accordingly to the file type of $path, but in most cases no need to do so
 
 header("Pragma: public");
 header("Expires: 0");
@@ -29,6 +29,8 @@ header("Content-Length: " .(string)(filesize($fullPath)) );
 header('Content-Disposition: attachment; filename="'.basename($fullPath).'"');
 header("Content-Transfer-Encoding: binary\n");
 
+ob_clean();
+flush();
 readfile($fullPath); // outputs the content of the file
 
 exit();
