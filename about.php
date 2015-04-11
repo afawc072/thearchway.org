@@ -92,7 +92,7 @@ $(document).ready(function() {
 
     <?php include ("templates/header_0margin.php"); ?>
 
-    <div id="hc-mask" style="height: 400px;">
+    <div id="hc-mask" style="height: 400px; margin-top: 106px;">
         <h1 style="margin: 0px 0px; font-fize: 80px; color: #FFF; letter-spacing: 4px; vertical-align: baseline; font-weight: bold;">
                 HELP/...
         </h1>

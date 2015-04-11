@@ -35,7 +35,7 @@
 
     <?php include ("templates/header.php"); ?>
 
-    <div class="container" style="margin-top: 50px;">
+    <div class="container" style="margin-top :166px;">
  
  <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Upload /</b> Can't find a course ?</p>
 

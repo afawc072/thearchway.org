@@ -229,6 +229,16 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 .button:hover { background:#ddd; }
 
 ///ADDED BY PL FROM FM
+
+//Map the correct css to create the fixed position 
+div#header-fixed {
+  position:fixed; top:0px; margin:auto; z-index:100000; width:100%;
+}
+
+div#my-menus {
+  background:#000; height:75px; opacity:0.8
+}
+
     input:invalid {
   
 }

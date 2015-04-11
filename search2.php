@@ -98,7 +98,7 @@ header('Cache-Control: max-age=900');
                         include ("templates/header.php");
                         echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
-                        echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
+                        echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
 
                         echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download /</b> $exactCourse  </p>";
 
@@ -166,7 +166,7 @@ header('Cache-Control: max-age=900');
 
                         include ("templates/header.php");
 
-                        echo '<div class="container" style="margin-top: 50px;">';
+                        echo '<div class="container" style="margin-top: 154px;">';
                         echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>$exactCourse /</b> No documents uploaded yet ...</p>";
                         echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, this course does not contain any document at the moment. If you have notes related to this class and you wish to contribute, we encourage you to post them from our <a href='upload.php' style='color: #00A255;'>upload page</a>.</p>";
                         echo "<br>";
@@ -187,8 +187,8 @@ header('Cache-Control: max-age=900');
                     include ("templates/header.php");
                     echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
-                    echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
-                    echo '<div class="example" style="background-color: rgba(239, 246, 238, 0) !important;">';
+                    echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
+                    echo '<div class="example" style="background-color: rgba(239, 246, 238, 0) !important; margin: 0px 0px 0px;">';
                     echo "<legend><b>Search / </b><span style='color: #00A255;'>$input</span></legend>";
                     echo '<table class="table striped bordered hovered">';
                     echo '<thead>';
@@ -252,7 +252,7 @@ header('Cache-Control: max-age=900');
                             include ("templates/header.php");
                             echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
-                            echo '<div style="padding-bottom: 200px; margin-top: 50px;">';
+                            echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
 
                             echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Downloads matching keyword /</b> $input </p>";
 
@@ -336,7 +336,7 @@ header('Cache-Control: max-age=900');
 
                                     include ("templates/header.php");
 
-                                    echo '<div class="container" style="margin-top: 50px;">';
+                                    echo '<div class="container" style="margin-top: 154px;">';
                                     echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search /</b> No results</p>";
                                     echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, <span style='color: #00A255;'>$input</span> did not return any document or course.</p>";
                                     echo "<br>";
