@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+if(!isset($_SESSION['username'])){
+header('Location:/archway/profile.html');
+}
+
 ignore_user_abort(true);
 set_time_limit(0); // disable the time limit for this script
 
