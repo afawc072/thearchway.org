@@ -95,7 +95,7 @@ $(document).ready(function() {
 
                     <?php include ("templates/header.php"); ?>
 
-                        <div id="isc_3" class="normal" onscroll="return isc_VLayout_0._handleCSSScroll()" style="position: relative;width: 50%; top :116px; margin: 0 auto; width: 779px;">
+                        <div id="isc_3" class="normal" onscroll="return isc_VLayout_0._handleCSSScroll()" style="position: relative;width: 50%; top :50px; margin: 0 auto; width: 779px;">
         
                  
                
