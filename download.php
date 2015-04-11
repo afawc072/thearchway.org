@@ -26,14 +26,7 @@ if ($fd = fopen ($fullPath, "r")) {
         echo "\n";
         header("Content-type: application/pdf");
         header("Content-Disposition: attachment; filename=\"".$path_parts["basename"]."\""); // use 'attachment' to force a file download
-        break;
-        // add more headers for other content types here
-        //default;
-        //header("Content-type: application/octet-stream");
-        //header("Content-Disposition: filename=\"".$path_parts["basename"]."\"");
-        //break;
-    }
-    header("Content-length: $fsize");
+        header("Content-length: $fsize");
     header("Cache-control: private"); //use this to open files directly
     //while(!feof($fd)) {
     //    $buffer = fread($fd, 2048);
@@ -41,6 +34,15 @@ if ($fd = fopen ($fullPath, "r")) {
     // }
     ob_clean();
     readfile($fd);
+    fclose ($fd);
+        break;
+        // add more headers for other content types here
+        //default;
+        //header("Content-type: application/octet-stream");
+        //header("Content-Disposition: filename=\"".$path_parts["basename"]."\"");
+        //break;
+    }
+    
 }
-fclose ($fd);
+//fclose ($fd);
 exit;
