@@ -23,17 +23,13 @@ $key=TRUE;
 
 if ($key == FALSE){
 	session_unset();
-//header('Location:login_error.html');
+header('Location:login_error.html');
 }
 
 function encrypt($pass){
 require "variables/variables.inc.php";
-echo $salt1;
-echo $salt2;
 $pass_hash1 = md5($pass . $salt1);
-echo $pass_hash1;
 $passFinal = sha1($salt2 . $pass_hash1);
-echo $passFinal;
 
 return $passFinal;
 
