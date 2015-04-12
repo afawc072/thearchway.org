@@ -1,15 +1,16 @@
 <html>
 	<body>
 	<?php
-	$con = mysql_connect("localhost","admin","vincentdb")or die(mysql_error());
+	include("db_connect.php");
+	// $con = mysql_connect("localhost","admin","vincentdb")or die(mysql_error());
 		
-		if (!$con)
-		  {
-		  echo"No Connection";
-		  die('Could not connect: ' . mysql_error());
-		  }
+	// 	if (!$con)
+	// 	  {
+	// 	  echo"No Connection";
+	// 	  die('Could not connect: ' . mysql_error());
+	// 	  }
 		 
-		mysql_select_db("archway1", $con); 
+	// 	mysql_select_db("archway1", $con); 
 
 
 
