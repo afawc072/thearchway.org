@@ -23,7 +23,7 @@ $key=TRUE;
 
 if ($key == FALSE){
 	session_unset();
-header('Location:login_error.html');
+//header('Location:login_error.html');
 }
 
 function encrypt($pass){
