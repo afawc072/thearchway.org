@@ -1,5 +1,5 @@
 <?php
-include("variables/variables.inc.php");
+require "variables/variables.inc.php";
 
 function encrypt($pass){
 
