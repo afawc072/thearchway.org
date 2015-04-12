@@ -4,13 +4,6 @@
     <head>
 
 <?php
-session_start();
-if(!isset($_SESSION['username'])){
-header('Location:/archway/profile.html');
-}
-?>
-
-<?php
 header('Cache-Control: max-age=900');
 ?>
 
