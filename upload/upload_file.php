@@ -48,34 +48,44 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       }
     else
       {
-   echo $cname;
-      // if(!file_exists(dirname("/opt/lampp/htdocs/php_website_test/uploadedFiles/" .$tname)))
-    if (!is_dir($structure.$cname)) {
-        mkdir($structure.$cname);
-//        echo 'Directory not found';
-       }
+         require "db_connect.php";
+         $result = mysql_query( "SELECT * FROM Course WHERE cname='$cname' LIMIT 1");
+         if(mysql_fetch_array($result) !== false){
 
-      $path=$structure.$cname."/".$filename;
-      move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."/".$filename);
+
+        echo $cname;
+      // if(!file_exists(dirname("/opt/lampp/htdocs/php_website_test/uploadedFiles/" .$tname)))
+        if (!is_dir($structure.$cname)) {
+          mkdir($structure.$cname);
+//        echo 'Directory not found';
+         }  
+
+        $path=$structure.$cname."/".$filename;
+        move_uploaded_file($_FILES["file"]["tmp_name"], $structure.$cname."/".$filename);
 
       //Add course to MYSQL DB
 
       //open connection
-      $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
+        $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
       //select database
-      mysql_select_db("archway1", $conn);
+        mysql_select_db("archway1", $conn);
 
-      if(!empty($_POST['details'])){
-        $sql2 = "INSERT INTO Files (fromCourse, description, courseFile,path,user) VALUES ('$cname','$description','$filename','$path','$user')";
-      } else {
+        if(!empty($_POST['details'])){
+          $sql2 = "INSERT INTO Files (fromCourse, description, courseFile,path,user) VALUES ('$cname','$description','$filename','$path','$user')";
+        } 
+        else {
           $sql2 = "INSERT INTO Files (fromCourse, courseFile,path,user) VALUES ('$cname','$filename','$path','$user')";  
-      }
-      $result=mysql_query($sql2, $conn) or die(mysql_error());
-      mysql_close($conn);
+        }
+        $result=mysql_query($sql2, $conn) or die(mysql_error());
+        mysql_close($conn);
     
-      echo "Thank you for Contributing to the Archway";
+        echo "Thank you for Contributing to the Archway";
     
-      header("refresh:5; url=/archway");
+        header("refresh:5; url=/archway");
+        }
+        else{
+          echo "Please Upload to a course contained in our DB";
+        }
       }
     }
   }
