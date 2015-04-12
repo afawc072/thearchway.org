@@ -6,7 +6,7 @@ require "variables/dbconnect.inc.php";
  $con = mysql_connect($host, $dbuser, $dbpass)or die(mysql_error()); 
  mysql_select_db($dbname,$con);
 
-$con = mysql_connect("localhost","admin","vincentdb")or die(mysql_error());
+$con = mysql_connect($host,$dbuser,$dbpass)or die(mysql_error());
 		
 if (!$con)
  	  {
@@ -14,5 +14,5 @@ if (!$con)
 	  die('Could not connect: ' . mysql_error());
  	  }
 		 
- 	mysql_select_db("archway1", $con); 
+ 	mysql_select_db($dbname, $con); 
  ?> 
