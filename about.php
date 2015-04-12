@@ -99,7 +99,7 @@ $(document).ready(function() {
     </div>
 
 
-    <div class="container" style="margin-top: 50px;">
+    <div class="container" style="margin-top: 50px; min-width:720px;">
 
         
        
@@ -109,7 +109,7 @@ $(document).ready(function() {
 
 <?php include ("templates/login_box.php");?>
 
-   <div class="example" style="border: 0px; witdh: 100%;">
+   <div class="example" style="border: 0px; witdh: 100%; ">
                 <div class="grid fluid">
                 <div class="row" style="text-align:center; position:relative;">
                     <div class="span4">

@@ -11,4 +11,3 @@ echo"<div class='example' style=' position:fixed; top:0px; margin:auto; z-index:
 
 
                   
-<div class='element input-element'><form><div class='input-control text'><input type='text' placeholder='Search...'><button class='btn-search'></button></div></form></div>
