@@ -1,6 +1,6 @@
 <?php
 
-include("variables/variables.inc.php");
+include("variables/variables.inc");
 
 function encrypt($pass){
 
