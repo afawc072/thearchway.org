@@ -5,5 +5,5 @@ include("variables/dbconnect.inc.php");
  mysql_connect($host, $dbuser, $dbpass) or die(mysql_error()); 
  mysql_select_db($dbname);
  $result = mysql_query("SELECT * FROM Users");
-var_dump($results);
+var_dump($result);
  ?> 
