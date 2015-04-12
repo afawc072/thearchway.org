@@ -1,7 +1,7 @@
 <html>
 	<body>
 	<?php
-	include("db_connect.php");
+	require_once "db_connect.php";
 	// $con = mysql_connect("localhost","admin","vincentdb")or die(mysql_error());
 		
 	// 	if (!$con)
