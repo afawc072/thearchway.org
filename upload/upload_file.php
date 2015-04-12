@@ -48,7 +48,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       }
     else
       {
-         require "db_connect.php";
+         require "/archway/db_connect.php";
          $result = mysql_query( "SELECT * FROM Course WHERE cname='$cname' LIMIT 1");
          if(mysql_fetch_array($result) !== false){
 
