@@ -6,7 +6,7 @@
 $email=$_POST['user'];
 $password=$_POST['pass'];
 
-$pass=encrypt($password);
+$password=encrypt($password);
 
 $key = FALSE;
 $result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password' ");
