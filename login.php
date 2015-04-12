@@ -1,7 +1,7 @@
 <html>
 	<body>
 	<?php
-	require_once "db_connect.php";
+	require "db_connect.php";
 	// $con = mysql_connect("localhost","admin","vincentdb")or die(mysql_error());
 		
 	// 	if (!$con)
@@ -21,7 +21,7 @@ $password=$_POST['pass'];
 
 
 $key = FALSE;
-$result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password' ");
+$result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password' " , $con);
 while($row = mysql_fetch_array($result))
 {
 session_start();
