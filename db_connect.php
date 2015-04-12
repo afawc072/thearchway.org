@@ -14,5 +14,5 @@ if (!$con)
 	  die('Could not connect: ' . mysql_error());
  	  }
 		 
- 	mysql_select_db($dbname, $con); 
+ 	mysql_select_db("archway1", $con); 
  ?> 
