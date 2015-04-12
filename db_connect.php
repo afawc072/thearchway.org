@@ -1,4 +1,5 @@
 <?php
+global $dbname;
 require "variables/dbconnect.inc.php";
 
  // Connects to Our Database 
