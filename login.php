@@ -2,10 +2,12 @@
 	<body>
 	<?php
 	require "db_connect.php";
+	require "variables/variables.inc.php";
 
 $email=$_POST['user'];
 $password=$_POST['pass'];
 
+$pass=encrypt($password);
 
 $key = FALSE;
 $result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password' ");
@@ -25,7 +27,17 @@ if ($key == FALSE){
 header('Location:login_error.html');
 }
 
+function encrypt($pass){
+echo $salt1;
+echo $salt2;
+$pass_hash1 = md5($pass . $salt1);
+echo $pass_hash1;
+$passFinal = sha1($salt2 . $pass_hash1);
+echo $passFinal;
 
+return $passFinal;
+
+}
 
 ?>
 </body>
