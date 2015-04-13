@@ -38,6 +38,6 @@ while (($k<=${#ARRAY[@]}))
         temp=$(echo ${ARRAY[$k]} | cut -c47-)
         echo $temp;
         course=$(echo ${temp:0:7})
-        echo "INSERT INTO Files (courseFile, path, fromCourse) SELECT '$temp', '${ARRAY[$k]}', 'course' FROM DUAL WHERE NOT EXISTS (SELECT * FROM Files WHERE courseFile='$temp' AND path='${ARRAY[$k]}') LIMIT 1;" | mysql -u admin -pvincentdb archway1;
+        echo "INSERT INTO Files (courseFile, path, fromCourse, user) SELECT '$temp', '${ARRAY[$k]}', '$course', 'automated_script' FROM DUAL WHERE NOT EXISTS (SELECT * FROM Files WHERE courseFile='$temp' AND path='${ARRAY[$k]}') LIMIT 1;" | mysql -u admin -pvincentdb archway1;
         ((++k))
 done
