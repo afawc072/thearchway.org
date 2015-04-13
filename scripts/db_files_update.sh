@@ -1,7 +1,8 @@
+
 #! /bin/bash
 
 echo "WE WILL NOW UPDATE THE DB BY REMOVING FROM IT FILES THAT AREN'T IN THE FILE SERVER ANYMORE"
-sleep 5
+#sleep 5
 
 while read -a row
 do
@@ -24,13 +25,20 @@ fi
 done < <(echo "use archway1;SELECT id,path from Files" | mysql -u admin -pvincentdb)
 
 echo "WE WILL NOW UPDATE THE DB WITH COURSES THAT MIGHT HAVE SLIPPED THROUGH THE CRACKS OF OUR DB OR WERE ADDED MANUALLY TO THE FILE SERVER"
-sleep 5
+
 
 ARRAY=( $(find /var/www/archway/upload/uploadedFiles/* | grep -e ".doc" -e ".odt" -e ".ppt" -e ".docx" -e ".pdf") )
 
-for i in "${ARRAY[@]}"
-	do
-	:
-	COURSENAME[$i]=$(echo ${ARRAY[$i]} | cut -c47-)
-done
+temp="";
+course="";
+k=0;
+while (($k<=${#ARRAY[@]}))
+        do
 
+        #echo ;
+        temp=$(echo ${ARRAY[$k]} | cut -c47-)
+        echo $temp;
+        course=$(echo ${temp:0:7})
+        echo "INSERT INTO Files (courseFile, path, fromCourse) SELECT '$temp', '${ARRAY[$k]}', 'course' FROM DUAL WHERE NOT EXISTS (SELECT * FROM Files WHERE courseFile='$temp' AND path='${ARRAY[$k]}') LIMIT 1;" | mysql -u admin -pvincentdb archway1;
+        ((++k))
+done
