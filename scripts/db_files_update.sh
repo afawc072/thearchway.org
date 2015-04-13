@@ -31,6 +31,6 @@ ARRAY=( $(find /var/www/archway/upload/uploadedFiles/* | grep -e ".doc" -e ".odt
 for i in "${ARRAY[@]}"
 	do
 	:
-	COURSENAME=$(echo ${ARRAY[i]} | cut -c47-)
+	COURSENAME[$i]=$(echo ${ARRAY[$i]} | cut -c47-)
 done
 
