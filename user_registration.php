@@ -2,9 +2,9 @@
 //Get a DB connection
 require "db_connect.php";
 //Get variables from Registration Submit
-$user=$_POST['user'];
+$user=$_POST['username'];
 $email=$_POST['emailInput'];
-$password1=$_POST['passwordInput'];
+$password=$_POST['passwordInput'];
 $first=$_POST['firstNInput'];
 $last=$_POST['lastNInput'];
 
@@ -22,7 +22,7 @@ if ($key == FALSE){
 	$confirmCode=generate_random_string();
 	$password=encrypt($password);
 	$sql = "INSERT INTO Users (username, password, email, first, last, confirmCode) VALUES ('$user', '$password', '$email', '$first', '$last', '$confirmCode')";
-	$result=mysql_query($sql, $conn) or die(mysql_error());
+	$result=mysql_query($sql) or die(mysql_error());
     
 	//PLACE TO SEND CONFIRMATION CODE TO USER
 
