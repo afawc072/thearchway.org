@@ -195,8 +195,8 @@ header('Cache-Control: max-age=900');
                          $courseList = "";
                          $courseCount = 1;
 
-                        while ($courseFetcher = mysql_fetch_array($data)) {
-
+                      //  while ($courseFetcher = mysql_fetch_array($data)) {
+                          while ($result) {
                          $exactCourse = $courseFetcher['cname'];
                          echo $exactCourse;
                         //Querying for all files from courses that are LIKE input
