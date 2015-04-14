@@ -14,6 +14,7 @@ while($row = mysql_fetch_array($result))
 {
 session_start();
 $_SESSION['username']=$row["username"];
+$_SESSION['email']=$row["email"];
 
 header('Location:index.php');	
 

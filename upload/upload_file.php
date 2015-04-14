@@ -15,7 +15,7 @@ $filename = str_replace(' ', '', $filename);
 $filename = preg_replace('/\s+/', '', $filename);
 $extension = end($temp);
 $structure = "/var/www/archway/upload/uploadedFiles/";
-$user = $_SESSION['username'];
+$user = $_SESSION['email'];
 if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
 || ($_FILES["file"]["type"] == "application/vnd.oasis.opendocument.text")
 || ($_FILES["file"]["type"] == "application/msword")
