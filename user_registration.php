@@ -3,10 +3,10 @@
 require "db_connect.php";
 //Get variables from Registration Submit
 $user=$_POST['user'];
-$email=$_POST['email'];
-$password1=$_POST['pass'];
-$first=$_POST['first'];
-$last=$_POST['last'];
+$email=$_POST['emailInput'];
+$password1=$_POST['passwordInput'];
+$first=$_POST['firstNInput'];
+$last=$_POST['lastNInput'];
 
 //First Condition to verify if email is already contained in the DB
 $key=FALSE;
