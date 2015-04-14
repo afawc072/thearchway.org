@@ -193,7 +193,7 @@ header('Cache-Control: max-age=900');
                     echo '<tbody>';
 
                          $courseList = "";
-                         $courseCount = 1;
+                         $courseCount = 0;
 
                         while ($courseFetcher = mysql_fetch_array($data)) {
 
