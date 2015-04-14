@@ -53,9 +53,9 @@ header('Cache-Control: max-age=900');
                     mysql_select_db("archway1", $conn);
 
                     //filtering input for xss and sql injection
-                    //$input = strip_tags( $input );
-                    //$input = mysql_real_escape_string( $input );
-                    //$input = trim( $input );
+                    $input = strip_tags( $input );
+                    $input = mysql_real_escape_string( $input );
+                    $input = trim( $input );
 
                     //Querying for all courses that are LIKE input
                     $sql1 = "SELECT cname FROM Course WHERE cname  LIKE '%$input%';";
@@ -198,7 +198,7 @@ header('Cache-Control: max-age=900');
                         while ($courseFetcher = mysql_fetch_array($data)) {
 
                          $exactCourse = $courseFetcher['cname'];
-
+                         echo $exactCourse;
                         //Querying for all files from courses that are LIKE input
                         $sqlNbrFiles = "SELECT fromCourse FROM Files WHERE fromCourse  LIKE '%$exactCourse%';";
                         $dataNbrFiles = mysql_query($sqlNbrFiles, $conn) or die(mysql_error());
