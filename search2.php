@@ -53,9 +53,9 @@ header('Cache-Control: max-age=900');
                     mysql_select_db("archway1", $conn);
 
                     //filtering input for xss and sql injection
-                    $input = strip_tags( $input );
-                    $input = mysql_real_escape_string( $input );
-                    $input = trim( $input );
+                    //$input = strip_tags( $input );
+                    //$input = mysql_real_escape_string( $input );
+                    //$input = trim( $input );
 
                     //Querying for all courses that are LIKE input
                     $sql1 = "SELECT cname FROM Course WHERE cname  LIKE '%$input%';";
@@ -193,7 +193,7 @@ header('Cache-Control: max-age=900');
                     echo '<tbody>';
 
                          $courseList = "";
-                         $courseCount = 0;
+                         $courseCount = 1;
 
                         while ($courseFetcher = mysql_fetch_array($data)) {
 
