@@ -194,9 +194,11 @@ header('Cache-Control: max-age=900');
 
                          $courseList = "";
                          $courseCount = 1;
+                         $sql1 = "SELECT cname FROM Course WHERE cname  LIKE '%$input%';";
+                         $data = mysql_query($sql1, $conn) or die(mysql_error());
 
-                      //  while ($courseFetcher = mysql_fetch_array($data)) {
-                          while ($result) {
+                        while ($courseFetcher = mysql_fetch_array($data)) {
+
                          $exactCourse = $courseFetcher['cname'];
                          echo $exactCourse;
                         //Querying for all files from courses that are LIKE input
