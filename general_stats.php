@@ -105,7 +105,7 @@ $(document).ready(function() {
        
  <div id="isc_3" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px;width: 100%; display: inline-block; outline-style: none;">
  
- <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em; margin-left: 57px;"><b>Help /</b> TOP COURSES</p>
+ <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em; margin-left: 57px;"><b>STATS /</b> TOP COURSES</p>
 
 <?php include ("templates/login_box.php");?>
 
