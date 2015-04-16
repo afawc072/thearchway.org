@@ -132,19 +132,6 @@ $(document).ready(function() {
                     <div id="unDiv" name="unDiv" class="input-control text" data-role="input-control">
                         <input type="text" id="username" name="username" required>
                     </div>
-                    <label>First Name</label>
-
-
-                    <div id="firstNInputDiv" name="firstNInputDiv" class="input-control text" data-role="input-control">
-                        <input id="firstNInput" name="firstNInput" type="text" required>
-                    </div>
-                    
-                    <label>Last Name</label>
-
-
-                    <div id="lastNInputDiv" name="lastNInputDiv" class="input-control text" data-role="input-control">
-                        <input id="lastNInput" name="lastNInput" type="text" required>
-                    </div>
 
                     <label>Email Address</label>
                     <div id="emailInputDiv" name="emailInputDiv" class="input-control text" data-role="input-control">
@@ -155,6 +142,10 @@ $(document).ready(function() {
                     <label>Password</label>
                     <div id="passwordInputDiv" name="passwordInputDiv" class="input-control text" data-role="input-control">
                         <input id="passwordInput" name="passwordInput" required type='password' >
+                    </div>
+                    <label>Re-type password</label>
+                    <div id="passwordInputDiv" name="passwordInputConfirmDiv" class="input-control text" data-role="input-control">
+                        <input id="passwordInputConfirm" name="passwordInputConfirm" required type='password'>
                     </div>
 
                     
