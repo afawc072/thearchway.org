@@ -5,8 +5,7 @@ require "db_connect.php";
 $user=$_POST['username'];
 $email=$_POST['emailInput'];
 $password=$_POST['passwordInput'];
-$first=$_POST['firstNInput'];
-$last=$_POST['lastNInput'];
+
 
 //First Condition to verify if email is already contained in the DB
 $key=FALSE;
@@ -21,7 +20,7 @@ if ($key == FALSE){
 
 	$confirmCode=generate_random_string();
 	$password=encrypt($password);
-	$sql = "INSERT INTO Users (username, password, email, first, last, confirmCode) VALUES ('$user', '$password', '$email', '$first', '$last', '$confirmCode')";
+	$sql = "INSERT INTO Users (username, password, email, confirmCode) VALUES ('$user', '$password', '$email', '$confirmCode')";
 	$result=mysql_query($sql) or die(mysql_error());
     
 	//PLACE TO SEND CONFIRMATION CODE TO USER

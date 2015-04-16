@@ -1,9 +1,12 @@
 <?php
+require "db_connect.php";
 
 session_start();
 if(!isset($_SESSION['username'])){
 header('Location:/archway/profile.html');
 }
+
+
 
 ignore_user_abort(true);
 set_time_limit(0); // disable the time limit for this script
@@ -13,6 +16,10 @@ $courseName = substr($dl_file, 0, 7);
 $path = "/var/www/archway/upload/uploadedFiles/".$courseName."/"; // change the path to fit your websites document structure
 $dl_file = filter_var($dl_file, FILTER_SANITIZE_URL); // Remove (more) invalid characters
 $fullPath = $path.$dl_file;
+$user = $_SESSION['email'];
+
+$sql = "INSERT INTO download (file, course, user) VALUES ('$dl_file', '$courseName', '$user')";
+$result=mysql_query($sql) or die(mysql_error());
 
 echo $dl_file;
 echo "\n";

@@ -57,6 +57,8 @@ header('Cache-Control: max-age=900');
                     $input = mysql_real_escape_string( $input );
                     $input = trim( $input );
 
+                    $sql = "INSERT INTO search (searchQ) VALUES ('$input')";
+                    $result=mysql_query($sql) or die(mysql_error());
                     //Querying for all courses that are LIKE input
                     $sql1 = "SELECT cname FROM Course WHERE cname  LIKE '%$input%';";
                     $data = mysql_query($sql1, $conn) or die(mysql_error());
