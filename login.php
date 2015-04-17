@@ -19,7 +19,7 @@ session_start();
 $_SESSION['username']=$row["username"];
 $_SESSION['email']=$row["email"];
 
-
+}
 $key=TRUE;	
 echo 'true';
 }
