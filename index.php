@@ -28,6 +28,7 @@ header('Cache-Control: max-age=900');
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
     <script src="js/start-screen.js"></script>
+    <script src="js/ajax_login.js"></script>
 <script type="text/javascript">
     
 $(document).ready(function() {
@@ -173,7 +174,6 @@ $(document).ready(function() {
 
 </div>
 </div>
-<script type="text/javascript" src="js/ajax_search.js"></script>
         </body>
     </html>
 

@@ -147,9 +147,6 @@ $(document).ready(function() {
                     <div id="passwordInputDiv" name="passwordInputConfirmDiv" class="input-control text" data-role="input-control">
                         <input id="passwordInputConfirm" name="passwordInputConfirm" required type='password'>
                     </div>
-
-                    
-
                     <br>
                     <legend style="margin-top: 14px;"></legend>
                     <input id="submitbutton" type="submit" name="submitbutton" value="CREATE ACCOUNT" style="padding: 15px 22px; background-color: #4A4A4A; color: #FFF; margin-right: 30px;">

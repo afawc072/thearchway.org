@@ -5,7 +5,7 @@
                                               
                                              echo"<div id='login-box' class='login-popup'>";
                                                  echo"<a href='#' class='close'><img src='images/close_pop.png' class='btn_close' title='Close Window' alt='Close' /></a>";
-                                                    echo"<form class='signin' method='post' action='login.php'>";
+                                                    echo"<form id='signin' class='signin' method='post' action='login.php'>";
                                                         echo"<fieldset class='textbox' style='margin: 15px;'>";
                                                         echo"<label class='username'>";
                                                         echo"<span>Email</span>";
