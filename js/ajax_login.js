@@ -12,7 +12,7 @@ $('load').click(function(){
     })
 
     username=$("#user").val();
-    password=$("#password").val();
+    password=$("#pass").val();
     
     $.ajax({
     	type: "POST",

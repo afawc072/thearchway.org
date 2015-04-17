@@ -27,7 +27,7 @@ echo 'true';
 	$key == FALSE;
 	echo 'false';
 }
-	
+
 
 function encrypt($pass){
 require "variables/variables.inc.php";
