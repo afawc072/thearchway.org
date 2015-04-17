@@ -62,14 +62,9 @@ $(document).ready(function() {
 $('#load').click(function(){
 
     var $this = $(this);
-    $this.css({
-        'background-color' : 'rgba(219, 86, 86, 0)',
-        'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
 
-    })
-
-    username=$("#user").val();
-    password=$("#pass").val();
+    var username=$("#user").val();
+    var password=$("#pass").val();
     
     $.ajax({
         type: "POST",
@@ -87,7 +82,11 @@ $('#load').click(function(){
 
         },
         beforeSend:function(){
-            $("#login-box").html("Loading...");
+            $this.css({
+                'background-color' : 'rgba(219, 86, 86, 0)',
+                'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
+
+            })
         }
     });
     return false;
