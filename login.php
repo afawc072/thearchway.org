@@ -18,11 +18,9 @@ $_SESSION['email']=$row["email"];
 
 }
 echo 'true';
-header('Location:login_error.html');
 }
 } else {
 	echo 'false';
-	header('Location:login_error.html');
 }
 
 
