@@ -1,7 +1,6 @@
 <?php
 
 	session_start();
-	$username = $_POST[];
 	require "db_connect.php";
 
 $email=$_POST['name'];
@@ -9,7 +8,6 @@ $password=$_POST['pwd'];
 
 $password=encrypt($password);
 
-$key = FALSE;
 $result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password' ") or die (mysql_error());
 $num_row= mysql_num_rows($result);
 if( $num_row >= 1){
@@ -19,12 +17,12 @@ $_SESSION['username']=$row["username"];
 $_SESSION['email']=$row["email"];
 
 }
-$key=TRUE;	
 echo 'true';
+header('Location:login_error.html');
 }
 } else {
-	$key = FALSE;
 	echo 'false';
+	header('Location:login_error.html');
 }
 
 
