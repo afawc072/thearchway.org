@@ -73,10 +73,10 @@ $('#load').click(function(){
 
             if(html=='true')
             {
-                $("#login-box").html("<a href='search2.php' id='logout'>Logout</a>");
+                location.reload();
             }
             else{
-                $("#login-box").html("Wrong username or password");
+                $("#login-box").html("WRONG USER NAME OR PASSWORD");
             }
 
         },
