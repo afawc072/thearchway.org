@@ -8,7 +8,7 @@ $password=$_POST['pwd'];
 
 $password=encrypt($password);
 
-$result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password'") or die (mysql_error());
+$result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password';") or die (mysql_error());
 $num_row= mysql_num_rows($result);
 
 if( $num_row >= 1){
