@@ -77,6 +77,11 @@ $('#load').click(function(){
             }
             else{
                 $("#login-box").html("WRONG USER NAME OR PASSWORD");
+                $this.css({
+                'background-color' : 'rgba(219, 86, 86, 100)',
+                'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
+
+            })
             }
 
         },
