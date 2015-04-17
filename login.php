@@ -4,8 +4,6 @@
 	$username = $_POST[];
 	require "db_connect.php";
 
-	echo 'true';
-
 $email=$_POST['name'];
 $password=$_POST['pwd'];
 
@@ -17,7 +15,6 @@ $num_row= mysql_num_rows($result);
 if( $num_row >= 1){
 while($row = mysql_fetch_array($result))
 {
-session_start();
 $_SESSION['username']=$row["username"];
 $_SESSION['email']=$row["email"];
 

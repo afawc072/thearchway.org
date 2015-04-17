@@ -63,8 +63,8 @@ $('#load').click(function(){
 
     var $this = $(this);
 
-    var username=$("#user").val();
-    var password=$("#pass").val();
+    username=$("#user").val();
+    password=$("#pass").val();
     
     $.ajax({
         type: "POST",
