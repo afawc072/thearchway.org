@@ -2,7 +2,7 @@
 
 session_start();
 if(!isset($_SESSION['username'])){
-header('Location:/archway/profile.html');
+header('Location:/archway/sign-up.php');
 }
 
 $allowedExts = array("ppt","docx","doc","pdf","odt");
