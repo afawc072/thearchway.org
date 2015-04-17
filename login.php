@@ -4,6 +4,8 @@
 	$username = $_POST[];
 	require "db_connect.php";
 
+	echo 'true';
+
 $email=$_POST['name'];
 $password=$_POST['pwd'];
 
