@@ -8,6 +8,8 @@ $('signin').submit(function(event){
 		request.abort();
 	}
 
+	console.log("penis");
+
 	var $form = $(this);
 
 	var $inputs = $form.find("input, select, button, textarea");
