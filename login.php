@@ -16,7 +16,6 @@ session_start();
 $_SESSION['username']=$row["username"];
 $_SESSION['email']=$row["email"];
 
-header('Location:index.php');	
 
 $key=TRUE;	
 }
@@ -24,7 +23,6 @@ $key=TRUE;
 
 if ($key == FALSE){
 	session_unset();
-header('Location:login_error.html');
 }
 
 function encrypt($pass){

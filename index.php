@@ -65,7 +65,6 @@ $(document).ready(function() {
             'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
 
         })
-        $this.fadeOut(1000);
     });
 
     
