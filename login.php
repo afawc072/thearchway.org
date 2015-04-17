@@ -23,7 +23,7 @@ $key=TRUE;
 echo 'true';
 }
 } else {
-	$key == FALSE;
+	$key = FALSE;
 	echo 'false';
 }
 
