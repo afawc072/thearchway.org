@@ -59,7 +59,7 @@ $(document).ready(function() {
     });
 
 
-$('load').click(function(){
+$('#load').click(function(){
 
     var $this = $(this);
     $this.css({
