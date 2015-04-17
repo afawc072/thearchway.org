@@ -19,7 +19,7 @@ $_SESSION['email']=$row["email"];
 }
 echo 'true';
 }
-} else {
+else {
 	echo 'false';
 }
 
