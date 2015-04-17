@@ -18,7 +18,7 @@ $_SESSION['username']=$row["username"];
 $_SESSION['email']=$row["email"];
 
 }
-echo 'true';
+echo 1;
 }
 else {
 	echo 'false';

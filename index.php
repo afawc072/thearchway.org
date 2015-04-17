@@ -71,7 +71,7 @@ $('#load').click(function(){
         data: "name="+username+"&pwd="+password,
         success: function(html){
 
-            if(html=='true')
+            if(html==1)
             {
                 location.reload();
             }
