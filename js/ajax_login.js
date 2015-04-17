@@ -1,4 +1,3 @@
-<script type="text/javascript">
 $(document).ready(function() {
 
 	var request;
@@ -38,4 +37,3 @@ $('load').click(function(){
 });
 
 });
-</script>
