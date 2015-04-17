@@ -58,15 +58,6 @@ $(document).ready(function() {
         return false;
     });
 
-    $('#load').click(function() {
-    var $this = $(this);
-        $this.css({
-            'background-color' : 'rgba(219, 86, 86, 0)',
-            'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
-
-        })
-    });
-
     
     // When clicking on the button close or the mask layer the popup closed
     $('a.close, #mask').click( function() { 

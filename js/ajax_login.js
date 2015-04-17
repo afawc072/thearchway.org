@@ -2,47 +2,38 @@ $(document).ready(function() {
 
 	var request;
 
-$('signin').submit(function(event){
+$('load').click(function(){
 
-	if (request){
-		request.abort();
-	}
+    var $this = $(this);
+    $this.css({
+        'background-color' : 'rgba(219, 86, 86, 0)',
+        'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
 
-	console.log("penis");
+    })
 
-	var $form = $(this);
+    username=$("#user").val();
+    password=$("#password").val();
+    
+    $.ajax({
+    	type: "POST",
+    	url: "login.php",
+    	data: "name="+username+"&pwd="+password,
+    	success: function(html){
 
-	var $inputs = $form.find("input, select, button, textarea");
+    		if(html=='true')
+    		{
+    			$("#login-box").html("<a href='search2.php' id='logout'>Logout</a>");
+    		}
+    		else{
+    			$("#login-box").html("Wrong username or password");
+    		}
 
-	var serializedData = $form.serialize();
-
-	$inputs.prop("disabled", true);
-
-	request = $.ajax({
-
-		url: 'login.php',
-		type: 'post',
-		data: serializedData 
-	});
-
-	request.done(function (response, textStatus, jqXHR){
-		console.log("It worked");
-	});
-
-
-    request.fail(function (jqXHR, textStatus, errorThrown){
-        console.error(
-            "The following error occurred: "+
-            textStatus, errorThrown
-        );
+    	},
+    	beforeSend:function(){
+    		$("#login-box").html("Loading...");
+    	}
     });
-
-        request.always(function () {
-        // Reenable the inputs
-        $inputs.prop("disabled", false);
-    });
-
-        event.preventDefault();
-	});
+    return false;
+});
 
 });
