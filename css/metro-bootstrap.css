@@ -55,6 +55,15 @@ a:active,
       padding-top: 160px;
     }
 
+    #hc-mask-green {
+      background-color: #000;
+      background-image : url(../images/archway_assets1600x400_green.jpg);
+      background-position: center center, center top;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      padding-top: 160px;
+    }
+
 
     .footer, .push {
     height: 100px; /* .push must be the same height as .footer */
