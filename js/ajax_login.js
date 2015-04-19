@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 $('#signin').submit(function(){
 
-    var $this = $(this);
+    var $this = $("#load");
 
     username=$("#user").val();
     password=$("#pass").val();
