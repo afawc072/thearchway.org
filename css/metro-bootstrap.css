@@ -63,6 +63,7 @@ a:active,
       background-position: center center, center top;
       background-repeat: no-repeat;
       padding-top: 160px;
+      min-width: 720px;
     }
 
 
