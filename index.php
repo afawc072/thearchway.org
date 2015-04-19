@@ -28,6 +28,7 @@ header('Cache-Control: max-age=900');
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
     <script src="js/start-screen.js"></script>
+    <script src="js/ajax_login.js"></script>
 <script type="text/javascript">
     
 $(document).ready(function() {
@@ -55,45 +56,6 @@ $(document).ready(function() {
         $('#mask').fadeIn(300);
         
         return false;
-    });
-
-
-$('#load').click(function(){
-
-    var $this = $(this);
-
-    username=$("#user").val();
-    password=$("#pass").val();
-    
-    $.ajax({
-        type: "POST",
-        url: "login.php",
-        data: "name="+username+"&pwd="+password,
-        success: function(html){
-
-            if(html==1)
-            {
-                location.reload();
-            }
-            else{
-                $("#login-box").html("WRONG USER NAME OR PASSWORD");
-                $this.css({
-                'background-color' : 'rgba(219, 86, 86, 100)',
-                'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
-
-            })
-            }
-
-        },
-        beforeSend:function(){
-            $this.css({
-                'background-color' : 'rgba(219, 86, 86, 0)',
-                'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
-
-            })
-        }
-    });
-    return false;
     });
     
     // When clicking on the button close or the mask layer the popup closed

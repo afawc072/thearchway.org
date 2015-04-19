@@ -1,39 +1,41 @@
 $(document).ready(function() {
 
-	var request;
-
-$('load').click(function(){
+$('#signin').submit(function(){
 
     var $this = $(this);
-    $this.css({
-        'background-color' : 'rgba(219, 86, 86, 0)',
-        'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
-
-    })
 
     username=$("#user").val();
     password=$("#pass").val();
     
     $.ajax({
-    	type: "POST",
-    	url: "login.php",
-    	data: "name="+username+"&pwd="+password,
-    	success: function(html){
+        type: "POST",
+        url: "login.php",
+        data: "name="+username+"&pwd="+password,
+        success: function(html){
 
-    		if(html=='true')
-    		{
-    			$("#login-box").html("<a href='search2.php' id='logout'>Logout</a>");
-    		}
-    		else{
-    			$("#login-box").html("Wrong username or password");
-    		}
+            if(html==1)
+            {
+                location.reload();
+            }
+            else{
+                $("#login-box").html("WRONG USER NAME OR PASSWORD");
+                $this.css({
+                'background-color' : 'rgba(219, 86, 86, 100)',
+                'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
 
-    	},
-    	beforeSend:function(){
-    		$("#login-box").html("Loading...");
-    	}
+            })
+            }
+
+        },
+        beforeSend:function(){
+            $this.css({
+                'background-color' : 'rgba(219, 86, 86, 0)',
+                'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
+
+            })
+        }
     });
     return false;
-});
+    });
 
 });
