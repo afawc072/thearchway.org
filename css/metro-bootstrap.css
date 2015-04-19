@@ -48,9 +48,7 @@ a:active,
 
     #hc-mask {
       background-color: #000;
-      background-image : url(../images/archway_assets1600x400.jpg);
-      background-position: center center, center top;
-      background-repeat: no-repeat;
+      background-image : url(../images/archway_assets1600x400.jpg) no-repeat scroll center top / cover transparent;
       background-size: 100%;
       padding-top: 160px;
     }
