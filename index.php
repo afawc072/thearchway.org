@@ -54,6 +54,7 @@ $(document).ready(function() {
         // Add the mask to body
         $('body').append('<div id="mask"></div>');
         $('#mask').fadeIn(300);
+        document.getElementById("user").focus();
         
         return false;
     });

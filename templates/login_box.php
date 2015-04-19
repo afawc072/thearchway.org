@@ -24,6 +24,8 @@
                                                         echo"<p style='line-height: 18px; padding-top: 15px;'>";
                                                         echo"<a class='forgot' href='#'>Forgot your password?</a>";
                                                         echo"</p>";
+                                                        echo"<div id='flash-notice' name='flash-notice'>";
+                                                        echo"</div>";
                                             
                                                         echo"</fieldset>";
                                                     echo"</form>";

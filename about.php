@@ -52,19 +52,11 @@ $(document).ready(function() {
         // Add the mask to body
         $('body').append('<div id="mask"></div>');
         $('#mask').fadeIn(300);
+        document.getElementById("user").focus();
         
         return false;
     });
 
-    $('#load').click(function() {
-    var $this = $(this);
-        $this.css({
-            'background-color' : 'rgba(219, 86, 86, 0)',
-            'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
-
-        })
-        $this.fadeOut(1000);
-    });
 
     
     // When clicking on the button close or the mask layer the popup closed
