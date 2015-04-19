@@ -19,7 +19,7 @@
                                                         echo"<input id='pass' name='pass' value='' type='password' placeholder='Password' style='width: 214px;' required>";
                                                         echo"</label>";
                                                         
-                                                        echo"<input type='submit' id='load' value='Sign In' style='width: 214px; margin-top: 10px;'/>";
+                                                        echo"<input type='submit' id='load' value='SIGN IN' style='width: 214px; margin-top: 10px;'/>";
                                                                         
                                                         echo"<p style='line-height: 18px; padding-top: 15px;'>";
                                                         echo"<a class='forgot' href='#'>Forgot your password?</a>";

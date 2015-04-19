@@ -25,7 +25,7 @@
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
     <script src="js/start-screen.js"></script>
-
+    <script src="js/ajax_login.js"></script>
     <script type="text/javascript">
     
 $(document).ready(function() {
