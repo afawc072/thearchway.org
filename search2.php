@@ -65,6 +65,61 @@ header('Cache-Control: max-age=900');
                     $result = mysql_fetch_array($data);
                     $anymatches=mysql_num_rows($data);
 
+                    /****************************************
+                    *                 [IF]                  *
+                    *             Input is empty            *
+                    *          return all courses           *
+                    *                                       *
+                    *****************************************/
+
+                    if($input == ''){
+                        echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
+                        include ("templates/header_sb.php");
+                        echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
+
+                        echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
+                        echo '<div class="example" style="background-color: rgba(239, 246, 238, 0) !important; margin: 0px 0px 0px;">';
+                        echo "<legend><b>Search / </b><span style='color: #00A255;'>All courses</span></legend>";
+                        echo '<table class="table striped bordered hovered">';
+                        echo '<thead>';
+                        echo '<tr>';
+                        echo '<th class="text-left">Courses</th>';
+                        echo '<th class="text-left">Document(s) added</th>';
+                        echo '</tr>';
+                        echo '</thead>';
+                        echo '<tbody>';
+
+                             $courseList = "";
+                             $courseCount = 1;
+                             $sql1 = "SELECT cname FROM Course;";
+                             $data = mysql_query($sql1, $conn) or die(mysql_error());
+
+                            while ($courseFetcher = mysql_fetch_array($data)) {
+
+                             $exactCourse = $courseFetcher['cname'];
+                            //Querying for all files from courses that are LIKE input
+                            $sqlNbrFiles = "SELECT fromCourse FROM Files WHERE fromCourse  LIKE '%$exactCourse%';";
+                            $dataNbrFiles = mysql_query($sqlNbrFiles, $conn) or die(mysql_error());
+                            $fileCount =mysql_num_rows($dataNbrFiles);
+                            //Setting the path to documents
+                            $path = "upload/uploadedFiles/".$exactCourse;
+                            $pathtotal= $path."*";
+                            
+
+
+
+                                    
+                                    echo "<tr class=''><td><form style='margin:  0px 0px 0px;' name='courseForm".$courseCount."' action='search2.php' method='post'><a href='javascript:;' onclick='parentNode.submit();'>".$courseFetcher['cname']."</a><input type='hidden' name='".$courseCount."' value='".$courseFetcher['cname']."'/></form></td><td>".$fileCount."</td></tr>";
+
+                                    $courseCount++;
+                                              
+                                }
+                                mysql_close($conn);
+
+                                    echo'</tbody>';
+                                    echo '</table>';
+                                    echo '</div>';
+                    }
 
                     /****************************************
                     *                 [IF]                  *
@@ -73,7 +128,7 @@ header('Cache-Control: max-age=900');
                     *         in its specific folder        *
                     *                                       *
                     *****************************************/
-                    if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input) && $anymatches!=0){
+                    else if(preg_match('/([A-Za-z]{3})([0-9]{4})/', $input) && $anymatches!=0){
 
                         $exactCourse = $result['cname'];
                         //Setting the path to documents
