@@ -28,6 +28,7 @@ session_start();
     <script src="js/docs.js"></script>
     <script src="js/github.info.js"></script>
     <script src="js/ga.js"></script>
+    <script src="js/ajax_login.js"></script>
 
 
     <script type="text/javascript">
