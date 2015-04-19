@@ -47,6 +47,7 @@ $('#signin').submit(function(){
                             'padding-bottom' : 0,
                           }, "slow");
                       lock = 0;
+                      
                      
                     }, 5000);
                 $this.css({
