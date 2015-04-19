@@ -65,6 +65,13 @@ header('Cache-Control: max-age=900');
                     $result = mysql_fetch_array($data);
                     $anymatches=mysql_num_rows($data);
 
+                    /****************************************
+                    *                 [IF]                  *
+                    *             Input is empty            *
+                    *          return all courses           *
+                    *                                       *
+                    *****************************************/
+
                     if($input == ''){
                         echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
                         include ("templates/header_sb.php");
