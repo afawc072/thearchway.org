@@ -53,14 +53,15 @@ a:active,
       background-position: center center, center top;
       background-repeat: no-repeat;
       padding-top: 160px;
+      min-width: 720px;
     }
 
     #hc-mask-green {
       background-color: #000;
       background-image : url(../images/archway_assets1600x400_green.jpg);
+      background-size: cover;
       background-position: center center, center top;
       background-repeat: no-repeat;
-      background-size: 100%;
       padding-top: 160px;
     }
 
