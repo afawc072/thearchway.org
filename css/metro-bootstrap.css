@@ -48,8 +48,10 @@ a:active,
 
     #hc-mask {
       background-color: #000;
-      background-image : url(../images/archway_assets1600x400.jpg) no-repeat scroll center top transparent;
+      background-image : url(../images/archway_assets1600x400.jpg);
       background-size: cover;
+      background-position: center center, center top;
+      background-repeat: no-repeat;
       padding-top: 160px;
     }
 
