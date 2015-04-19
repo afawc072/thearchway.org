@@ -1,17 +1,25 @@
 $(document).ready(function() {
 
+     var lock = 0;
+
 $('#signin').submit(function(){
 
     var $this = $("#load");
 
     username=$("#user").val();
     password=$("#pass").val();
+
+    if(lock === 1 ){
+        return false;
+    };
     
     $.ajax({
         type: "POST",
         url: "login.php",
         data: "name="+username+"&pwd="+password,
         success: function(html){
+
+            lock = 1;
 
             if(html==1)
             {
@@ -31,15 +39,16 @@ $('#signin').submit(function(){
 
                     }, 200);
                    setTimeout(function(){
-                     $("#flash-notice").fadeOut(4000);
+                     $("#flash-notice").fadeOut(2000);
 
-                    }, 4000);
+                    }, 3000);
                    setTimeout(function(){
                       $("#login-box").animate({ 
                             'padding-bottom' : 0,
                           }, "slow");
+                      lock = 0;
                      
-                    }, 8000);
+                    }, 5000);
                 $this.css({
                 'background-color' : '',
                 'background' : ''
@@ -54,6 +63,7 @@ $('#signin').submit(function(){
             $("#login-box").css({
                 'padding-bottom' : ''
                 })
+            $('#flash-notice').stop();
             $this.css({
                 'background-color' : 'rgba(219, 86, 86, 0)',
                 'background' : 'url("images/loadingbutton.png") no-repeat scroll 0 0 transparent'
