@@ -168,8 +168,8 @@ header('Location:/archway/profile.html');
                         </div>
                     
                     <br>
-                    <input type="submit" name="submit" value="UPLOAD">
-                    <input type="reset" value="RESET" name="reset" id="reset">
+                    <input type="submit" name="submit" value="UPLOAD" style="font-size: 12px;">
+                    <input type="reset" value="RESET" name="reset" id="reset" style="font-size: 12px;">
 
                     <div style="margin-top: 20px">
                         <a href="add_course.php"> Can't find a course? </a>
