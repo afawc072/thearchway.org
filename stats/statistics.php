@@ -60,6 +60,6 @@ while($row = mysql_fetch_array($resultUsers)){
 
 
 		}
-fclose($fh3);
+fclose($fh4);
 
 ?>
