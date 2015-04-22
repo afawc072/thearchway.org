@@ -160,6 +160,7 @@ header('Cache-Control: max-age=900');
                         echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
                         include ("templates/header_sb.php");
                         echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
+                        echo '<div class="example" style="margin: 0px 0px 0px;">';
 
                         echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
 
@@ -214,7 +215,7 @@ header('Cache-Control: max-age=900');
                               }
 
 
-                            
+                            echo"</div>";
                             echo"</div>";
                             echo"</div>";
                             echo"</div>";
