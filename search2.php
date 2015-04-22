@@ -31,6 +31,19 @@ header('Cache-Control: max-age=900');
     <script src="js/github.info.js"></script>
     <script src="js/ga.js"></script>
 
+        <style type="text/css">
+     html { 
+        background: url(images/sky_1080_1.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='archway/images/sky_1080_1.jpg', sizingMethod='scale')";
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='archway/images/sky_1080_1.jpg', sizingMethod='scale');
+        }
+
+    </style>
+
     </head>
 
     <body class="metro">
