@@ -91,7 +91,7 @@ header('Cache-Control: max-age=900');
                         echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
                         echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
-                        echo '<div class="example" style="background-color: rgba(239, 246, 238, 0) !important; margin: 0px 0px 0px;">';
+                        echo '<div class="example" style="margin: 0px 0px 0px;">';
                         echo "<legend><b>Search / </b><span style='color: #00A255;'>All courses</span></legend>";
                         echo '<table class="table striped bordered hovered">';
                         echo '<thead>';
@@ -251,7 +251,7 @@ header('Cache-Control: max-age=900');
                     echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
                     echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
-                    echo '<div class="example" style="background-color: rgba(239, 246, 238, 0) !important; margin: 0px 0px 0px;">';
+                    echo '<div class="example" style="margin: 0px 0px 0px;">';
                     echo "<legend><b>Search / </b><span style='color: #00A255;'>$input</span></legend>";
                     echo '<table class="table striped bordered hovered">';
                     echo '<thead>';
