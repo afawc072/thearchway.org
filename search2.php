@@ -160,9 +160,8 @@ header('Cache-Control: max-age=900');
                         echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
                         include ("templates/header_sb.php");
                         echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
-                        echo '<div class="example" style="margin: 0px 0px 0px;">';
-
                         echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
+                        echo '<div class="example" style="margin: 0px 0px 0px;">';
 
                         echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download /</b> $exactCourse  </p>";
 
@@ -415,7 +414,7 @@ header('Cache-Control: max-age=900');
         
         </div>
         </div>
-        <?php include ("templates/footer.php"); ?>
+        <?php include ("templates/footer_white.php"); ?>
     </div>
     </div>
 
