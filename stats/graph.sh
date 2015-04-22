@@ -1,12 +1,12 @@
 #!/bin/bash
-
+#blabla
 sudo php statistics.php
 
 gnuplot <<_EOF_
 	set title 'Number of searches'
 	set datafile separator ","
 	set term png
-	set output 'rocknrool.jpg'
+	set output 'rocknrool.png'
 	set timefmt '%Y-%m-%d'
 	set xdata time
 	set format x '%Y-%m-%d'
