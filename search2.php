@@ -317,6 +317,7 @@ header('Cache-Control: max-age=900');
                             echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
 
                             echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
+                            echo '<div class="example" style="margin: 0px 0px 0px;">';
 
                             echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Downloads matching keyword /</b> $input </p>";
 
