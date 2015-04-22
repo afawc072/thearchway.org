@@ -106,17 +106,29 @@ header('Location:/archway/profile.html');
     </script>
 
     <style type="text/css">
-        #uploadform form{
-    opacity: 0;
-    -webkit-transition: opacity 0.5s ease-in;
-    -moz-transition: opacity 0.5s ease-in;
-    -o-transition: opacity 0.5s ease-in;
-    -ms-transition: opacity 0.5s ease-in;
-    transition: opacity 0.5s ease-in;
+    #uploadform form{
+        opacity: 0;
+        -webkit-transition: opacity 0.5s ease-in;
+        -moz-transition: opacity 0.5s ease-in;
+        -o-transition: opacity 0.5s ease-in;
+        -ms-transition: opacity 0.5s ease-in;
+        transition: opacity 0.5s ease-in;
     }
     #uploadform form.load {
-    opacity: 1;
+        opacity: 1;
     }
+
+    html { 
+        background: url(images/sky_1080_1.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='archway/images/sky_1080_1.jpg', sizingMethod='scale')";
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='archway/images/sky_1080_1.jpg', sizingMethod='scale');
+    }
+
+
 
     </style>
 
@@ -182,7 +194,7 @@ header('Location:/archway/profile.html');
 
     </div>
     </div>
-    <?php include ("templates/footer.php"); ?>
+    <?php include ("templates/footer_white.php"); ?>
 
 </body></center>
 </html> 
