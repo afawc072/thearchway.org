@@ -22,7 +22,7 @@
                                                         echo"<input type='submit' id='load' value='SIGN IN' style='width: 214px; margin-top: 10px;'/>";
                                                                         
                                                         echo"<p style='line-height: 18px; padding-top: 15px;'>";
-                                                        echo"<a class='forgot' href='#'>Forgot your password?</a>";
+                                                        echo"<a class='forgot' href='reset-password.php'>Forgot your password?</a>";
                                                         echo"</p>";
                                                         echo"<div id='flash-notice' name='flash-notice'>";
                                                         echo"</div>";
