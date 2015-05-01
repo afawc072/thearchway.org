@@ -113,7 +113,7 @@ $(document).ready(function() {
     <?php include ("templates/login_box.php");?>
     
 
-        <div id="signinform" name="signinform" class="example" style="top: 50px; background-color: white !important;">
+        <div id="signinform" name="signinform" class="example" style="top: 50px; background-color: white !important; border: none;">
             <form action="user_registration.php" method="post" id="signinform"
              enctype="multipart/form-data">
                 <fieldset>
