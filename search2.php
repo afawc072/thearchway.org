@@ -54,6 +54,7 @@ header('Cache-Control: max-age=900');
 
                     <?php
                     ini_set('display_errors', 'On');
+                    session_start();
                     
                     //declaring variable
                     foreach ($_POST as $name => $value) {
