@@ -113,7 +113,7 @@ $(document).ready(function() {
     <?php include ("templates/login_box.php");?>
         <div class="example" style="margin: 0px 0px 0px;background-color: white !important; border: none;">
 
-            <p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'>
+            <p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 10px;'>
                 <b>Contact Archway /</b>...</p>
             <p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 15px;line-height: 1.55em;'>
             We’re here to help with any questions or comments. </p>
@@ -123,13 +123,16 @@ $(document).ready(function() {
 
             Email our support staff at<span style="color: #00A255;"> support@archway.ca </span>and we will be happy to help you out.
             <br><br><b>What's in a great support request?</b><br>
-
-                Provide us with as much essential information as possible.
-                Let us know the name of the user or repository you're having trouble with.
-                Include any screenshots or links that are related to your problem.
+                <ul style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;'>
+                <li>Provide us with as much essential information as possible.</li>
+                <li>Let us know the name of the user or repository you're having trouble with.</li>
+                <li>Include any screenshots or links that are related to your problem.</li>
+            </ul>
             <br>
-            For tips on how to find the ressources you are looking for, please visit our <a href='about.php'>help page</a>.</p>
-                                    
+<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>
+
+            For tips such as finding the ressources you are looking for, please visit our <a href='about.php'>help page</a>.</p>
+                                   
             </div>
 
         </div>
