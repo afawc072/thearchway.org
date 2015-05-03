@@ -79,7 +79,7 @@ $(document).ready(function() {
 
 <noscript></noscript>
 
-<div class="container" style="min-height: 1300px; height: auto !important; margin: 0 auto -100px;">
+<div class="container" style="min-height: 2300px; height: auto !important; margin: 0 auto -100px;">
 
     <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; display: inline-block; outline-style: none;">
 
@@ -136,26 +136,27 @@ $(document).ready(function() {
                 </div>
             </div>
         </div>
-
-        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em; margin-left: 57px; margin-top: 49px;"><b>Help /</b> Account Access</p>
-                   <div class="example" style="border: 0px; witdh: 100%; background-color: white !important;">
-                <div class="grid fluid">
+        <div class="example" style="border: 0px; witdh: 100%; background-color: white !important;">
+        <div class="grid fluid">
                 <div class="row" style="position:relative;">
 
-            <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">If you've forgotten your password, please reset it from <span style="color: #00A255;"><a href="reset-password.php"> this link</a></span>. You can enter your email address to <br>receive a password reset. If for some reason you don't receive an email from us after submitting a request,<br> please try checking your spam folder.</p>
-                        
-             
+                    <div class="span6">
+                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Help /</b> Account Access</p>
+                
 
-            </div>
-        </div>
-    </div>
+                        <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">If you've forgotten your password, please reset it from <span style="color: #00A255;"><a href="reset-password.php"> this link</a></span>. You can enter your email address to <br>receive a password reset. If for some reason you don't receive an email from us after submitting a request, please try checking your spam folder.</p>
+                        </div>
 
-                        
-                        
+                    <div class="span6">
+                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Help /</b> Searching Ressources</p>
+                
 
-
-
-
+                         <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
+                            Our search engine has been written to browse intuitively through documents organized by <b>course</b>. Also, if you like, you can also search by <b>keyword</b>. This will allow us to display all documents with matching description/name only. 
+                        </p>
+                        </div>
+                    </div>
+                </div>
 
 
                 </div>
