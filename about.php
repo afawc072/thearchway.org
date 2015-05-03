@@ -163,6 +163,8 @@ $(document).ready(function() {
             </div>
         </div>
     </div>
+        </div>
+    
 
             <?php include ("templates/footer.php"); ?>
 
