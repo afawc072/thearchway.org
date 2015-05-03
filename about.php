@@ -141,14 +141,14 @@ $(document).ready(function() {
                 <div class="row" style="position:relative;">
 
                     <div class="span6">
-                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Help /</b> Account Access</p>
+                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Help /</b> Account Access <i class="icon-key"></i></p>
                 
 
                         <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">If you've forgotten your password, please reset it from <span style="color: #00A255;"><a href="reset-password.php"> this link</a></span>. You can enter your email address to <br>receive a password reset. If for some reason you don't receive an email from us after submitting a request, please try checking your spam folder.</p>
                         </div>
 
                     <div class="span6">
-                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Help /</b> Searching Ressources</p>
+                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Help /</b> Searching Ressources <i class="icon-database"></i></p>
                 
 
                          <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
