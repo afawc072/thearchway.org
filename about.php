@@ -136,7 +136,7 @@ $(document).ready(function() {
                 </div>
             </div>
         </div>
-        <div class="example" style="border: 0px; witdh: 100%; background-color: white !important;">
+        <div class="example" style="border: 0px; witdh: 100%; background-color: white !important; top: 50px;">
         <div class="grid fluid">
                 <div class="row" style="position:relative;">
 
