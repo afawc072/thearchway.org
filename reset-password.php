@@ -113,7 +113,7 @@ $(document).ready(function() {
     <?php include ("templates/login_box.php");?>
     
 
-        <div id="resetPwform" name="resetPwform" class="example" style="top: 50px; background-color: white !important; border:none; width: 50%;">
+        <div id="resetPwform" name="resetPwform" class="example" style="top: 50px; background-color: white !important; border:none; width: 50%; margin: 0 auto;">
             <form action="" method="post" id="resetform"
              enctype="multipart/form-data">
                 <fieldset>
