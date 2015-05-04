@@ -93,7 +93,7 @@ header('Cache-Control: max-age=900');
 
                         echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
                         echo '<div class="example" style="margin: 0px 0px 0px;">';
-                        echo "<legend><b>Search / </b><span style='color: #00A255;'>All courses</span><i class='icon-folder' style='background: black;color: white;padding: 7px;border-radius: 50%'></i></legend>";
+                        echo "<legend><b>Search / </b><span style='color: #00A255;'>All courses</span></legend>";
                         echo '<table class="table striped bordered hovered">';
                         echo '<thead>';
                         echo '<tr>';
@@ -164,7 +164,7 @@ header('Cache-Control: max-age=900');
                         echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
                         echo '<div class="example" style="margin: 0px 0px 0px;">';
 
-                        echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download /</b> $exactCourse  <i class='icon-folder-2' style='background: black;color: white;padding: 7px;border-radius: 50%'></i></p>";
+                        echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Download /</b> $exactCourse  </p>";
 
                         echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
                         echo"<div class='list-group '>";
@@ -255,7 +255,7 @@ header('Cache-Control: max-age=900');
 
                     echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
                     echo '<div class="example" style="margin: 0px 0px 0px;">';
-                    echo "<legend><b>Search / </b><span style='color: #00A255;'>$input   </span><i class='icon-folder' style='background: black;color: white;padding: 7px;border-radius: 50%'></i></legend>";
+                    echo "<legend><b>Search / </b><span style='color: #00A255;'>$input</span></legend>";
                     echo '<table class="table striped bordered hovered">';
                     echo '<thead>';
                     echo '<tr>';
@@ -322,7 +322,7 @@ header('Cache-Control: max-age=900');
                             echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
                             echo '<div class="example" style="margin: 0px 0px 0px;">';
 
-                            echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Downloads matching keyword /</b> $input   <i class='icon-tag' style='background: black;color: white;padding: 7px;border-radius: 50%'></i></p>";
+                            echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Downloads matching keyword /</b> $input </p>";
 
                             echo"<div class='listview-outlook' data-role='listview' style='margin-top: 20px'>";
 
