@@ -116,7 +116,7 @@ $(document).ready(function() {
             <p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 10px;'>
                 <b>Contact Archway /</b>...</p>
             <p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 15px;line-height: 1.55em;'>
-            We’re here to help with any questions or comments. </p>
+            We're here to help with any questions or comments. </p>
             <legend></legend>
             <p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>
 
