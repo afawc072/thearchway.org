@@ -2,7 +2,7 @@
 
 session_start();
 if(!isset($_SESSION['username'])){
-header('Location:/archway/sign-up.php');
+header('Location:/sign-up.php');
 }
 
 $allowedExts = array("ppt","docx","doc","pdf","odt");
@@ -14,7 +14,7 @@ $filename = trim($filename, " \t\n\r\0\x0B" );
 $filename = str_replace(' ', '', $filename);
 $filename = preg_replace('/\s+/', '', $filename);
 $extension = end($temp);
-$structure = "/var/www/archway/upload/uploadedFiles/";
+$structure = "/var/www/upload/uploadedFiles/";
 $user = $_SESSION['email'];
 if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
 || ($_FILES["file"]["type"] == "application/vnd.oasis.opendocument.text")
@@ -38,26 +38,25 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
     echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
     echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
 
-    //if (file_exists($structure.$cname."_".$_FILES["file"]["name"]))
       if (file_exists($structure.$cname."/".$filename))
       {
 
         echo "A File With That Name Already Exists";
       
-        header("refresh:5; url=/archway/upload.php");
+        header("refresh:5; url=/upload.php");
       }
     else
       {
-         require "/var/www/archway/db_connect.php";
+         require "/var/www/db_connect.php";
+
          $result = mysql_query( "SELECT * FROM Course WHERE cname='$cname' LIMIT 1");
          if(mysql_fetch_array($result) !== false){
 
 
         echo $cname;
-      // if(!file_exists(dirname("/opt/lampp/htdocs/php_website_test/uploadedFiles/" .$tname)))
+
         if (!is_dir($structure.$cname)) {
           mkdir($structure.$cname);
-//        echo 'Directory not found';
          }  
 
         $path=$structure.$cname."/".$filename;
@@ -81,7 +80,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
     
         echo "Thank you for Contributing to the Archway";
     
-        header("refresh:5; url=/archway");
+        header("refresh:5; url=/");
         }
         else{
           echo "Please Upload to a course contained in our DB";
@@ -94,7 +93,7 @@ else
 
 
       echo "Invalid file. You can only upload documents with the 'pdf', 'doc', 'docx', 'ppt' and 'odt' extension and smaller than 20 Mb";      
-      header("refresh:5; url=/archway/upload.php");
+      header("refresh:5; url=/upload.php");
  
   }
 ?>
