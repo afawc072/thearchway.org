@@ -57,8 +57,8 @@
 
             <br>
             <p style="color: #F3F4F5; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
-                We can't find the page you're looking for. Check out our <a href= 'about.php'> help page</a> or head back to <a href='index.php'>home</a>.<br>
-                If you want to help us fix this issue, please <a href= 'contact.php'>contact us</a> and let us know what went wrong. Be sure to give us some info on what Browser and OS you were using when this occurred.
+                We can't find the page you're looking for. Check out our <a href= '/about.php'> help page</a> or head back to <a href='/index.php'>home</a>.<br>
+                If you want to help us fix this issue, please <a href= '/contact.php'>contact us</a> and let us know what went wrong. Be sure to give us some info on what Browser and OS you were using when this occurred.
 
             </p>
         </div>
@@ -66,7 +66,7 @@
 
 
     </div>
-    <center><footer><ul class='horizontal-menu compact'><li><p style='color: #F3F4F5 ; font-size: small;'>&copy; 2015 Archway</p></li><li><a href='index.php' style='color: #F3F4F5 ; font-size: small;'>Home</a></li><li><a href='about.php' style='color: #F3F4F5 ; font-size: small;'>Help</a><li><a href='about.php' style='color: #F3F4F5 ; font-size: small;'>Privacy</a></li><li><a href='contact.php' style='color: #F3F4F5 ; font-size: small;'>Feedback</a></li></ul></footer></center>
+    <center><footer><ul class='horizontal-menu compact'><li><p style='color: #F3F4F5 ; font-size: small;'>&copy; 2015 Archway</p></li><li><a href='/index.php' style='color: #F3F4F5 ; font-size: small;'>Home</a></li><li><a href='/about.php' style='color: #F3F4F5 ; font-size: small;'>Help</a><li><a href='/about.php' style='color: #F3F4F5 ; font-size: small;'>Privacy</a></li><li><a href='/contact.php' style='color: #F3F4F5 ; font-size: small;'>Feedback</a></li></ul></footer></center>
 
 </body></center>
 </html> 
