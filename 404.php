@@ -27,7 +27,7 @@
 
     <style type="text/css">
      html { 
-        background: url(images/sky_1080_1.jpg) no-repeat center center fixed; 
+        background: url(/images/sky_1080_1.jpg) no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
