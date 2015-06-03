@@ -1,12 +1,11 @@
 <?php
     require_once('class.phpmailer.php');
 
-    include("sendmail.php");
     $to       =   "pierluc.boudreau@gmail.com";
     $subject  =   "Archway test email";
     $message  =   "hello <i>this is a test from Luke.</i>";
-    $$name     =   "Shahid Shaikh";
-    $$mailsend =   sendmail($to,$subject,$message,$name);
+    $name     =   "Shahid Shaikh";
+    $mailsend =   sendmail($to,$subject,$message,$name);
       if($mailsend==1){
         echo '<h2>email sent.</h2>';
       }
