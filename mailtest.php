@@ -1,5 +1,5 @@
 <?php
-    require_once('class.phpmailer.php');
+    require('PHPMailerAutoload.php');
 
     $to       =   "pierluc.boudreau@gmail.com";
     $subject  =   "Archway test email";
