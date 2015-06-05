@@ -3,8 +3,8 @@
 
     $to       =   "pierluc.boudreau@gmail.com";
     $subject  =   "Archway test email";
-    $message  =   "hello <i>this is a test from Luke.</i>";
-    $name     =   "Shahid Shaikh";
+    $message  =   file_get_contents('/mailtemplates/activation_template.txt');;
+    $name     =   "THE GUY";
     $mailsend =   sendmail($to,$subject,$message,$name);
       if($mailsend==1){
         echo '<h2>email sent.</h2>';
@@ -30,8 +30,9 @@
                   $mail->SetFrom('noreply@thearchway.org', 'The Archway');
                   $mail->AddReplyTo("noreply@thearchway.org","The Archway");
                   $mail->Subject    = $subject;
-                  $mail->AltBody    = "Any message.";
+                  $mail->AltBody    = $message;
                   $mail->MsgHTML($body);
+                  $mail->isHTML(true);
                   $address = $to;
                   $mail->AddAddress($address, $name);
                   if(!$mail->Send()) {
