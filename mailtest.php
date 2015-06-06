@@ -3,7 +3,7 @@
 
     $to       =   "pierluc.boudreau@gmail.com";
     $subject  =   "Archway test email";
-    $message  =   file_get_contents('mailtemplates/activation_template.txt');
+    $message  =   file_get_contents('mailtemplates/activation_template2.txt');
     $name     =   "THE GUY";
     $mailsend =   sendmail($to,$subject,$message,$name);
       if($mailsend==1){
