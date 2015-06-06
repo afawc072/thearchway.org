@@ -1,19 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8=
-" />
-    <meta name="viewport" content="width=320, target-densitydpi=dev=
-ice-dpi" />
 
 <style type="text/css">
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleuserc=
-ontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvx=
-L-qU.woff) format('woff');
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
 </style>
 <!--[if gte mso 9]>
@@ -26,174 +20,74 @@ L-qU.woff) format('woff');
 </style>
 <![endif]-->
   </head>
-  <body style="width: 100% !important;background-color: #EFF0F2;margin: 0=
-;padding: 0;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans=
--serif;">
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" =
+  <body style="width: 100% !important;background-color: #EFF0F2;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"
 id="background-table" style="background-color: #EFF0F2">
       <tbody>
-        <tr style="border-collapse: collapse"><td align="center" bgcolo=
-r="#EFF0F2" style="border-collapse: collapse;font-family: &quot;Helveti=
-ca Neue&quot;, Arial, Helvetica, sans-serif;">
-          <table class="w640" style="margin:0 10px;" width="640" cell=
-padding="0" cellspacing="0" border="0"><tbody><tr style="border-col=
-lapse: collapse"><td class="w640" width="640" height="20" style="bo=
-rder-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Hel=
-vetica, sans-serif;"></td></tr><tr style="border-collapse: collapse"><td =
-id="header" class="w640" width="640" align="center" bgcolor="#EFF=
-0F2" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&q=
-uot;, Arial, Helvetica, sans-serif;">
-=20=20=20=20
-    <table class="w640" width="640" cellpadding="0" cellspacing="0"=
- border="0"><tbody><tr style="border-collapse: collapse"><td class="w=
-30" width="30" style="border-collapse: collapse;font-family: &quot;Helv=
-etica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" wi=
-dth="580" height="30" style="border-collapse: collapse;font-family: &=
-quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class==
-"w30" width="30" style="border-collapse: collapse;font-family: &quot;He=
-lvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr><tr style="b=
-order-collapse: collapse"><td class="w30" width="30" style="border-co=
-llapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica,=
- sans-serif;"></td>
-            <td class="w580" width="580" style="border-collapse: coll=
-apse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;=
-">
+        <tr style="border-collapse: collapse">
+
+    <td align="center" bgcolor="#EFF0F2" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
+
+      <table class="w640" style="margin:0 10px;" width="640" cell-padding="0" cellspacing="0" border="0">
+
+      <tbody>
+
+        <tr style="border-collapse: collapse;"><td class="w640" width="640" height="20" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica,sans-serif;">
+        </td>
+      </tr>
+
+    <tr style="border-collapse: collapse"><td
+id="header" class="w640" width="640" align="center" bgcolor="#EFF0F2" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
+
+
+<table class="w640" width="640" cellpadding="0" cellspacing="0" border="0"><tbody><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" width="580" height="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td>
+            <td class="w580" width="580" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
                 <div align="center" id="headline">
-                    <a href="http://oneclass.com" target="_blank"><sing=
-leline label="Title"><img src="http://oneclass.com/assets/scholarships/=
-logo.png" alt="oneclass_logo.png" style="outline: none;text-decoration:=
- none;display: block" /></singleline></a></div>
+                    <a href="http://thearchway.org" target="_blank"><singleline label="Title"><img src="http://thearchway.org/images/archwaylogo_no_rectangles.png" width="30%" height= "30%" alt="/images/archwaylogo_no_rectangles.png" style="outline: none;text-decoration:none;display: block" /></singleline></a></div>
             </td>
-            <td class="w30" width="30" style="border-collapse: collap=
-se;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">=
+            <td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
 </td>
-        </tr><tr style="border-collapse: collapse"><td class="w30" widt=
-h="30" style="border-collapse: collapse;font-family: &quot;Helvetica Ne=
-ue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" width="5=
-80" height="30" style="border-collapse: collapse;font-family: &quot;Hel=
-vetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w30" wi=
-dth="30" style="border-collapse: collapse;font-family: &quot;Helvetica =
-Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr></tbody></table></td>
-                </tr><tr style="border-collapse: collapse"><td class="w=
-640" width="640" height="30" bgcolor="#ffffff" style="border-collap=
-se: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, san=
-s-serif;"></td></tr><tr id="simple-content-row" style="border-collapse:=
- collapse"><td class="w640" width="640" bgcolor="#ffffff" style="bo=
-rder-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Hel=
-vetica, sans-serif;">
-    <table class="w640" width="640" cellpadding="0" cellspacing="0"=
- border="0"><tbody><tr style="border-collapse: collapse"><td class="w=
-30" width="30" style="border-collapse: collapse;font-family: &quot;Helv=
-etica Neue&quot;, Arial, Helvetica, sans-serif;"></td>
-            <td class="w580" width="580" style="border-collapse: coll=
-apse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;=
-">
-                <repeater><layout label="Text only"><table class="w580"=
- width="580" cellpadding="0" cellspacing="0" border="0"><tbody><tr =
-style="border-collapse: collapse"><td class="w580" width="580" style=
-="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Aria=
-l, Helvetica, sans-serif;">
-                                    <div align="left" class="article-co=
-ntent" style="font-size: 15px;line-height: 21px;color: #676C70;margin-top=
-: 0;margin-bottom: 18px;font-family: &quot;Helvetica Neue&quot;, Arial, Hel=
-vetica, sans-serif;font-weight:400;">
-                                        <multiline label="Description"><p=
->Hi pboud071,</p><h1 style="font-size: 18px; font-weight:bold;">Your acti=
-vation link</h1><p><a href="http://oneclass.com/activate/12d8e507bb3b0a1e=
-89cd9ad54d0cb7608e30f8cb" target="_blank" style="color:#3289da;">http:/=
-/oneclass.com/activate/12d8e507bb3b0a1e89cd9ad54d0cb7608e30f8cb</a></p><p>T=
-hank you for joining OneClass! This is the last step to finish creating you=
-r account, please click on the activation link above to activate your accou=
-nt.</p>
+        </tr><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" width="580" height="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr></tbody></table></td>
+                </tr><tr style="border-collapse: collapse"><td class="w640" width="640" height="30" bgcolor="#ffffff" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr><tr id="simple-content-row" style="border-collapse: collapse"><td class="w640" width="640" bgcolor="#ffffff" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
+    <table class="w640" width="640" cellpadding="0" cellspacing="0" border="0"><tbody><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td>
+            <td class="w580" width="580" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
+                <repeater><layout label="Text only"><table class="w580" width="580" cellpadding="0" cellspacing="0" border="0"><tbody><tr style="border-collapse: collapse"><td class="w580" width="580" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
+                                    <div align="left" class="article-content" style="font-size: 15px;line-height: 21px;color: #676C70;margin-top: 0;margin-bottom: 18px;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;font-weight:400;">
+                                        <multiline label="Description"><p>Hi LE MESSIEUR,</p><h1 style="font-size: 18px; font-weight:bold;">Your activation link</h1><p><a href="http://oneclass.com/activate/12d8e507bb3b0a1e=
+89cd9ad54d0cb7608e30f8cb" target="_blank" style="color:#3289da;">LE LINK</a></p><p>Thank you for joining The Archway! This is the last step to finish creating your account, please click on the activation link above to activate your account.</p>
 </multiline></div>
                                 </td>
-                            </tr><tr style="border-collapse: collapse"><t=
-d class="w580" width="580" height="10" style="border-collapse: coll=
-apse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;=
-"></td></tr></tbody></table></layout></repeater></td>
-            <td class="w30" width="30" style="border-collapse: collap=
-se;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">=
+                            </tr><tr style="border-collapse: collapse"><td class="w580" width="580" height="10" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr></tbody></table></layout></repeater></td>
+            <td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
 </td>
-        </tr></tbody></table></td></tr><tr style="border-collapse: collap=
-se"><td class="w640" width="640" height="15" bgcolor="#ffffff" styl=
-e="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Ari=
-al, Helvetica, sans-serif;"></td></tr><tr style="border-collapse: collaps=
-e"><td id="footer" class="w640" width="640" align="center" bgcolor=
-="#EFF0F2" style="border-collapse: collapse;border-radius: 0 0 6px 6px;=
--moz-border-radius: 0 0 6px 6px;-webkit-border-radius: 0 0 6px 6px;-webkit-=
-font-smoothing: antialiased;font-family: &quot;Helvetica Neue&quot;, Arial,=
- Helvetica, sans-serif;;background-color: #EFF0F2;color: #676C70">
-=20=20=20=20
-    <table class="w640" width="640" cellpadding="0" cellspacing="0"=
- border="0"><tbody><tr style="border-collapse: collapse"><td class="w=
-30" width="30" style="border-collapse: collapse;font-family: &quot;Helv=
-etica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" wi=
-dth="580" height="20" style="border-collapse: collapse;font-family: &=
-quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class==
-"w30" width="30" style="border-collapse: collapse;font-family: &quot;He=
-lvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr><tr style="b=
-order-collapse: collapse"><td class="w30" width="30" style="border-co=
-llapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica,=
+        </tr></tbody></table></td></tr><tr style="border-collapse: collapse"><td class="w640" width="640" height="15" bgcolor="#ffffff" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr><tr style="border-collapse: collapse"><td id="footer" class="w640" width="640" align="center" bgcolor="#EFF0F2" style="border-collapse: collapse;border-radius: 0 0 6px 6px;-moz-border-radius: 0 0 6px 6px;-webkit-border-radius: 0 0 6px 6px;-webkit-font-smoothing: antialiased;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;;background-color: #EFF0F2;color: #676C70">
+    <table class="w640" width="640" cellpadding="0" cellspacing="0" border="0"><tbody><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" width="580" height="20" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-co
+llapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica,
  sans-serif;"></td>
-            <td class="w580" width="580" style="border-collapse: coll=
-apse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;=
-">
+            <td class="w580" width="580" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
                 <div align="center" id="headline">
-                    <singleline label="footer"><img src="http://oneclas=
-s.com/assets/scholarships/emailfooter.png" alt="email_footer.png" style=
-="outline: none;text-decoration: none;display: block" /></singleline></di=
-v>
+                    <singleline label="footer"></singleline></div>
             </td>
             <td class="w30" width="30" style="border-collapse: collap=
-se;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">=
+se;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
 </td>
-        </tr><tr style="border-collapse: collapse"><td class="w30" widt=
-h="30" style="border-collapse: collapse;font-family: &quot;Helvetica Ne=
-ue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" width="5=
-80" height="20" style="border-collapse: collapse;font-family: &quot;Hel=
-vetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w30" wi=
-dth="30" style="border-collapse: collapse;font-family: &quot;Helvetica =
+        </tr><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" width="580" height="20" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica =
 Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr></tbody></table></td>
-                </tr><tr style="border-collapse: collapse"><td class="w=
-640" width="640" style="border-collapse: collapse;font-family: &quot;He=
-lvetica Neue&quot;, Arial, Helvetica, sans-serif;">
-    <table id="footer" class="w640" width="640" cellpadding="0" cel=
-lspacing="0" border="0" bgcolor="#EFF0F2" style="border-radius: 0 0=
- 6px 6px;-moz-border-radius: 0 0 6px 6px;-webkit-border-radius: 0 0 6px 6px=
-;-webkit-font-smoothing: antialiased;background-color: #EFF0F2;color: #888"=
-><tbody><tr style="border-collapse: collapse"><td class="w30" width="=
-30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&qu=
-ot;, Arial, Helvetica, sans-serif;"></td>
-            <td class="w580" width="580" valign="top" style="border=
--collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helveti=
-ca, sans-serif;">
-            <span class="hide"><p id="permission-reminder" align="cen=
-ter" class="footer-content-left" style="-webkit-text-size-adjust: none;=
--ms-text-size-adjust: none;font-size: 11px;line-height: 15px;color: #888;ma=
-rgin-top: 0;margin-bottom: 3px;white-space: normal"><span>=C2=A92014 Noteso=
-lution, Inc. - OneClass. #1205 - 415 Yonge Street, Toronto, ON M5B2E7</span=
-></p></span>
-            <span class="hide"><p id="permission-reminder" align="cen=
-ter" class="footer-content-left" style="-webkit-text-size-adjust: none;=
--ms-text-size-adjust: none;font-size: 11px;line-height: 15px;color: #888;ma=
-rgin-top: 0;margin-bottom: 3px;white-space: normal"><span>To change your Em=
-ail Notification preferences, log in to your account, go to Settings, and c=
-lick Notifications.</span></p></span>
+                </tr><tr style="border-collapse: collapse"><td class="w640" width="640" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
+    <table id="footer" class="w640" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#EFF0F2" style="border-radius: 0 0 6px 6px;-moz-border-radius: 0 0 6px 6px;-webkit-border-radius: 0 0 6px 6px;-webkit-font-smoothing: antialiased;background-color: #EFF0F2;color: #888"
+><tbody><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td>
+            <td class="w580" width="580" valign="top" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
+            <span class="hide"><p id="permission-reminder" align="center" class="footer-content-left" style="-webkit-text-size-adjust: none;-ms-text-size-adjust: none;font-size: 11px;line-height: 15px;color: #888;margin-top: 0;margin-bottom: 3px;white-space: normal"><span>
+              The Archway 2015<br>support@thearchway.org
+            </span></p></span>
+ 
             </td>
-            <td class="w30" width="30" style="border-collapse: collap=
-se;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">=
+            <td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
 </td>
-        </tr><tr style="border-collapse: collapse"><td class="w30" widt=
-h="30" style="border-collapse: collapse;font-family: &quot;Helvetica Ne=
-ue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580 h0" width=
-="580" height="15" style="border-collapse: collapse;font-family: &quo=
-t;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w3=
-0" width="30" style="border-collapse: collapse;font-family: &quot;Helve=
-tica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr></tbody></table><=
-/td>
-                </tr><tr style="border-collapse: collapse"><td class="w=
-640" width="640" height="60" style="border-collapse: collapse;font-fa=
-mily: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr>=
+        </tr><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580 h0" width="580" height="15" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w3=
+0" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr></tbody></table>
+
+                </tr><tr style="border-collapse: collapse"><td class="w640" width="640" height="60" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr>
 </tbody></table></td>
   </tr>
       </tbody>

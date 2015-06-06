@@ -1,10 +1,16 @@
 <?php
     require('PHPMailerAutoload.php');
 
-    $to       =   "pierluc.boudreau@gmail.com";
-    $subject  =   "Archway test email";
+    //TO DEFINE DEPENDING ON USER
+    $to       =   "pboud071@uottawa.ca";
+    $activation_link = "A link to activate your email";
+    $name     =   "THE G";
+
+    //PREDEFINED FOR ACCOUNT VALIDATION
+    $subject  =   "Activating your Archway account!";
     $message  =   file_get_contents('mailtemplates/activation_template2.txt');
-    $name     =   "THE GUY";
+    $message  =   str_replace('LE MESSIEUR', $name, $message);
+    $message  =   str_replace('LE LINK', $activation_link, $message);
     $mailsend =   sendmail($to,$subject,$message,$name);
       if($mailsend==1){
         echo '<h2>email sent.</h2>';
