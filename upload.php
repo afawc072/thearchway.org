@@ -6,7 +6,7 @@
 <?php 
 session_start();
 if(!isset($_SESSION['username'])){
-header('Location:/archway/profile.html');
+header('Location:sign-up.php');
 }
 ?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">

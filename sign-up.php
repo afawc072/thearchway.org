@@ -69,6 +69,7 @@ $(document).ready(function() {
     return false;
     });
 
+    // Making sure user writes matching passwords
     $("#signinform").submit(function(){
         var hasError = false;
         var passwordVal = $("#passwordInput").val();
