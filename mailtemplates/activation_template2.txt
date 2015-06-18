@@ -33,7 +33,7 @@
 <table class="w640" width="640" cellpadding="0" cellspacing="0" border="0"><tbody><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w580" width="580" height="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr><tr style="border-collapse: collapse"><td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td>
             <td class="w580" width="580" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
                 <div align="center" id="headline">
-                    <a href="http://thearchway.org" target="_blank"><singleline label="Title"><img src="http://thearchway.org/images/archwaylogo_no_rectangles.png" width="50%" height= "50%" alt="/images/archwaylogo_no_rectangles.png" style="outline: none;text-decoration:none;display: block" /></singleline></a></div>
+                    <a href="http://thearchway.org" target="_blank"><singleline label="Title"><img src="http://thearchway.org/images/archwaylogo_no_rectangles.png" width="40%" height= "40%" alt="/images/archwaylogo_no_rectangles.png" style="outline: none;text-decoration:none;display: block" /></singleline></a></div>
             </td>
             <td class="w30" width="30" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
 </td>
@@ -43,8 +43,7 @@
             <td class="w580" width="580" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
                 <repeater><layout label="Text only"><table class="w580" width="580" cellpadding="0" cellspacing="0" border="0"><tbody><tr style="border-collapse: collapse"><td class="w580" width="580" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;">
                                     <div align="left" class="article-content" style="font-size: 15px;line-height: 21px;color: #676C70;margin-top: 0;margin-bottom: 18px;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;font-weight:400;">
-                                        <multiline label="Description"><p>Hi LE MESSIEUR,</p><h1 style="font-size: 18px; font-weight:bold;">Your activation link</h1><p><a href="http://oneclass.com/activate/12d8e507bb3b0a1e=
-89cd9ad54d0cb7608e30f8cb" target="_blank" style="color:#3289da;">LE LINK</a></p><p>Thank you for joining The Archway! This is the last step to finish creating your account, please click on the activation link above to activate your account.</p>
+                                        <multiline label="Description"><p>Hi LE MESSIEUR,</p><h1 style="font-size: 18px; font-weight:bold;">Your activation link</h1><p><a href="LE LINK" target="_blank" style="color:#3289da;">LE LINK</a></p><p>Thank you for joining The Archway! This is the last step to finish creating your account, please click on the activation link above to activate your account.</p>
 </multiline></div>
                                 </td>
                             </tr><tr style="border-collapse: collapse"><td class="w580" width="580" height="10" style="border-collapse: collapse;font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif;"></td></tr></tbody></table></layout></repeater></td>

@@ -69,6 +69,21 @@ $(document).ready(function() {
     return false;
     });
 
+    $("#signinform").submit(function(){
+        var hasError = false;
+        var passwordVal = $("#passwordInput").val();
+        var checkVal = $("#passwordInputConfirm").val();
+
+        if(passwordVal != checkVal){
+            $("#passwordInputConfirm").val('');
+            $("#passwordInput").val('');
+            hasError = true;
+        }
+
+        if(hasError == true) {return false;}
+
+    });
+
 
 });
 </script>
@@ -113,7 +128,7 @@ $(document).ready(function() {
     <?php include ("templates/login_box.php");?>
     
 
-        <div id="signinform" name="signinform" class="example" style="top: 50px; background-color: white !important; border: none;">
+        <div id="signinformDiv" name="signinformDiv" class="example" style="top: 50px; background-color: white !important; border: none;">
             <form action="signup_ac.php" method="post" id="signinform"
              enctype="multipart/form-data">
                 <fieldset>
@@ -132,11 +147,11 @@ $(document).ready(function() {
 
                     <label>Password</label>
                     <div id="passwordInputDiv" name="passwordInputDiv" class="input-control text" data-role="input-control">
-                        <input id="passwordInput" name="passwordInput" required type='password' >
+                        <input id="passwordInput" name="passwordInput" required type='password' pattern=".{6,}" placeholder="Minimum of 6 characters">
                     </div>
                     <label>Re-type password</label>
                     <div id="passwordInputDiv" name="passwordInputConfirmDiv" class="input-control text" data-role="input-control">
-                        <input id="passwordInputConfirm" name="passwordInputConfirm" required type='password'>
+                        <input id="passwordInputConfirm" name="passwordInputConfirm" required type='password' placeholder="Passwords must match">
                     </div>
                     <br>
                     <legend style="margin-top: 14px;"></legend>

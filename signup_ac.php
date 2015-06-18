@@ -49,15 +49,6 @@ echo "Not found your email in our database";
 }
 
 
-// if your email succesfully sent
-if($sentmail){
-echo "Your Confirmation link Has Been Sent To Your Email Address.";
-}
-else {
-echo "Cannot send Confirmation link to your e-mail address";
-}
-
-
 
     function sendmail($to,$subject,$message,$name)
     {
