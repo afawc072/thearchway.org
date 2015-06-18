@@ -114,7 +114,7 @@ $(document).ready(function() {
     
 
         <div id="signinform" name="signinform" class="example" style="top: 50px; background-color: white !important; border: none;">
-            <form action="user_registration.php" method="post" id="signinform"
+            <form action="signup_ac.php" method="post" id="signinform"
              enctype="multipart/form-data">
                 <fieldset>
                     <legend>Create Account</legend>
