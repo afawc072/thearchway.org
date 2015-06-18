@@ -147,7 +147,7 @@ $(document).ready(function() {
 
                     <label>Password</label>
                     <div id="passwordInputDiv" name="passwordInputDiv" class="input-control text" data-role="input-control">
-                        <input id="passwordInput" name="passwordInput" required type='password' pattern=".{6,}" placeholder="Minimum of 6 characters">
+                        <input id="passwordInput" name="passwordInput" required type='password' pattern=".{6,}" placeholder="Minimum of 6 characters" title="Your password must be at least 6 characters long">
                     </div>
                     <label>Re-type password</label>
                     <div id="passwordInputDiv" name="passwordInputConfirmDiv" class="input-control text" data-role="input-control">
