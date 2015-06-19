@@ -136,7 +136,7 @@ $(document).ready(function() {
                 
 
                          <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
-                            Once you signed in and found what you were looking for, simply click any listed file to get your hands on them ! (yes, it's as simple as that) </p>
+                            Once you signed in and found what you were looking for, simply click any listed file to get your hands on them ! (it's as simple as that) </p>
                         </div>
                     </div>
 
@@ -147,8 +147,15 @@ $(document).ready(function() {
                 
 
                         <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
-                             Our databases are growing in size everyday thanks to our loyal users. Use the top search bar to browse intuitively through hundreds of documents organized by <b>course</b> and <b>keyword</b>.
-                        </p>
+                             Our databases are growing in size everyday thanks to our loyal users. If you have notes related to any uOttawa class and wish to contribute, we encourage you to post them from our <a href='upload.php'>upload page</a>. 
+                             <br>Here are the formats we support :
+                                             <ul style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;'>
+                                                <li>Microsoft Word (.doc, .docx)</li>
+                                                <li>Microsoft PowerPoint (.ppt, pptx)</li>
+                                                <li>PDF documents (.pdf)</li>
+                                                <li>Open Office (.odt)</li>
+                                                <li>Text (.txt)</li>
+                             </p>
                         </div>
 
                     <div class="span6">
