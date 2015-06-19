@@ -71,6 +71,16 @@ a:active,
       min-width: 720px;
     }
 
+    #hc-mask2 {
+      background-color: #000;
+      background-image : url(../images/archway_assets21600x400.jpg);
+      background-size: cover;
+      background-position: center center, center top;
+      background-repeat: no-repeat;
+      padding-top: 160px;
+      min-width: 720px;
+    }
+
     #hc-mask-green {
       background-color: #000;
       background-image : url(../images/archway_assets1600x400_green.jpg);
@@ -7953,10 +7963,10 @@ a {
   background-color: #00ccff;
 }
 .metro .stepper > ul li.complete {
-  background-color: #60a917;
+  background-color: #00A255;
 }
 .metro .stepper > ul li.complete:hover {
-  background-color: #7ad61d;
+  background-color: #0ACE71;
 }
 .metro .stepper.rounded li {
   border-radius: 100%;
