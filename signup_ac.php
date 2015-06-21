@@ -18,7 +18,7 @@ $password=$_POST['passwordInput'];
 $sql="INSERT INTO $tbl_name(confirm_code, name, email, password)VALUES('$confirm_code', '$name', '$email', '$password')";
 $result=mysql_query($sql);
 
-// if suceesfully inserted data into database, send confirmation link to email
+// if suceesfully inserted data into db, send confirmation link to email
 if($result){
 
 // ---------------- SEND MAIL FORM ----------------
@@ -34,7 +34,7 @@ if($result){
     $message  =   str_replace('LE LINK', $activation_link, $message);
     $mailsend =   sendmail($to,$subject,$message,$name);
       if($mailsend==1){
-        echo '<h2>email sent.</h2>';
+        header('Location:/confirmation_sent.php');
       }
       else{
         echo '<h2>There are some issue.</h2>';
