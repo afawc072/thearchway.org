@@ -79,7 +79,7 @@ $(document).ready(function() {
 
 <noscript></noscript>
 
-<div class="container" style="min-height: 2300px; height: auto !important; margin: 0 auto -100px;">
+<div class="container" style="min-height: 1500px; height: auto !important; margin: 0 auto -100px;">
 
     <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; display: inline-block; outline-style: none;">
 
@@ -147,7 +147,7 @@ $(document).ready(function() {
                 
 
                         <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
-                             Our databases are growing in size everyday thanks to our loyal users. If you have notes related to any uOttawa class and wish to contribute, we encourage you to post them from our <a href='upload.php'>upload page</a>. 
+                             Our databases are growing in size everyday thanks to our loyal users. If you have notes related to any uOttawa class and wish to contribute, we encourage you to post them from <a href='upload.php'>here</a>. 
                              <br>Here are the formats we support :
                                              <ul style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;'>
                                                 <li>Microsoft Word (.doc, .docx)</li>
@@ -163,7 +163,7 @@ $(document).ready(function() {
                 
 
                          <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
-                            Everything you need to know about The Archway can be found there. From  </p>
+                            Everything you need to know about The Archway can be found <a href='about.php'>there</a>. </p>
                         </div>
                     </div>
                 </div>

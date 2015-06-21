@@ -27,20 +27,20 @@ $password=$rows['password'];
 
 $tbl_name2="Users";
 
-// Insert data that retrieves from "temp_members_db" into table "registered_members"
+// Insert data that retrieves from "temp_members_db" into table "Users"
 $sql2="INSERT INTO $tbl_name2(username, email, password)VALUES('$name', '$email', '$password')";
 $result2=mysql_query($sql2);
 }
 
 // if not found passkey, display message "Wrong Confirmation code"
 else {
-echo "Wrong Confirmation code";
+header('Location:/wcc.php');
 }
 
-// if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
+// if successfully moved data from table"temp_members_db" to table "Users" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
 if($result2){
 
-echo "Your account has been activated";
+header('Location:/welcome.php');
 
 // Delete information of this user from table "temp_members_db" that has this passkey
 $sql3="DELETE FROM $tbl_name1 WHERE confirm_code = '$passkey'";
