@@ -104,9 +104,7 @@ $(document).ready(function() {
                         }
 
 
-                    $conn = mysql_connect("localhost", "admin", "vincentdb") or die(mysql_error());
-                    //select database
-                    mysql_select_db("archway1", $conn);
+                    require "db_connect.php";
 
                     //filtering input for xss and sql injection
                     $input = strip_tags( $input );
