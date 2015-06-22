@@ -31,6 +31,48 @@ header('Cache-Control: max-age=900');
     <script src="js/github.info.js"></script>
     <script src="js/ga.js"></script>
 
+        <script type="text/javascript">
+    
+$(document).ready(function() {
+
+
+    $('a.login-window').click(function() {
+        
+        // Getting the variable's value from a link 
+        var loginBox = $(this).attr('href');
+
+        //Fade in the Popup and add close button
+        $(loginBox).fadeIn(300);
+        
+        //Set the center alignment padding + border
+        var popMargTop = ($(loginBox).height() + 24) / 2; 
+        var popMargLeft = ($(loginBox).width() + 24) / 2; 
+        
+        $(loginBox).css({ 
+            'margin-top' : -popMargTop,
+            'margin-left' : -popMargLeft
+        });
+        
+        // Add the mask to body
+        $('body').append('<div id="mask"></div>');
+        $('#mask').fadeIn(300);
+        
+        return false;
+    });
+
+    
+    // When clicking on the button close or the mask layer the popup closed
+    $('a.close, #mask').click( function() { 
+      $('#mask , .login-popup').fadeOut(300 , function() {
+        $('#mask').remove();  
+    }); 
+    return false;
+    });
+
+
+});
+</script>
+
         <style type="text/css">
      html { 
         background: url(images/sky_1080_1.jpg) no-repeat center center fixed; 
@@ -90,7 +132,7 @@ header('Cache-Control: max-age=900');
                         echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
                         include ("templates/header_sb.php");
                         echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
-
+                        include ("templates/login_box.php");
                         echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
                         echo '<div class="example" style="margin: 0px 0px 0px;">';
                         echo "<legend><b>Search / </b><span style='color: #00A255;'>All courses</span></legend>";
@@ -161,6 +203,7 @@ header('Cache-Control: max-age=900');
                         echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
                         include ("templates/header_sb.php");
                         echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
+                         include ("templates/login_box.php");
                         echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
                         echo '<div class="example" style="margin: 0px 0px 0px;">';
 
@@ -231,6 +274,7 @@ header('Cache-Control: max-age=900');
                         include ("templates/header_sb.php");
 
                         echo '<div class="container" style="margin-top: 154px;">';
+                         include ("templates/login_box.php");
                         echo '<div class="example" style="margin: 0px 0px 0px;">';
                         echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>$exactCourse /</b> No documents uploaded yet ...</p>";
                         echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, this course does not contain any document at the moment. If you have notes related to this class and you wish to contribute, we encourage you to post them from our <a href='upload.php'>upload page</a>.</p>";
@@ -252,7 +296,7 @@ header('Cache-Control: max-age=900');
                     echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
                     include ("templates/header_sb.php");
                     echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
-
+                     include ("templates/login_box.php");
                     echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
                     echo '<div class="example" style="margin: 0px 0px 0px;">';
                     echo "<legend><b>Search / </b><span style='color: #00A255;'>$input</span></legend>";
@@ -318,7 +362,7 @@ header('Cache-Control: max-age=900');
                             echo'<div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">';
                             include ("templates/header_sb.php");
                             echo '<div class="container" style="min-height: 795px;height: auto !important; margin: 0 auto -100px;">';
-
+                             include ("templates/login_box.php");
                             echo '<div style="padding-bottom: 200px; margin-top: 154px;">';
                             echo '<div class="example" style="margin: 0px 0px 0px;">';
 
@@ -405,6 +449,7 @@ header('Cache-Control: max-age=900');
                                     include ("templates/header_sb.php");
 
                                     echo '<div class="container" style="margin-top: 154px;">';
+                                     include ("templates/login_box.php");
                                     echo '<div class="example" style="margin: 0px 0px 0px;">';
                                     echo "<p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;'><b>Search /</b> No results</p>";
                                     echo "<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>Unfortunately, <span style='color: #00A255;'>$input</span> did not return any document or course.</p>";
