@@ -8,14 +8,14 @@ $password=$_POST['pwd'];
 
 $password=encrypt($password);
 
-$result = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password';") or die (mysql_error());
-$num_row= mysql_num_rows($result);
+$resultlogin = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password';") or die (mysql_error());
+$num_row_login= mysql_num_rows($resultlogin);
 
-if( $num_row >= 1){
-while($row = mysql_fetch_array($result))
+if( $num_row_login >= 1){
+while($row_login = mysql_fetch_array($resultlogin))
 {
-$_SESSION['username']=$row["username"];
-$_SESSION['email']=$row["email"];
+$_SESSION['username']=$row_login["username"];
+$_SESSION['email']=$row_login["email"];
 
 }
 echo 1;
