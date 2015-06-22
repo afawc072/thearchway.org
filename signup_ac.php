@@ -14,6 +14,8 @@ $name=$_POST['username'];
 $email=$_POST['emailInput'];
 $password=$_POST['passwordInput'];
 
+$password=encrypt($password);
+
 // Insert data into database
 $sql="INSERT INTO $tbl_name(confirm_code, name, email, password)VALUES('$confirm_code', '$name', '$email', '$password')";
 $result=mysql_query($sql);
@@ -75,5 +77,16 @@ echo "Not found your email in our database";
                         return 1;
                  }
     }
+
+    //Function to encrypt the password
+  function encrypt($pass){
+
+    require "variables/variables.inc.php";
+    $pass_hash1 = md5($pass . $salt1);
+    $passFinal = sha1($salt2 . $pass_hash1);
+
+  return $passFinal;
+
+}
 
 ?>
