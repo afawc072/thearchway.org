@@ -109,36 +109,33 @@ $(document).ready(function() {
     <?php include ("templates/header_sb.php"); ?>
 
     <div class="container" style="margin-top :116px;">
-
-    <?php include ("templates/login_box.php");?>
-        <div class="example" style="margin: 0px 0px 0px;background-color: white !important; border: none;">
-
-            <p class='generic' style='color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 10px;'>
-                <b>Contact Archway /</b>...</p>
-            <p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 15px;line-height: 1.55em;'>
-            We're here to help with any questions or comments. </p>
-            <legend></legend>
-            <p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>
+            <?php include ("templates/login_box.php");?>
+    
 
 
-            Email our support staff at<span style="color: #00A255;"> support@thearchway.org </span>and we will be happy to help you out.
-            <br><br><b>What's in a great support request?</b><br>
-                <ul style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;'>
-                <li>Provide us with as much essential information as possible.</li>
-                <li>Let us know the name of the user or repository you're having trouble with.</li>
-                <li>Include any screenshots or links that are related to your problem.</li>
-            </ul>
-            <br>
-<p style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;'>
+          <div class="example" style="border: 0px; witdh: 100%; background-color: white !important;">
+         <div class="grid fluid">
+                <div class="row" style="position:relative;">
 
-            For tips such as finding the ressources you are looking for, please visit our <a href='about.php'>help page</a>.</p>
-                                   
+                    <div class="span12">
+                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"   ><b>Oops /</b> Something went wrong ... <i class="icon-warning on-right on-left"
+        style="color: black;"></i></p>
+                
+
+                        <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
+                            It seems your account activation email could not be sent. Please submit another<a href='sign-up.php'> registration request</a> later or <a href='contact.php'> contact us</a>. </p>
+                                
+                        </div>
+                 
+                    </div>
+                </div>
             </div>
 
         </div>
 
     </div>
     </div>
+</div>
     <?php include ("templates/footer.php"); ?>
 
 </body></center>

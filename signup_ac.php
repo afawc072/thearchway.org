@@ -37,7 +37,7 @@ if($result){
         header('Location:/confirmation_sent.php');
       }
       else{
-        echo '<h2>There are some issue.</h2>';
+        header('Location:/mailserver_unavailable.php');
       }
 
 }
