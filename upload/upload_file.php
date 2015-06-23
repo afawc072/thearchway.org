@@ -79,7 +79,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
         mysql_close($conn);
         
         $message = base64_encode($cname."+".$filename);
-        header("Location: file_uploaded.php?message=$message");
+        header("Location: /file_uploaded.php?message=$message");
         }
         else{
           echo "Please Upload to a course contained in our DB";
