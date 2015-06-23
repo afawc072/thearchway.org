@@ -9,6 +9,7 @@ $allowedExts = array("ppt","docx","doc","pdf","odt");
 $temp = explode(".",$_FILES["file"]["name"]);
 $cname = $_POST["coursesInput"];
 $description = $_POST["details"];
+$shortfilename = $_FILES["file"]["name"];
 $filename = $cname."_".$_FILES["file"]["name"];
 $filename = trim($filename, " \t\n\r\0\x0B" );
 $filename = str_replace(' ', '', $filename);
@@ -78,7 +79,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
         $result=mysql_query($sql2, $conn) or die(mysql_error());
         mysql_close($conn);
         
-        $message = base64_encode($cname."+".$filename);
+        $message = base64_encode($cname."+".$shortsfilename);
         header("Location: /file_uploaded.php?message=$message");
         }
         else{
