@@ -77,10 +77,9 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
         }
         $result=mysql_query($sql2, $conn) or die(mysql_error());
         mysql_close($conn);
-    
-        echo "Thank you for Contributing to the Archway";
-    
-        header("refresh:5; url=/");
+        
+        $message = base64_encode($cname."+".$filename);
+        header("Location: file_uploaded.php?message=$message");
         }
         else{
           echo "Please Upload to a course contained in our DB";
