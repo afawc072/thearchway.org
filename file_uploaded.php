@@ -6,7 +6,7 @@
 <?php 
 session_start();
 if(!isset($_SESSION['username'])){
-header('Location:/sign-up.php');
+header('Location:/404.php');
 }
 
 ?>
@@ -123,15 +123,21 @@ $(document).ready(function() {
 
                     <div class="span12">
                         <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"   ><b>Document uploaded /</b> Thank you for contributing to the Archway <i class="icon-thumbs-up on-right on-left"
-        style="color: black;"></i></p>
+                        style="color: black;"></i></p>
                 
 
                         <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
                             Your account could not be activated properly or is already activated. If not, please submit another<a href='sign-up.php'> registration request</a>, to receive a valid confirmation code. </p>
                                 
                                 <?php 
+                                if(isset($_GET['message'])){
                                 $message = nl2br(base64_decode($_GET['message']));
-                                echo $message;
+
+                                $fname = substr($message, 7);  
+                                $cname = substr($message, 0, 7);  
+                                echo $fname;
+                                echo $cname;
+                            }
                                 ?>
                         </div>
                  

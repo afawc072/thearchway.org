@@ -79,7 +79,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
         $result=mysql_query($sql2, $conn) or die(mysql_error());
         mysql_close($conn);
         
-        $message = base64_encode($cname."+".$shortsfilename);
+        $message = base64_encode($cname."".$shortsfilename);
         header("Location: /file_uploaded.php?message=$message");
         }
         else{
@@ -92,8 +92,7 @@ else
   {
 
 
-      echo "Invalid file. You can only upload documents with the 'pdf', 'doc', 'docx', 'ppt' and 'odt' extension and smaller than 20 Mb";      
-      header("refresh:5; url=/upload.php");
+      header("Location: /invalid_file_extension.php");     
  
   }
 ?>

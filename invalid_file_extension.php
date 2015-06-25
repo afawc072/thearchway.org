@@ -5,6 +5,9 @@
 
 <?php 
 session_start();
+if(!isset($_SESSION['username'])){
+header('Location:/404.php');
+}
 ?>
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
@@ -118,16 +121,26 @@ $(document).ready(function() {
                 <div class="row" style="position:relative;">
 
                     <div class="span12">
-                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"   ><b>Upload failed /</b> Invalid file extension/size <i class="icon-warning on-right on-left"
+                        <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"   ><b>Upload failed /</b> Invalid file extension or size <i class="icon-warning on-right on-left"
         style="color: black;"></i></p>
                 
 
                         <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
-                            It seems there was an issue with the transfer ... Please make sure your document extension is 'pdf', 'doc', 'docx', 'ppt' or 'odt' and smaller than 20 MB. </p>
+                            It seems there was an issue with the transfer... Please make sure your document is <b>smaller than 20 MB</b> and belongs to one of the following <b>formats</b> :  
+
+                            <ul style='color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;'>
+                                                <li>Microsoft Word (.doc, .docx)</li>
+                                                <li>Microsoft PowerPoint (.ppt, pptx)</li>
+                                                <li>PDF documents (.pdf)</li>
+                                                <li>Open Office (.odt)</li>
+                                                <li>Text (.txt)</li></p>
                                 
                         </div>
                  
                     </div>
+                    <br>
+                    <br>
+                    <center> <a href='upload.php'>Go Back</a> </center>
                 </div>
             </div>
 
