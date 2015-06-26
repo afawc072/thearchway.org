@@ -132,7 +132,7 @@ $(document).ready(function() {
                             }
                                 echo $cname;
                            
-                                ?>)
+                                ?> )
 
                             <i class="icon-warning on-right on-left"
         style="color: black;"></i></p>
