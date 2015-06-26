@@ -122,7 +122,6 @@ $(document).ready(function() {
 
                     <div class="span12">
                         <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"   ><b>Upload failed /</b> Invalid course code (
-
                           <?php 
                              if(isset($_GET['message'])){
                                 $message = nl2br(base64_decode($_GET['message']));
