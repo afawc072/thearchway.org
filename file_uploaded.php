@@ -121,7 +121,7 @@ $(document).ready(function() {
          <div class="grid fluid">
                 <div class="row" style="position:relative;">
 
-                    <div class="span12">
+                    <div class="span12" style="margin-bottom: 100px;">
                         <p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"   ><b>Document uploaded /</b> Thank you for contributing to the Archway <i class="icon-thumbs-up on-right on-left"
                         style="color: black;"></i></p>
                 
@@ -134,8 +134,7 @@ $(document).ready(function() {
 
                                 $fname = substr($message, 7);  
                                 $cname = substr($message, 0, 7);  
-                                echo $fname;
-                                echo $cname;
+    
                             }
                                 echo "The upload process was completed successfully. We truely appreciate the help you provide to our website and to all students taking $cname. Stay cool.";
                            
