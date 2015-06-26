@@ -127,10 +127,9 @@ $(document).ready(function() {
                 
 
                         <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
-                            Your account could not be activated properly or is already activated. If not, please submit another<a href='sign-up.php'> registration request</a>, to receive a valid confirmation code. </p>
-                                
-                                <?php 
-                                if(isset($_GET['message'])){
+                            
+                            <?php 
+                             if(isset($_GET['message'])){
                                 $message = nl2br(base64_decode($_GET['message']));
 
                                 $fname = substr($message, 7);  
@@ -138,8 +137,17 @@ $(document).ready(function() {
                                 echo $fname;
                                 echo $cname;
                             }
+                                echo "The upload process was completed successfully. We truely appreciate the help you provide to our website and to all students taking $cname. Stay cool.";
+                           
                                 ?>
+
+                        </p>
+                                
+                        
                         </div>
+                        <br>
+                    <br>
+                    <center><a href='index.php'>Home</a> | <a href='upload.php'>Upload again</a> </center>
                  
                     </div>
                 </div>
