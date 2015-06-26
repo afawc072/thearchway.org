@@ -42,9 +42,7 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
       if (file_exists($structure.$cname."/".$filename))
       {
 
-        echo "A File With That Name Already Exists";
-      
-        header("refresh:5; url=/upload.php");
+         header("Location: /document_already_exists.php");  
       }
     else
       {
@@ -83,7 +81,10 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
         header("Location: /file_uploaded.php?message=$message");
         }
         else{
-          echo "Please Upload to a course contained in our DB";
+
+          //IF COURSE IS NOT IN DB
+          $message = base64_encode($cname."".$shortsfilename);
+        header("Location: /invalid_coursecode.php?message=$message");
         }
       }
     }
