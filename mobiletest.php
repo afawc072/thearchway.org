@@ -82,7 +82,7 @@ $(document).ready(function() {
 
         <noscript></noscript>
 
-            <div class="container" style="min-height: 100%; height: auto !important; margin: 0 auto -100px;">
+            <div class="container" style="min-height: 100%; height: auto !important; margin: 0 auto -100px; width: 100% !important;">
 
                 <div id="isc_2" class="normal" onscroll="return isc_VLayout_2._handleCSSScroll()" style="position: absolute; left: 0px; top: 0px; width: 100%; heig…cursor: default; display: inline-block; outline-style: none;">
 
@@ -91,7 +91,7 @@ $(document).ready(function() {
         
                  
                
-</div>
+
 </div>
 
 </div>
@@ -99,8 +99,6 @@ $(document).ready(function() {
 
 <?php include ("templates/footer.php"); ?>
 
-</div>
-</div>
         </body>
     </html>
 
