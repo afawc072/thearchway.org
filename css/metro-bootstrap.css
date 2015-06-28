@@ -4576,6 +4576,28 @@ a {
 .metro .navigation-bar.dark .element-menu > li:hover {
   background-color: #201a1a;
 }
+
+#sign-up_menu_item {
+  color: #ffffff;
+  background-color: #00A255;
+}
+
+#sign-up_menu_item:hover {
+  color: #555;
+  background-color: #0ACE71;
+}
+.metro .navigation-bar.grey {
+  background-color: #F5F5F5 !important;
+    color: #555 !important;
+}
+.metro .navigation-bar.dark .element-menu > li > a {
+  color: #555 !important;
+}
+.metro .navigation-bar.grey .element:hover,
+.metro .navigation-bar.grey .element-menu > li:hover {
+  background-color: #999999;
+  color: #ffffff;
+}
 .metro .navigation-bar.light {
   background-color: #eeeeee;
   color: #555555;

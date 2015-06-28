@@ -85,7 +85,35 @@ $(document).ready(function() {
             <div class="container" style="min-height: 100%; height: auto !important; margin: 0 auto -100px; width: 100% !important;">
 
                 
-                    <?php include ("templates/header.php"); ?>
+                 <?php //include ("templates/header_mt.php"); ?>
+
+                           <nav class="navigation-bar grey">
+                <div class="navigation-bar-content">
+                    <a href="/" class="element"> HOME</a>
+                    <span class="element-divider"></span>
+
+                    <a href="/" class="element"> HELP</a>
+
+                    <div class="no-tablet-portrait">
+    
+                        <span class="element-divider"></span>
+
+
+                        
+                        <span class="element-divider place-right"></span>
+                         <a class="element place-right" href="#">LOGIN</a>
+
+                         <span class="element-divider place-right"></span>
+                         <a id="sign-up_menu_item" class="element place-right" href="#">SIGN-UP</a>
+                         <span class="element-divider place-right"></span>
+
+
+                          
+
+                       
+                    </div>
+                </div>
+            </nav>
 
         
                  
