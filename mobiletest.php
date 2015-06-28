@@ -94,7 +94,7 @@ $(document).ready(function() {
 
                     <a href="/" class="element"> HELP</a>
 
-                    <div class="no-tablet-portrait">
+                   
     
                         <span class="element-divider"></span>
 
