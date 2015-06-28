@@ -76,7 +76,7 @@ $(document).ready(function() {
 
     </head>
 
-    <body class="metro" style="height: 100%;">
+    <body class="metro" style="height: 100%; width:100% !important;">
 
         <script></script>
 
@@ -87,7 +87,7 @@ $(document).ready(function() {
                 
                  <?php //include ("templates/header_mt.php"); ?>
 
-                           <nav class="navigation-bar grey">
+                <nav class="navigation-bar grey" style="width: 100%;">
                 <div class="navigation-bar-content">
                     <a href="/" class="element"> HOME</a>
                     <span class="element-divider"></span>
