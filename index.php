@@ -2,11 +2,10 @@
     <html style="">
 
     <head>
-<?php session_start() ?>
-
-<?php
-header('Cache-Control: max-age=900');
+<?php session_start();
+header('Cache-Control: max-age=9000');
 ?>
+
     <link href="css/metro-bootstrap.css" rel="stylesheet">
     <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
     <link href="css/iconFont.css" rel="stylesheet">
