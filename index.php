@@ -6,13 +6,13 @@
 header('Cache-Control: max-age=9000');
 ?>
 
-    <link href="css/metro-bootstrap.css" rel="stylesheet" Cache-Control: 'max-age=9000'>
-    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet" Cache-Control: 'max-age=9000'>
-    <link href="css/iconFont.css" rel="stylesheet" Cache-Control: 'max-age=9000'>
-    <link href="css/docs.css" rel="stylesheet" Cache-Control: 'max-age=9000'>
-    <link href="js/prettify.css" rel="stylesheet" Cache-Control: 'max-age=9000'>
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="js/prettify.css" rel="stylesheet">
 
-    <script src="js/jquery/jquery.min.js" Cache-Control: 'max-age=9000'></script>
+    <script src="js/jquery/jquery.min.js"></script>
     <script src="js/jquery/jquery.widget.min.js"></script>
     <script src="js/jquery/jquery.mousewheel.js"></script>
     <script src="js/prettify.js"></script>
