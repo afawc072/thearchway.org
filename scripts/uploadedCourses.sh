@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd /var/www/archway/upload/uploadedFiles/
-path=/var/www/archway/stats/coursesStats.txt
+cd /var/www/upload/uploadedFiles/
+path=/var/www/stats/coursesStats.txt
 
 
 numCourses=$(ls -lR | grep ^d | wc -l)

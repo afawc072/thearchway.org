@@ -27,7 +27,7 @@ $('#signin').submit(function(){
                     'padding-bottom' : 0,
                   }, "slow");
                 document.getElementById("flash-notice").innerHTML = "";
-                location.reload();
+                window.location.reload();
             }
             else{
                 $("#login-box").animate({ 

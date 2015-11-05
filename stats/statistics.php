@@ -1,5 +1,5 @@
 <?php
-require "/var/www/archway/db_connect.php";
+require "/var/www/db_connect.php";
 
 $resultU = mysql_query("select user, count(*) as occurences from Files group by user order by occurences desc, user limit 3;");
 $resultC = mysql_query("select fromCourse, count(*) as occurences from Files group by fromCourse order by occurences desc, user limit 3;");
