@@ -8,7 +8,7 @@ $password=$_POST['pwd'];
 
 $password=encrypt($password);
 
-$resultlogin = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password';") or die (mysql_error());
+$resultlogin = mysql_query("SELECT * FROM Users WHERE email = '$email' AND password = '$password' AND registered = 'f';") or die (mysql_error());
 $num_row_login= mysql_num_rows($resultlogin);
 
 if( $num_row_login >= 1){
