@@ -42,11 +42,11 @@ if($result){
     	//PREDEFINED FOR ACCOUNT VALIDATION
     	$subject  =   "Resetting your password!";
    	 	$message  =   file_get_contents('mailtemplates/activation_template2.txt');
-    	$message  =   str_replace('LE MESSIEUR', 'User', $message);
+    	$message  =   str_replace('LE MESSIEUR', "User", $message);
     	$message  =   str_replace('LE LINK', $activation_link, $message);
-    	$mailsend =   sendmail($to,$subject,$message,'User');
+    	$mailsend =   sendmail($to,$subject,$message,"User");
       if($mailsend==1){
-        	header('Location:/confirmation_sent.php');
+        	header('Location:/confirmation_sent_password.php');
       }
       else{
         	header('Location:/mailserver_unavailable.php');
