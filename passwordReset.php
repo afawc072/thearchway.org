@@ -41,7 +41,7 @@ if($result){
 
     	//PREDEFINED FOR ACCOUNT VALIDATION
     	$subject  =   "Resetting your password!";
-   	 	$message  =   file_get_contents('mailtemplates/activation_template2.txt');
+   	 	$message  =   file_get_contents('mailtemplates/password_reset.txt');
     	$message  =   str_replace('LE MESSIEUR', "User", $message);
     	$message  =   str_replace('LE LINK', $activation_link, $message);
     	$mailsend =   sendmail($to,$subject,$message,"User");
