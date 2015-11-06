@@ -7,6 +7,7 @@ require "db_connect.php";
 $email=$_SESSION['email'];
 $password=$_POST['passwordInput'];
 $tbl_name="Users";
+$tbl_name2="Reset";
 
 //to ensure that the user went through the confirmation, we look that the email is not empty.
 if(isset($password)){
@@ -18,6 +19,8 @@ if(isset($password)){
 
 	if($result){
 		session_destroy();
+		$sql="DELETE FROM $tbl_name2 WHERE email = '$email'";
+		$result=mysql_query($sql3);
 		header('Location:/index.php');
 	}
 
