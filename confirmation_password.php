@@ -22,7 +22,7 @@ if($result){
 	$count=mysql_num_rows($result);
 	
 	if($count==1){
-		$rows=mysql_fetch_array($result1);
+		$rows=mysql_fetch_array($result);
 		$email=$rows['email'];
 		$_SESSION['email'] = $email;
 		header('Location:/password_change.php');
