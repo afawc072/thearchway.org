@@ -37,7 +37,7 @@ if($result){
 
 		//TO DEFINE DEPENDING ON USER
     	$to = $email;
-    	$activation_link = "http://www.thearchway.org/confirmation.php?passkey=$confirm_code";
+    	$activation_link = "http://www.thearchway.org/confirmation_password.php?passkey=$confirm_code";
 
     	//PREDEFINED FOR ACCOUNT VALIDATION
     	$subject  =   "Resetting your password!";
