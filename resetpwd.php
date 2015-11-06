@@ -1,12 +1,14 @@
 <?php
 
 session_start();
+require "db_connect.php";
 
 //VARIABLES
 $email=$_SESSION['email'];
 $password=$_POST['passwordInput'];
 $tbl_name="Users";
 
+//to ensure that the user went through the confirmation, we look that the email is not empty.
 if(isset($password)){
 
 	$password=encrypt($password);
