@@ -29,4 +29,5 @@ function encrypt($pass){
 
   return $passFinal;
 
+}
 ?>
