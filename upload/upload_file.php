@@ -77,13 +77,13 @@ if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
         $result=mysql_query($sql2, $conn) or die(mysql_error());
         mysql_close($conn);
         
-        $message = base64_encode($cname."".$shortsfilename);
+        $message = base64_encode($cname."".$shortfilename);
         header("Location: /file_uploaded.php?message=$message");
         }
         else{
 
           //IF COURSE IS NOT IN DB
-          $message = base64_encode($cname."".$shortsfilename);
+          $message = base64_encode($cname."".$shortfilename);
         header("Location: /invalid_coursecode.php?message=$message");
         }
       }
