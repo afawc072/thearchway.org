@@ -69,6 +69,22 @@ $(document).ready(function() {
     return false;
     });
 
+    // Making sure user writes matching passwords
+    $("#signinform").submit(function(){
+        var hasError = false;
+        var passwordVal = $("#passwordInput").val();
+        var checkVal = $("#passwordInputConfirm").val();
+
+        if(passwordVal != checkVal){
+            $("#passwordInputConfirm").val('');
+            $("#passwordInput").val('');
+            hasError = true;
+        }
+
+        if(hasError == true) {return false;}
+
+    });
+
 
 });
 </script>
@@ -113,23 +129,24 @@ $(document).ready(function() {
     <?php include ("templates/login_box.php");?>
     
 
-        <div id="resetPwform" name="resetPwform" class="example" style="top: 50px; background-color: white !important; border:none; width: 50%; margin: 0 auto;">
-            <form action="passwordReset.php" method="post" id="resetform"
+        <div id="signinformDiv" name="signinformDiv" class="example" style="top: 50px; background-color: white !important; border: none;">
+            <form action="resetpwd.php" method="post" id="resetpwd"
              enctype="multipart/form-data">
                 <fieldset>
-                    <legend><p class="generic" style="color: #3E4252;font-weight: 600;font-family: Segoe UI_,Open Sans,Verdana,Arial,Helvetica,sans-serif;font-weight: 400; font-size: 24px;line-height: 1.55em;"><b>Login /</b> Forgot your password ?</p></legend>
+                    <legend>Modify Password</legend>
 
-                    <label>Email Address</label>
-                    <div id="emailInputDiv" name="emailInputDiv" class="input-control text" data-role="input-control">
-                        <input id="emailInput" name="emailInput" type="email" required>
+                    <label>Password</label>
+                    <div id="passwordInputDiv" name="passwordInputDiv" class="input-control text" data-role="input-control">
+                        <input id="passwordInput" name="passwordInput" required type='password' pattern=".{6,}" placeholder="Minimum of 6 characters" title="Your password must be at least 6 characters long">
+                    </div>
+                    <label>Re-type password</label>
+                    <div id="passwordInputDiv" name="passwordInputConfirmDiv" class="input-control text" data-role="input-control">
+                        <input id="passwordInputConfirm" name="passwordInputConfirm" required type='password' placeholder="Passwords must match">
                     </div>
                     <br>
-                    We will email you a link to reset your password. 
-                    <br>
-                    <br>
-                    <input id="submitbutton" type="submit" name="submitbutton" value="SEND" style="padding: 15px 22px; background-color: #4A4A4A; color: #FFF; margin-right: 10px;">
+                    <legend style="margin-top: 14px;"></legend>
+                    <input id="submitbutton" type="submit" name="submitbutton" value="RESET PASSWORD" style="padding: 15px 22px; background-color: #4A4A4A; color: #FFF; margin-right: 30px;">
 
-                    or <a href='index.php' style="color: #00A255;"> Cancel </a>
 
                 </fieldset>
             </form>

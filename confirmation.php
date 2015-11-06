@@ -28,7 +28,7 @@ $password=$rows['password'];
 $tbl_name2="Users";
 
 // Insert data that retrieves from "temp_members_db" into table "Users"
-$sql2="INSERT INTO $tbl_name2(username, email, password)VALUES('$name', '$email', '$password')";
+$sql2="INSERT INTO $tbl_name2(username, email, password, registered)VALUES('$name', '$email', '$password', 'f')";
 $result2=mysql_query($sql2);
 }
 
