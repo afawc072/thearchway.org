@@ -55,7 +55,7 @@ if($result){
 	}
 
 	else {
-		echo "There is a problem with your demand, please try again later and if non-successful, contact us!"
+		echo "There is a problem with your demand, please try again later and if non-successful, contact us!";
 	}
 
 	}
