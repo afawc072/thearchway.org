@@ -1,7 +1,7 @@
 <!-- This PHP file is called by reset-password.php and sends an e-mail to a user who
 lost is password -->
 <?php
-
+session_start();
 //VARIABLES
 
 $tbl_name="Reset";
@@ -85,7 +85,7 @@ function sendmail($to,$subject,$message,$name)
                   $mail->MsgHTML($body);
                   $mail->isHTML(true);
                   $address = $to;
-                  //$mail->AddAddress($address, $name);
+                  $mail->AddAddress($address, $name);
                   if(!$mail->Send()) {
                       return 0;
                   } else {
