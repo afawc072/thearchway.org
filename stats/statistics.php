@@ -17,7 +17,7 @@ while($row = mysql_fetch_array($resultC)){
 
 				}
 
-$myFile = "/var/www/archway/stats/searchStats.txt";
+$myFile = "/var/www/stats/searchStats.txt";
 $fh = fopen($myFile, 'w') or die("can't open file");
 while($row = mysql_fetch_array($resultS)){
 		$stringData = $row[0].",".$row[1]."\n";
@@ -28,7 +28,7 @@ while($row = mysql_fetch_array($resultS)){
 		}
 fclose($fh);
 
-$myFile2 = "/var/www/archway/stats/dowloadStats.txt";
+$myFile2 = "/var/www/stats/dowloadStats.txt";
 $fh2 = fopen($myFile2, 'w') or die("can't open file");
 while($row = mysql_fetch_array($resultD)){
 		$stringData = $row[0].",".$row[1]."\n";
@@ -40,7 +40,7 @@ while($row = mysql_fetch_array($resultD)){
 fclose($fh2);
 
 
-$myFile3 = "/var/www/archway/stats/uploadStats.txt";
+$myFile3 = "/var/www/stats/uploadStats.txt";
 $fh3 = fopen($myFile3, 'w') or die("can't open file");
 while($row = mysql_fetch_array($resultUpload)){
 		$stringData = $row[0].",".$row[1]."\n";
@@ -51,7 +51,7 @@ while($row = mysql_fetch_array($resultUpload)){
 		}
 fclose($fh3);
 
-$myFile4 = "/var/www/archway/stats/UserStats.txt";
+$myFile4 = "/var/www/stats/UserStats.txt";
 $fh4 = fopen($myFile4, 'w') or die("can't open file");
 while($row = mysql_fetch_array($resultUsers)){
 		$stringData = $row[0].",".$row[1]."\n";
