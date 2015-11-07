@@ -26,7 +26,7 @@ done < <(echo "use archway1;SELECT id,path from Files" | mysql -u admin -pvincen
 echo "WE WILL NOW UPDATE THE DB WITH COURSES THAT MIGHT HAVE SLIPPED THROUGH THE CRACKS OF OUR DB OR WERE ADDED MANUALLY TO THE FILE SERVER"
 
 
-ARRAY=( $(find /var/www/archway/upload/uploadedFiles/* | grep -e ".doc" -e ".odt" -e ".ppt" -e ".docx" -e ".pdf") )
+ARRAY=( $(find /var/www/upload/uploadedFiles/* | grep -e ".doc" -e ".odt" -e ".ppt" -e ".docx" -e ".pdf") )
 
 temp="";
 course="";
