@@ -20,8 +20,16 @@ $password=encrypt($password);
 $sql="INSERT INTO $tbl_name(confirm_code, name, email, password)VALUES('$confirm_code', '$name', '$email', '$password')";
 $result=mysql_query($sql);
 
+//Flag created to prevent already signed up user to duplicate their demand!
+$key=FALSE;
+$result = mysql_query("SELECT * FROM Users WHERE email = '$email'");
+while($row = mysql_fetch_array($result))
+{
+$key=TRUE;  
+}
+
 // if suceesfully inserted data into db, send confirmation link to email
-if($result){
+if($result && $key){
 
 // ---------------- SEND MAIL FORM ----------------
 
@@ -47,7 +55,7 @@ if($result){
 
 // if not found
 else {
-echo "Not found your email in our database";
+echo "It looks like this e-mail is already in use";
 }
 
 
