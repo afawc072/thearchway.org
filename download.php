@@ -18,7 +18,6 @@ $path = "/var/www/upload/uploadedFiles/".$courseName."/"; // change the path to 
 $path_parts = pathinfo($_GET['download_file']);
 $file_name  = $path_parts['basename'];
 $dl_file  =  $file_name;
-$dl_file = utf8_encode($dl_file);
 $fullPath = $path.$dl_file;
 
 $user = $_SESSION['email'];

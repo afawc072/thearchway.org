@@ -16,7 +16,7 @@ $description = $_POST["details"];
 //Name to be displayed to user
 $shortfilename = $_FILES["file"]["name"];
 //String modifications to allow good success of file upload...
-//$filename = utf8_encode($_FILES["file"]["name"]);
+$filename = utf8_encode($_FILES["file"]["name"]);
 $filename = $cname."_".$filename;
 $filename = trim($filename, " \t\n\r\0\x0B" );
 $filename = str_replace(' ', '', $filename);
