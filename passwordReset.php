@@ -36,7 +36,7 @@
     else{
 
       $rows=mysql_fetch_array($result1);
-      $name=$rows['name'];
+      $name=$rows['username'];
 
 //Since the coloum registered needs to be set to 'f' for logins to be accepted, there won't be any login possible by setting it to 't'
 //This will be changed once the confirmation email is activated
