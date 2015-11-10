@@ -109,7 +109,7 @@ $(document).ready(function() {
             <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
             	<?php
 
-				require "/var/www/archway/db_connect.php";
+				require "/var/www/db_connect.php";
 
 
 				$resultU = mysql_query("select user, count(*) as occurences from Files group by user order by occurences desc, user limit 3;");

@@ -5,18 +5,28 @@ if(!isset($_SESSION['username'])){
 header('Location:/sign-up.php');
 }
 
+//extensions allowed
 $allowedExts = array("ppt","docx","doc","pdf","odt");
+//Gets filename only(no extension)
 $temp = explode(".",$_FILES["file"]["name"]);
+//Course Name
 $cname = $_POST["coursesInput"];
+//Details
 $description = $_POST["details"];
+//Name to be displayed to user
 $shortfilename = $_FILES["file"]["name"];
-$filename = $cname."_".$_FILES["file"]["name"];
+//String modifications to allow good success of file upload...
+$filename = utf8_encode($_FILES["file"]["name"]);
+$filename = $cname."_".$filename;
 $filename = trim($filename, " \t\n\r\0\x0B" );
 $filename = str_replace(' ', '', $filename);
 $filename = preg_replace('/\s+/', '', $filename);
 $extension = end($temp);
 $structure = "/var/www/upload/uploadedFiles/";
+
 $user = $_SESSION['email'];
+
+
 if ((($_FILES["file"]["type"] == "application/vnd.ms-powerpoint")
 || ($_FILES["file"]["type"] == "application/vnd.oasis.opendocument.text")
 || ($_FILES["file"]["type"] == "application/msword")
