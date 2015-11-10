@@ -15,7 +15,11 @@ $dl_file = preg_replace("([^\w\s\d\-_~,;:\[\]\(\].]|[\.]{2,})", '', $_GET['downl
 $courseName = substr($dl_file, 0, 7);
 $path = "/var/www/upload/uploadedFiles/".$courseName."/"; // change the path to fit your websites document structure
 //$dl_file = filter_var($dl_file, FILTER_SANITIZE_URL); // Remove (more) invalid characters
+$path_parts = pathinfo($_GET['download_file']);
+$file_name  = $path_parts['basename'];
+$dl_file  = $path. $file_name;
 $fullPath = $path.$dl_file;
+
 $user = $_SESSION['email'];
 
 $sql = "INSERT INTO download (file, course, user) VALUES ('$dl_file', '$courseName', '$user')";
