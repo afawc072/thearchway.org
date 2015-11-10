@@ -17,7 +17,7 @@ $path = "/var/www/upload/uploadedFiles/".$courseName."/"; // change the path to 
 //$dl_file = filter_var($dl_file, FILTER_SANITIZE_URL); // Remove (more) invalid characters
 $path_parts = pathinfo($_GET['download_file']);
 $file_name  = $path_parts['basename'];
-$dl_file  = $path. $file_name;
+$dl_file  =  $file_name;
 $fullPath = $path.$dl_file;
 
 $user = $_SESSION['email'];
