@@ -31,7 +31,7 @@
 
 //This email is not linked to any account
     if($count!=1){
-      echo "No account corresponds to this email address.";
+      header('Location:/no_email.php');
     }
     else{
 
@@ -85,7 +85,7 @@
 
 else {
 
-	echo "No account corresponds to this email address.";
+	header('Location:/no_email.php');
 
 }
 
