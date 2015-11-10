@@ -123,7 +123,7 @@ $(document).ready(function() {
                 
 
                         <p style="color: #606B7C; font-family: Sergoe UI Light_, Open Sans Light, Verdana, Arial, Helvetica, sans-serif;font-weight: 400; font-size: 18px;line-height: 1.55em;">
-                            It seems no account corresponds to this email address... <br>Please submit another<a href='reset-password.php'> request</a> for an existing account or <a href='contact.php'> contact us</a>. </p>
+                            It seems no account corresponds to this email address... Please submit another<a href='reset-password.php'> request</a> for an existing account or <a href='contact.php'> contact us</a>. </p>
                                 
                         </div>
                  
