@@ -20,7 +20,7 @@ if(isset($password)){
 	if($result){
 		session_destroy();
 		$sql="DELETE FROM $tbl_name2 WHERE email = '$email'";
-		$result=mysql_query($sql3);
+		$result=mysql_query($sql);
 		header('Location:/index.php');
 	}
 
